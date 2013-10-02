@@ -24,7 +24,7 @@ if (ADMUX==6){
 }
 
 void InitADC(){
-	cli();
+//	cli();
 	ADCSRA |=  (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0); // Set ADC prescalar
 	ADMUX |= (1 << REFS0)|(0<<REFS1); // Set ADC reference to AVCC
 	// no left ajustment needed in 10 bit mode!
@@ -36,5 +36,5 @@ void InitADC(){
    	ADCSRA |= (1 << ADEN);  // Enable ADC
    	ADCSRA |= (1 << ADSC);// Start A2D Conversions
 	ADCSRA |= (1 << ADIE);//Ѕит 3 Ц ADIE (ADC Interrupt Enable) Ц бит разрешени€ прерывани€ аналогоЦцифрового преобразовател€ : 1 Ц разрешено, 0 Ц запрещено.
-	sei();
+//	sei();
 }

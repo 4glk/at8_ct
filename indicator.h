@@ -37,12 +37,12 @@
 #define IND_ACTIVE_LEVEL_DIG   1
 
 /*куда подключены сегменты индикатора*/
-#define IND_PORT_SEG PORTC
-#define IND_DDR_SEG DDRC
+#define IND_PORT_SEG PORTD
+#define IND_DDR_SEG DDRD
 
 /*куда подклчены разр€ды индикатора*/
-#define IND_PORT_DIG PORTD
-#define IND_DDR_DIG DDRD
+#define IND_PORT_DIG PORTB
+#define IND_DDR_DIG DDRB
 
 /*к какому регистру подключены сегменты и разр€ды
 если используетс€ два регистра,
@@ -52,14 +52,14 @@
 #define IND_SHIFT_REG_DIG2 0
 
 /*к каким выводам подключены разр€ды*/
-#define IND_NUM1 0
-#define IND_NUM2 1
-#define IND_NUM3 2
-#define IND_NUM4 3
-#define IND_NUM5 4
-#define IND_NUM6 5
-#define IND_NUM7 6
-#define IND_NUM8 7
+#define IND_NUM1 7
+#define IND_NUM2 6
+#define IND_NUM3 5
+#define IND_NUM4 4
+#define IND_NUM5 3
+#define IND_NUM6 2
+#define IND_NUM7 1
+#define IND_NUM8 0
 
 /*если используетс€ три сдвиговых регистра
 нужно определить вторую группу разр€дов */

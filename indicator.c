@@ -69,7 +69,7 @@ __flash uint8_t number[][2] =   // скоро она потолстеет , бу
   {(1<<IND_A)|(1<<IND_B)|(1<<IND_C)|(1<<IND_D)|(1<<IND_E)|(1<<IND_F)|(0<<IND_G),0}, //0
   {(0<<IND_A)|(1<<IND_B)|(1<<IND_C)|(0<<IND_D)|(0<<IND_E)|(0<<IND_F)|(0<<IND_G),1}, //1
   {(1<<IND_A)|(1<<IND_B)|(0<<IND_C)|(1<<IND_D)|(1<<IND_E)|(0<<IND_F)|(1<<IND_G),2},//2
-  {(1<<IND_A)|(1<<IND_B)|(0<<IND_C)|(1<<IND_D)|(1<<IND_E)|(0<<IND_F)|(1<<IND_G),3}, //3
+  {(1<<IND_A)|(1<<IND_B)|(1<<IND_C)|(1<<IND_D)|(0<<IND_E)|(0<<IND_F)|(1<<IND_G),3}, //3
   {(0<<IND_A)|(1<<IND_B)|(1<<IND_C)|(0<<IND_D)|(0<<IND_E)|(1<<IND_F)|(1<<IND_G),4},//4
   {(1<<IND_A)|(0<<IND_B)|(1<<IND_C)|(1<<IND_D)|(0<<IND_E)|(1<<IND_F)|(1<<IND_G),5}, //5
   {(1<<IND_A)|(0<<IND_B)|(1<<IND_C)|(1<<IND_D)|(1<<IND_E)|(1<<IND_F)|(1<<IND_G),6}, //6

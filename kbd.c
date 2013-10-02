@@ -25,14 +25,14 @@ int trigger(int btn,int port){
 }
 //*/
 //#include "kbd.h"
-/*
+//*
 void InitControl(){
-	DDRA=0b00111000;
+	DDRC=0b00111000;
 	//DDRA |= (1 << PC1)|(1 << PC2)|(1 << PC3)|(1 << PC4)|(1 << PC5)|(1 << PC6);
-	PORTA=0b00000111;
+	PORTC=0b00000111;
 }
 //*/
-/*
+//*
 uint8_t KeyCode(){
 
     return (flags.KeyPin);

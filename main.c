@@ -17,18 +17,16 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 //#include <util/delay.h>
-#include "macros.h"
-#include "kbd.h"
-
+#include "macros.h"     //описание флагов и работа с битами
+#include "kbd.h"        //работа с клавиатурой
 #include "adc.h"
-
 #include "indicator.h"
 #include "spi.h"
 #include "automate.h"
 #include "timer.h"
 #include "compilers.h"
-#include "7seg.h"//нужно будет убрать
-#include "init.h"
+
+
 
 
 //////////////   *******************переменные , почистить глобальные переменные , работать через указатели
@@ -49,20 +47,45 @@ int z=10,i=0; // на задержку индикации для управления яркостью
 int trigger(int btn,int port);	//функция переключения
 
 //*/
+
+uint16_t i;
 /***Главная функция***/
 int main (void)
 {
+
  //   TCNT1 = 57724;
  //   flags.KeyPressed=0;
-    DDRA=0b00111000;
-//    PORTA=0b00000111;
 //	InitDisplay();
-//	InitTimer();
+	InitTimer();
 //	InitADC();
 //	InitControl();
 	//TODO: нормальный обработчик событий (пока готов флаговый автомат в пашгановском)
+
+	  //инициализация индикатора и АЦП
+  IND_Init();
+//  ADC_Init();
+  InitControl();
+  //PackedBool flags;
+
+  //инициализация таймера Т0
+  TIMSK = (1<<TOIE0); // переполнение
+  TCCR0 = (1<<CS02)|(0<<CS01)|(1<<CS00); // предделитель 1024
+  TCNT0 = TCNT0_const;
+    flags.KeyPin=0;
+    flags.KeyPushLong=0;
+    flags.KeyState=0;
+    flags.KeyPressed = 0;
+    flags.KeyReleased = 1;
+    flags.State_Automate=0;
+ //   DDRC=0b00111000;
+  sei();
 while(1){
-        /*
+   // IND_Output(23332,0);
+    IND_OutputFormatChar("HEFH",1,1);
+    IND_OutputFormatChar("ABCD",6,4);
+   // IND_OutputFormat(12345678, 1,  1,  8);
+    //if (flags.State_Automate)StateAutomate(KeyCode());
+        /* // устаревший обработчик , суперцикл
 	display1=count1; if (display1==0) {display1=adc6_a;delay(2000);} //отображение счетчика ,
 	display2=count2; if (display2==0) {display2=adc7_a;delay(2000);} //если 0 то показать выставленное значение
 	if (adc6_a!=adc6) {display1=adc6;delay(2000);adc6_a=adc6;}      //если крутим ручку , то показать это значение
@@ -82,7 +105,31 @@ while(1){
 	if (fire_btn){trigger(fire_btn,4);} //1
 
 	//*/
-	return 0;
-}
+
+}return 0;
 }
 
+ISR(TIMER0_OVF_vect)
+{
+  //  PackedBool flags;
+  TCNT0 = TCNT0_const;
+ // IND_Output(1234,3);
+  IND_Update();
+  if(1){
+ // if(~PINC&0b00000111){ // обработчик нажатия
+    flags.KeyReleased=0;
+        if (++i > 25 ) {      //короткое нажатие 100 миллисекунд
+            if (!flags.KeyPressed){flags.KeyPressed = 1;flags.KeyPin=(~PINC&0b00000111);}
+               if ( i >100 ){  //длинное нажатие 3 секунды
+                 if (!flags.KeyPushLong) flags.KeyPushLong=1;
+                 KeyState();
+               }
+        }
+  }
+  else {
+        i=0;
+        if (!flags.KeyReleased) {flags.KeyReleased=1;}
+        KeyState();
+        }
+        if (CH(C,4)) {CB(C,4);}else SB(C,4);
+}

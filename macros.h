@@ -8,7 +8,8 @@
 #define TB(x,y) (x^=(1<<y))		//togglebit
 #define CH(x,y) (x&(1<<y))		//checkbit
 //*/
-
+#define TCNT0_const 0xd9 //217
+#define TCNTCC 57724
 //*
 #define SB(port,bit) (PORT##port|=(1<<bit))		//setbit (port,bit) приклеим это слово порт куда надо и будет проще
 #define CB(port,bit) (PORT##port&= ~(1<<bit))   //clearbit а лучше конечно написать порт и бит шоб пон€тнее было
@@ -36,7 +37,7 @@
 
  // значение калибровки таймера , секунда тики
 
-/******************кнопки********************
+/******************кнопки********************----//это все тоже устарело , код клавиши теперь хранитс€ в flags.KeyPin
 #define KP1 (PINC&(1<<PC0))   //KP = Key Port а чо бы так не сделать что бы меньше в глазах р€било ?
 #define KP2 (PINC&(1<<PC1))   //CHC(1)
 #define KP3 (PINC&(1<<PC2))   //CHC(2)
@@ -71,8 +72,8 @@ typedef enum f {           // потом объ€вить типа Btn KeyCode и переключать посл
 #define avtomat_btn (!(PINC&(1<<PC2)))&&((PINC&(1<<PC1)))&&(!(PINC&(1<<PC0)))   //101
 #define count_btn ((PINC&(1<<PC2)))&&(!(PINC&(1<<PC1)))&&(!(PINC&(1<<PC0)))     //011
 ///+********************************************************************************/
-#define truba_off CBC(5)//(PORTC&= ~(1<<PC5)) парочка типа булеана
-#define truba_on SBC(5)//(PORTC|=(1<<PC5))
+//#define truba_off CBC(5)//(PORTC&= ~(1<<PC5)) парочка типа булеана
+//#define truba_on SBC(5)//(PORTC|=(1<<PC5))
 #endif // MACROS_
 ///----------------------------------------------
 ///-----это мой битмакрос
@@ -88,15 +89,15 @@ typedef enum f {           // потом объ€вить типа Btn KeyCode и переключать посл
 #pragma once
 //*
 typedef struct { //булеановы переменные , зачем тратить на каждый флаг по байту ?
-  bool State_Automate:1;
-  bool KeyPressed:1;
-  bool KeyReleased:1;
-  bool KeyPushLong:1;
-  bool f4:1;
-  uint8_t  KeyPin:4;
-  bool KeyState:1;
-  //bool f6:1;
-  //bool f7:1;
+  bool State_Automate:1;    //обработчик
+  bool KeyPressed:1;        //флаг нажати€ клавиши
+  bool KeyReleased:1;       //флаг отпускани€ клавиши
+  bool KeyPushLong:1;       //флаг долгово нажати€ клавиши
+  bool KeyState:1;          //флаг состо€ни€ клавиши
+  uint8_t  KeyPin:4;        //здесь код клавиши
+ // bool Fire:1;            //флаг горелки
+  //bool Furnace:1;         //флаг циркул€рной печи
+  //bool Supply:1;          //флаг подачи
  } PackedBool;
 PackedBool flags;
 //*/

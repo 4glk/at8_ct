@@ -8,4 +8,4 @@
 //PackedBool flags;
 
 
-void StateAutomate(uint8_t KeyCode());
+void StateAutomate();
