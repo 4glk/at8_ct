@@ -151,4 +151,14 @@ uint8_t ascii2int(uint8_t symbol);
 *   Purpose :         бегущая строка
 ***********************************************************************************/
 void IND_RunString(char ch_string,uint8_t speed,uint8_t field,uint8_t amount,uint8_t comma);
+
+//TODO: вывод минут, секунд на дисплей
+/**
+    вывод на индикатор минут и секунд.
+   @param вход кол-во секунд с ацп
+   @param argument2 explanation
+   . . .
+   @return обновление буффера индикатора
+*/
+void IND_Time(uint16_t CurrentTime,uint8_t position);
 #endif //INDICATOR_H

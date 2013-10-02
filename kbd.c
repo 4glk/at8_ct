@@ -49,5 +49,5 @@ void KeyState(){
         flags.KeyPushLong=0;
         flags.State_Automate=1;
     }
-
+    flags.KeyReleased=1;
 }

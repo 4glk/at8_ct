@@ -68,7 +68,7 @@ int main (void)
   //PackedBool flags;
 
   //инициализация таймера Т0
-  TIMSK = (1<<TOIE0); // переполнение
+  TIMSK = (1<<TOIE0)|(1<<TOIE1); // переполнение
   TCCR0 = (1<<CS02)|(0<<CS01)|(1<<CS00); // предделитель 1024
   TCNT0 = TCNT0_const;
     flags.KeyPin=0;
@@ -81,10 +81,10 @@ int main (void)
   sei();
 while(1){
    // IND_Output(23332,0);
-    IND_OutputFormatChar("HEFH",1,1);
-    IND_OutputFormatChar("ABCD",6,4);
+    //IND_OutputFormatChar("HEFH",1,1);
+    //IND_OutputFormatChar("ABCD",6,4);
    // IND_OutputFormat(12345678, 1,  1,  8);
-    //if (flags.State_Automate)StateAutomate(KeyCode());
+    if (flags.State_Automate)StateAutomate(KeyCode());
         /* // устаревший обработчик , суперцикл
 	display1=count1; if (display1==0) {display1=adc6_a;delay(2000);} //отображение счетчика ,
 	display2=count2; if (display2==0) {display2=adc7_a;delay(2000);} //если 0 то показать выставленное значение
@@ -109,27 +109,30 @@ while(1){
 }return 0;
 }
 
-ISR(TIMER0_OVF_vect)
+ISR(TIMER0_OVF_vect) // на осциллографе в протеусе 5мс
 {
   //  PackedBool flags;
   TCNT0 = TCNT0_const;
  // IND_Output(1234,3);
   IND_Update();
-  if(1){
- // if(~PINC&0b00000111){ // обработчик нажатия
+ // if(1){
+  if(~PINC&0b00000111){ // обработчик нажатия
     flags.KeyReleased=0;
         if (++i > 25 ) {      //короткое нажатие 100 миллисекунд
             if (!flags.KeyPressed){flags.KeyPressed = 1;flags.KeyPin=(~PINC&0b00000111);}
                if ( i >100 ){  //длинное нажатие 3 секунды
-                 if (!flags.KeyPushLong) flags.KeyPushLong=1;
-                 KeyState();
+                 if (!flags.KeyPushLong){
+
+                    flags.KeyPushLong=1;
+                    KeyState();
+                 }
                }
         }
-  }
-  else {
+    }
+    else {
         i=0;
         if (!flags.KeyReleased) {flags.KeyReleased=1;}
         KeyState();
-        }
-        if (CH(C,4)) {CB(C,4);}else SB(C,4);
+    }
+    if (CH(C,4)) {CB(C,4);}else SB(C,4);// на осциллографе в протеусе 10мс(100гц)
 }
