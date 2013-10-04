@@ -8,8 +8,8 @@
 #define TB(x,y) (x^=(1<<y))		//togglebit
 #define CH(x,y) (x&(1<<y))		//checkbit
 //*/
-#define TCNT0_const 0xd9 //217
-#define TCNTCC 57724
+#define TCNT0_const 0xd9 //217(0xEC,236 дл€ 400√ц) //5 мс дл€ 8 бит таймера на 8ћгц 200 √ц, 2,5мс на 16ћгц 400√ц
+#define TCNTCC 57724 //0xe17c 1√ц 1 сек на 16 бит таймер на 8 ћгц
 //*
 #define SB(port,bit) (PORT##port|=(1<<bit))		//setbit (port,bit) приклеим это слово порт куда надо и будет проще
 #define CB(port,bit) (PORT##port&= ~(1<<bit))   //clearbit а лучше конечно написать порт и бит шоб пон€тнее было

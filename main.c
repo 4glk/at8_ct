@@ -109,10 +109,10 @@ while(1){
 }return 0;
 }
 
-ISR(TIMER0_OVF_vect) // на осциллографе в протеусе 5мс
+ISR(TIMER0_OVF_vect) // на осциллографе в протеусе 10мс (10kHz)
 {
   //  PackedBool flags;
-  TCNT0 = TCNT0_const;
+  TCNT0 = TCNT0_const;  //7812   217  //8000000/1024
  // IND_Output(1234,3);
   IND_Update();
  // if(1){
