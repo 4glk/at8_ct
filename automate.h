@@ -6,6 +6,9 @@
 #include "indicator.h"
 
 //PackedBool flags;
-
+extern uint16_t timer2;
+extern uint16_t NextState;
+extern uint16_t timer2_works;
 
 void StateAutomate();
+//extern enum InfoString();

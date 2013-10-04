@@ -9,6 +9,7 @@ extern void KeyState();
 extern uint16_t TimeStop;
 extern uint16_t TimeSupply;
 extern uint16_t CurrentTime;
+extern uint16_t timer2;
 extern int adc6,adc7;
 //extern uint16_t Time,FastTime;
 //extern uint8_t KeyCode();

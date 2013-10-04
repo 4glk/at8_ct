@@ -28,11 +28,13 @@ if (CurrentTime!=0){
 			CurrentTime=adc6;
 			TimeSupply=CurrentTime+1;
 			flags.ADC_Channel=1;
+			SB(C,3);
 		}
 			else{
 			CurrentTime=adc7;
 			TimeStop=CurrentTime+1;
 			flags.ADC_Channel=0;
+			CB(C,3);
 		}
 
 	}
@@ -44,9 +46,11 @@ if (flags.ADC_Channel==0) {TimeStop--;}
 }
 void InitTimer(){
 
-  TIMSK = (1<<TOIE0)|(1<<TOIE1); // переполнение
+  TIMSK = (1<<TOIE0)|(1<<TOIE1)|(1<<TOIE2); // переполнение
   TCCR0 = (1<<CS02)|(0<<CS01)|(1<<CS00); // предделитель 1024
   TCNT0 = TCNT0_const;
+
+  TCCR2 = (1<<CS02)|(0<<CS01)|(1<<CS00);
 
 	//DDRD = ( 1 << PD7 );  // настраиваем PC3 на выход
 	TCCR1B = (1<<CS12)|(0<<CS11)|(1<<CS10); // настраиваем делитель 100=256 101=1024
@@ -88,3 +92,8 @@ IND_Time(CurrentTime,5);
  //   if (CH(C,4)) {CB(C,4);}else SB(C,4);// на осциллографе в протеусе 10мс(100гц)
 }
 
+ISR(TIMER2_OVF_vect) // на осциллографе в протеусе 10мс (10kHz)
+{
+    timer2++;
+    //if (CH(C,5)) {CB(C,5);}else SB(C,5);
+}

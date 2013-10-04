@@ -63,7 +63,7 @@
 uint8_t ind_buf[IND_AMOUNT_NUM];
 
 // строки
-//__flash enum InfoStrings { ABCD,EDA,DADA };
+//__flash enum InfoString { CTAP,CTOP,_POD,TPYB,_GOR,ABTO };
 // TODO: забить таблицу под завязку, транслит , добавляем все совпадающие символы
 /*таблица перекодировки*/
 //*
@@ -114,9 +114,9 @@ void IND_OutputFormatChar(char char_string[], uint8_t comma, uint8_t position)
     for (i=0,j=strlen(char_string);i<strlen(char_string);i++,j--){ //зеркалирование строки
             tmp[j-1]=char_string[i];
     }
-    //TODO: для облегчения поиска добавить к счетчику примерное стартовое значение
+
     for (j=0;j<amount;j++){
-        for (i=11;i<=((int)tmp[j]);++i){
+        for (i=11;i<=((int)tmp[j]);++i){    //добавлено стартовое значение , перескакиваем цифры
             if (read_byte_flash(number[i][1])==(int)tmp[j]) break; // вся трабла была с чтением с пзу
         }
       ind_buf[j+position-1] = read_byte_flash(number[i][0]); //это конечно не оптимально искать в пзу

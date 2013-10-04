@@ -1,15 +1,19 @@
 #include "automate.h"
-
+extern uint16_t timerFunction;
 //TODO: переключатель по таймеру , обнуление счетчиков при остановке, блокировка ручного управления и наоборот
+//__flash enum InfoString { CTAP,CTOP,_POD,TPYB,_GOR,ABTO };
+
+
 
 void StateAutomate(KeyCode){
    // PackedBool flags;
     flags.State_Automate=0;
+ //   enum InfoString strng;
   //*
     switch (KeyCode){
         case 0: IND_OutputFormat(11, 7,  5,  3);break;
         case 1: IND_OutputFormatChar(" POD",0,1);
-                flags.SupplyAuto=0;
+              //  flags.SupplyAuto=0;
                 if (flags.SupplyManual){
                     flags.SupplyManual=0;
                     CB(C,3);
@@ -17,6 +21,11 @@ void StateAutomate(KeyCode){
                     flags.SupplyManual=1;
                     SB(C,3);
                 }
+                timer2=0;
+                timerFunction=timer2+1;
+                NextState=2;
+                flags.NextState=1;
+                timer2_works=1000;
                 ;break;     //3 кнопка подачи
         case 2: IND_OutputFormatChar("_GOP",0,1);
                 if (flags.Fire){
@@ -49,10 +58,16 @@ void StateAutomate(KeyCode){
         case 7: IND_OutputFormat(KeyCode, 5,  5,  3);break;     //-----
         case 8: IND_OutputFormat(55, 5,  5,  3);break;          //долгое нажатие нуля :)
         case 9: IND_OutputFormat(KeyCode, 5,  5,  3);break;     // 3
-        case 10: IND_Time(4725,1);break;                        //4
+        case 10: NextState=1;flags.NextState=1;IND_OutputFormatChar("ECT",0,1);break;                        //4
         case 11: IND_Time(3726,1);break;                        //1
         case 12: IND_OutputFormat(ascii2int('_'), 5,  1,  3);break;//5
-        case 13: IND_OutputFormat(KeyCode, 5,  5,  3);break;    //2
+        case 13: NextState=1;
+                flags.NextState=1;
+                IND_OutputFormatChar("ECT",0,1);
+                timer2=0;
+                timer2_works=500;
+                timerFunction=timer2+1;
+                break;    //2
         case 14: IND_OutputFormat(KeyCode, 5,  5,  3);break;
         case 15: IND_OutputFormat(KeyCode, 5,  5,  3);break;    //------
         case 16: IND_OutputFormat(KeyCode, 5,  5,  3);break;    //

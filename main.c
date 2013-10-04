@@ -13,6 +13,7 @@
 //- event-system !!!!
 //- state (состояние)-> event (событие) -> state (состояние) -> handler(обработчик)
 //- event-sources[1..x] -> loop order (кольцевая очередь) -> dipatcher -> handlers
+//- переназначение кнопок , если мы зашли в подменю , можно сделать прибавлением 16 к коду клавиши
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
@@ -53,6 +54,10 @@ uint16_t i;
 uint16_t TimeStop=0;
 uint16_t TimeSupply=0;
 uint16_t CurrentTime=0;
+uint16_t timer2=0;
+uint16_t timer2_works=0;
+uint16_t timerFunction=0;
+uint16_t NextState=0;
 /***Главная функция***/
 int main (void)
 {
@@ -80,7 +85,8 @@ int main (void)
     flags.State_Automate=0;
     flags.SupplyAuto=0;
     flags.SupplyManual=0;
-    flags.Furnace=0;       //(C,5)
+    flags.Furnace=0;        //(C,5)
+    flags.NextState=0;
  //   DDRC=0b00111000;
   sei();
 while(1){
@@ -89,6 +95,19 @@ while(1){
     //IND_OutputFormatChar("ABCD",6,4);
    // IND_OutputFormat(12345678, 1,  1,  8);
     if (flags.State_Automate)StateAutomate(KeyCode());
+//TODO: обдумать структуру управления состояниями , с вожможностью возвращения к длительным процедурам
+    if ((flags.NextState)&&(timerFunction!=0)&&(timer2>timer2_works)){
+        flags.NextState=0;
+        timerFunction=0;
+        StateAutomate(NextState);
+
+    }
+    /*
+    if (flags.NextState){
+        flags.NextState=0;
+        StateAutomate(NextState);
+    }
+    //*/
         /* // устаревший обработчик , суперцикл
 	display1=count1; if (display1==0) {display1=adc6_a;delay(2000);} //отображение счетчика ,
 	display2=count2; if (display2==0) {display2=adc7_a;delay(2000);} //если 0 то показать выставленное значение

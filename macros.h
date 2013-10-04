@@ -100,6 +100,7 @@ typedef struct { //булеановы переменные , зачем тратить на каждый флаг по байту 
   bool SupplyManual:1;
   bool SupplyAuto:1;          //флаг подачи
   bool ADC_Channel:1;      // канал ацп
+  bool NextState:1;
  } PackedBool;
 PackedBool flags;
 //*/
