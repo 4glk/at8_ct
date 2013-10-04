@@ -95,9 +95,11 @@ typedef struct { //булеановы переменные , зачем тратить на каждый флаг по байту 
   bool KeyPushLong:1;       //флаг долгово нажати€ клавиши
   bool KeyState:1;          //флаг состо€ни€ клавиши
   uint8_t  KeyPin:4;        //здесь код клавиши
- // bool Fire:1;            //флаг горелки
-  //bool Furnace:1;         //флаг циркул€рной печи
-  //bool Supply:1;          //флаг подачи
+  bool Fire:1;            //флаг горелки
+  bool Furnace:1;         //флаг циркул€рной печи
+  bool SupplyManual:1;
+  bool SupplyAuto:1;          //флаг подачи
+  bool ADC_Channel:1;      // канал ацп
  } PackedBool;
 PackedBool flags;
 //*/

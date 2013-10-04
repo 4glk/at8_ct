@@ -61,6 +61,9 @@
 
 /*буфер 7-ми сегметного индикатора*/
 uint8_t ind_buf[IND_AMOUNT_NUM];
+
+// строки
+//__flash enum InfoStrings { ABCD,EDA,DADA };
 // TODO: забить таблицу под завязку, транслит , добавляем все совпадающие символы
 /*таблица перекодировки*/
 //*
@@ -78,13 +81,23 @@ __flash uint8_t number[][2] =   // скоро она потолстеет , бу
   {(1<<IND_A)|(1<<IND_B)|(1<<IND_C)|(1<<IND_D)|(0<<IND_E)|(1<<IND_F)|(1<<IND_G),9}, //9
   {(0<<IND_A)|(0<<IND_B)|(0<<IND_C)|(0<<IND_D)|(0<<IND_E)|(0<<IND_F)|(0<<IND_G),10},  //IND_EMPTY_NUM
   {(0<<IND_A)|(0<<IND_B)|(0<<IND_C)|(0<<IND_D)|(0<<IND_E)|(0<<IND_F)|(1<<IND_G),11}, //MINUS , 11
+  {(0<<IND_A)|(0<<IND_B)|(0<<IND_C)|(0<<IND_D)|(0<<IND_E)|(0<<IND_F)|(0<<IND_G),32}, //SPACE
+  {(0<<IND_A)|(0<<IND_B)|(0<<IND_C)|(1<<IND_D)|(0<<IND_E)|(0<<IND_F)|(0<<IND_G),95}, //_
   {(1<<IND_A)|(1<<IND_B)|(1<<IND_C)|(0<<IND_D)|(1<<IND_E)|(1<<IND_F)|(1<<IND_G),65}, //a
   {(0<<IND_A)|(0<<IND_B)|(1<<IND_C)|(1<<IND_D)|(1<<IND_E)|(1<<IND_F)|(1<<IND_G),66},//b
   {(1<<IND_A)|(0<<IND_B)|(0<<IND_C)|(1<<IND_D)|(1<<IND_E)|(1<<IND_F)|(0<<IND_G),67}, //c
   {(0<<IND_A)|(1<<IND_B)|(1<<IND_C)|(1<<IND_D)|(1<<IND_E)|(0<<IND_F)|(1<<IND_G),68}, //d
   {(1<<IND_A)|(0<<IND_B)|(0<<IND_C)|(1<<IND_D)|(1<<IND_E)|(1<<IND_F)|(1<<IND_G),69}, //e
   {(1<<IND_A)|(0<<IND_B)|(0<<IND_C)|(0<<IND_D)|(1<<IND_E)|(1<<IND_F)|(1<<IND_G),70}, //f
+  {(1<<IND_A)|(0<<IND_B)|(0<<IND_C)|(0<<IND_D)|(1<<IND_E)|(1<<IND_F)|(0<<IND_G),71}, //G Г
   {(0<<IND_A)|(1<<IND_B)|(1<<IND_C)|(0<<IND_D)|(1<<IND_E)|(1<<IND_F)|(1<<IND_G),72}, //h
+  {(1<<IND_A)|(1<<IND_B)|(1<<IND_C)|(1<<IND_D)|(1<<IND_E)|(1<<IND_F)|(0<<IND_G),79}, //O
+  {(1<<IND_A)|(1<<IND_B)|(0<<IND_C)|(0<<IND_D)|(1<<IND_E)|(1<<IND_F)|(1<<IND_G),80}, //P P
+  {(0<<IND_A)|(0<<IND_B)|(0<<IND_C)|(1<<IND_D)|(1<<IND_E)|(1<<IND_F)|(1<<IND_G),84}, //T t
+  {(0<<IND_A)|(1<<IND_B)|(1<<IND_C)|(1<<IND_D)|(0<<IND_E)|(1<<IND_F)|(1<<IND_G),85}, //U Y
+  {(1<<IND_A)|(1<<IND_B)|(1<<IND_C)|(1<<IND_D)|(1<<IND_E)|(1<<IND_F)|(1<<IND_G),86}, //V B
+  {(0<<IND_A)|(1<<IND_B)|(1<<IND_C)|(1<<IND_D)|(0<<IND_E)|(1<<IND_F)|(1<<IND_G),89}, //Y Y
+
 };
 
 uint8_t ascii2int(uint8_t symbol){
@@ -94,7 +107,7 @@ uint8_t ascii2int(uint8_t symbol){
 /******************************************************************************/
 void IND_OutputFormatChar(char char_string[], uint8_t comma, uint8_t position)
 // TODO: реализовать бегущую строку с использованием количества элементов
-{//TODO: обработчик двойных символов транслита
+{// обработчик двойных символов транслита
     uint8_t i,j,amount;
     char tmp[strlen(char_string)];
     amount=strlen(char_string);
@@ -103,7 +116,7 @@ void IND_OutputFormatChar(char char_string[], uint8_t comma, uint8_t position)
     }
     //TODO: для облегчения поиска добавить к счетчику примерное стартовое значение
     for (j=0;j<amount;j++){
-        for (i=0;i<=((int)tmp[j]);++i){
+        for (i=11;i<=((int)tmp[j]);++i){
             if (read_byte_flash(number[i][1])==(int)tmp[j]) break; // вся трабла была с чтением с пзу
         }
       ind_buf[j+position-1] = read_byte_flash(number[i][0]); //это конечно не оптимально искать в пзу
@@ -113,8 +126,7 @@ void IND_OutputFormatChar(char char_string[], uint8_t comma, uint8_t position)
     ind_buf[comma-1] |= 1<<IND_COM;
   }
 }
-//TODO: сделать мигающюю раз в секунду точку , проверку позиции , верх или низ
-//  точку можно сделать проверкой четности....
+
 void IND_Time(uint16_t CurrentTime,uint8_t position){
     //вывод времени в минутах и секундах , преобразование из секунд
     // будет использоваться четыре цифры , нужна мигающая точка
