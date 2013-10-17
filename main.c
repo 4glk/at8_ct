@@ -59,6 +59,10 @@ uint16_t timer2=0;
 uint16_t timer2_works=0;
 uint16_t timerFunction=0;
 uint16_t NextState=0;
+
+void ToggleSupplyManual();
+void FuncINDTime();
+void FuncINDOutput();
 /***Главная функция***/
 int main (void)
 {
@@ -69,6 +73,7 @@ int main (void)
 	InitTimer();
 	InitADC();
 //	InitControl();
+    InitScheduler();
 
 	  //инициализация индикатора и АЦП
   IND_Init();
@@ -88,21 +93,30 @@ int main (void)
     flags.SupplyManual=0;
     flags.Furnace=0;        //(C,5)
     flags.NextState=0;
+    flags.RunFlag=1;
  //   DDRC=0b00111000;
+ //   AddTask((IND_Time(CurrentTime,5)),5,5);
+    AddTask(IND_Update,5,5);
+    AddTask(KeyScan,25,25);
+//    AddTask(ToggleSupplyManual,100,100);
+    AddTask(FuncINDTime,50,50);
+    AddTask(FuncINDOutput,50,50);
+ //   AddTask(IND_Output(23332,0),50,50);
   sei();
 while(1){
    // IND_Output(23332,0);
     //IND_OutputFormatChar("HEFH",1,1);
     //IND_OutputFormatChar("ABCD",6,4);
    // IND_OutputFormat(12345678, 1,  1,  8);
-    if (flags.State_Automate)StateAutomate(KeyCode());
+   DispatchTask();
+  //  if (flags.State_Automate)StateAutomate(KeyCode());
 //TODO: обдумать структуру управления состояниями , с вожможностью возвращения к длительным процедурам
-    if ((flags.NextState)&&(timerFunction!=0)&&(timer2>timer2_works)){
-        flags.NextState=0;
-        timerFunction=0;
-        StateAutomate(NextState);
+  //  if ((flags.NextState)&&(timerFunction!=0)&&(timer2>timer2_works)){
+  //      flags.NextState=0;
+  //      timerFunction=0;
+  //      StateAutomate(NextState);
 
-    }
+  //  }
     /*
     if (flags.NextState){
         flags.NextState=0;
@@ -132,5 +146,14 @@ while(1){
 
 }return 0;
 }
+void FuncINDTime(){
+    IND_Time(CurrentTime,5);
+}
 
+void FuncINDOutput(){
+    IND_Output(1234,1);
+}
 
+void ToggleSupplyManual(){
+    TB(C,3);
+}

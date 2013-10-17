@@ -67,33 +67,18 @@ ISR(TIMER0_OVF_vect) // на осциллографе в протеусе 10мс (10kHz)
 {
   //  PackedBool flags;
   TCNT0 = TCNT0_const;  //7812   217  //8000000/1024
- // IND_Output(1234,3);
-IND_Time(CurrentTime,5);
-  IND_Update();
+//  IND_Output(1234,3);
+//IND_Time(CurrentTime,5);
+//  IND_Update();
  // if(1){
-  if(~PINC&0b00000111){ // обработчик нажатия
-    flags.KeyReleased=0;
-        if (++i > 25 ) {      //короткое нажатие 100 миллисекунд
-            if (!flags.KeyPressed){flags.KeyPressed = 1;flags.KeyPin=(~PINC&0b00000111);}
-               if ( i >100 ){  //длинное нажатие 3 секунды
-                 if (!flags.KeyPushLong){
+//    KeyScan();
 
-                    flags.KeyPushLong=1;
-                    KeyState();
-                 }
-               }
-        }
-    }
-    else {
-        i=0;
-        if (!flags.KeyReleased) {flags.KeyReleased=1;}
-        KeyState();
-    }
  //   if (CH(C,4)) {CB(C,4);}else SB(C,4);// на осциллографе в протеусе 10мс(100гц)
 }
-
+/*
 ISR(TIMER2_OVF_vect) // на осциллографе в протеусе 10мс (10kHz)
 {
     timer2++;
     //if (CH(C,5)) {CB(C,5);}else SB(C,5);
 }
+//*/

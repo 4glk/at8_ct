@@ -29,6 +29,8 @@ int main(void){
     }
 }
 //*/
+//чтобы передать параметры передаваемой функции нужно указать их тип для начала
+// а потом уже мутить перегрузку и шаблоны...
 void AddTask (void (*taskfunc)(void), u16 taskdelay, u16 taskperiod){
    u8 n=0;
    u8 position=0;
@@ -50,13 +52,14 @@ void AddTask (void (*taskfunc)(void), u16 taskdelay, u16 taskperiod){
 }
 
 
-ISR(TIMER0_OVF_vect){
+ISR(TIMER2_OVF_vect){
 //   u8 m;
-   TransmitByte('-');           //DEBUG убирать на высоких частотах , а то заклинит :)
-   TCNT0 = StartFrom;
+    timer2++;
+//   TransmitByte('-');           //DEBUG убирать на высоких частотах , а то заклинит :)
+   TCNT2 = StartFrom;
    //переменные: сам счетчик и флаг запуска
-   if (runFlag==FALSE)delay_time--;
-   if (delay_time==0)runFlag=TRUE;
+   if (flags.RunFlag==0)delay_time--;
+   if (delay_time==0)flags.RunFlag=1;
 
 }
 //+ модифицировать: после выполнения задачи сдвинуть очередь влево, вычесть прошедшее время из всех задач
@@ -68,7 +71,7 @@ void DispatchTask (void){
   // u8 k;
     uint8_t n=0;
 
-    if (runFlag==TRUE){                     // если таймер выставил флаг
+    if (flags.RunFlag==1){                     // если таймер выставил флаг
 
 //        dt=delay_time;               // берем значение счетчика , шоб не перескочило в сортировке
         task tmp;                       // переменная для хранения нулевого элемента
@@ -92,7 +95,7 @@ void DispatchTask (void){
     else {delay_time=1;} //можно флаг запуска добавить сюда , но в очереди будет нечего убавлять и ф-ию зациклит
     dt=delay_time;      //или воткнуть туда значение уменьшения , только его нужно брать для точности
     (*tmp.pfunc)();
-    runFlag=FALSE;       //из расчета кол-ва тиков выполняемой функции и частоты прерывания таймера
+    flags.RunFlag=0;       //из расчета кол-ва тиков выполняемой функции и частоты прерывания таймера
     // уменьшаем время запуска в списке задач и присваиваем новое время срабатывания счетчику прерывания
     //+ пихать в очередь задачу с нулевой задержкой после следующей в очереди , а не перед , инкреметировать задержку
     //+ чтобы избежать зацикливания , лучше это обработать в очереди
@@ -106,7 +109,7 @@ void DeleteTask (u8 j)
    TaskArray[j].period = 0;
    TaskArray[j].run = 0;
 }
-
+#ifdef UART
 void TestA (void){
    TransmitByte('A');
 }
@@ -142,6 +145,8 @@ void TestH (void){
 void TestI (void){
    TransmitByte('I');
 }
+#endif
+#ifdef OSC
 // здесь будем кидать на осциллограф
 void Debug_osc_a(void){
     TB(B,0);
@@ -158,7 +163,8 @@ void Debug_osc_c(void){
 void Debug_osc_d(void){
     TB(B,3);
 }
-
+#endif
+#ifdef UART
 void InitUART (u16 baud){ //0x0033
    UBRRH = (u8)(baud>>8);
    UBRRL = (u8)baud;
@@ -171,12 +177,13 @@ void TransmitByte (u8 data){
    while ( !( UCSRA & (1<<UDRE)) );
    UDR = data;
 }
+#endif
 
 void InitScheduler (void){
    u8 i;
-   TCCR0 |= (1<<CS02)|(0<<CS01)|(1<<CS00);   // устанавливаем прескалер - 1024(101) 256(100) 64(011) 8(010) 0(001) off(000)
+   TCCR2 |= (1<<CS02)|(0<<CS01)|(1<<CS00);   // устанавливаем прескалер - 1024(101) 256(100) 64(011) 8(010) 0(001) off(000)
    TIFR = 1<<TOV0;   // очищаем флаг прерывания таймера Т0
-   TIMSK |= 1<<TOIE0;   // разрешаем прерывание по переполнению
-   TCNT0 = StartFrom;    // загружаем начальное зн. в счетный регистр
+   TIMSK |= 1<<TOIE2;   // разрешаем прерывание по переполнению
+   TCNT2 = StartFrom;    // загружаем начальное зн. в счетный регистр
    for (i=0; i<MAXnTASKS; i++) DeleteTask(i);   // очищаем массив задач
 }

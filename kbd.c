@@ -51,3 +51,24 @@ void KeyState(){
     }
     flags.KeyReleased=1;
 }
+
+void KeyScan(){
+  if(~PINC&0b00000111){ // обработчик нажатия
+    flags.KeyReleased=0;
+        if (++i > 25 ) {      //короткое нажатие 100 миллисекунд
+            if (!flags.KeyPressed){flags.KeyPressed = 1;flags.KeyPin=(~PINC&0b00000111);}
+               if ( i >100 ){  //длинное нажатие 3 секунды
+                 if (!flags.KeyPushLong){
+
+                    flags.KeyPushLong=1;
+                    KeyState();
+                 }
+               }
+        }
+    }
+    else {
+        i=0;
+        if (!flags.KeyReleased) {flags.KeyReleased=1;}
+        KeyState();
+    }
+}

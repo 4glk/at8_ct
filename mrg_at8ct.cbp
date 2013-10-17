@@ -64,6 +64,10 @@
 		</Unit>
 		<Unit filename="automate.h" />
 		<Unit filename="compilers.h" />
+		<Unit filename="dispatch.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dispatch.h" />
 		<Unit filename="fuse.c">
 			<Option compilerVar="CC" />
 		</Unit>

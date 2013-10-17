@@ -15,5 +15,7 @@
 void InitControl();
 uint8_t KeyCode();
 void KeyState();
+void KeyScan();
+extern uint16_t i;
 
 
