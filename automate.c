@@ -1,19 +1,12 @@
 #include "automate.h"
 extern uint16_t timerFunction;
 //TODO: переключатель по таймеру , обнуление счетчиков при остановке, блокировка ручного управления и наоборот
-//__flash enum InfoString { CTAP,CTOP,_POD,TPYB,_GOR,ABTO };
-
-
 
 void StateAutomate(KeyCode){
-   // PackedBool flags;
     flags.State_Automate=0;
- //   enum InfoString strng;
-  //*
     switch (KeyCode){
         case 0: IND_OutputFormat(11, 7,  5,  3);break;
         case 1: IND_OutputFormatChar(" POD",0,1);
-              //  flags.SupplyAuto=0;
                 if (flags.SupplyManual){
                     flags.SupplyManual=0;
                     CB(C,3);
@@ -41,8 +34,6 @@ void StateAutomate(KeyCode){
                     flags.SupplyAuto=1;
                     flags.SupplyManual=0;
                 }else flags.SupplyAuto=0;
-              //  flags.ADC_Channel=0;
-           //     if (CH(C,3))CB(C,3);
                 break;     //1 кнопка старт/стоп счетчика
         case 4: IND_OutputFormatChar("TPUB",0,1);
                 if (flags.Furnace){
@@ -81,5 +72,4 @@ void StateAutomate(KeyCode){
         case 24: IND_OutputFormat(KeyCode, 5,  5,  3);break;    //
         default:IND_OutputFormat(99, 7,  5,  3);break;
     }
-    //*/
 }

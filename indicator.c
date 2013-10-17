@@ -62,8 +62,6 @@
 /*буфер 7-ми сегметного индикатора*/
 uint8_t ind_buf[IND_AMOUNT_NUM];
 
-// строки
-//__flash enum InfoString { CTAP,CTOP,_POD,TPYB,_GOR,ABTO };
 // TODO: забить таблицу под завязку, транслит , добавляем все совпадающие символы
 /*таблица перекодировки*/
 //*
@@ -107,7 +105,7 @@ uint8_t ascii2int(uint8_t symbol){
 /******************************************************************************/
 void IND_OutputFormatChar(char char_string[], uint8_t comma, uint8_t position)
 // TODO: реализовать бегущую строку с использованием количества элементов, а также мигание символов
-{// обработчик двойных символов транслита
+{
     uint8_t i,j,amount;
     char tmp[strlen(char_string)];
     amount=strlen(char_string);
@@ -128,49 +126,12 @@ void IND_OutputFormatChar(char char_string[], uint8_t comma, uint8_t position)
 }
 
 void IND_Time(uint16_t CurrentTime,uint8_t position){
-    //вывод времени в минутах и секундах , преобразование из секунд
-    // будет использоваться четыре цифры , нужна мигающая точка
-    // и конечно позиция вывода верхний или нижний дисплей , т.е 1 или 5 позиция
-    // вроде все
-    //*
- //   uint8_t tmp;
- // uint8_t i;
- //    ind_buf[comma-1] |= 1<<IND_COM; // пашгановская точка
         uint8_t blk_dot;
-
-//    uint8_t amount=4;   // число жестко фиксированное , но пока пусть будет переменная
-    //*/
     !(CurrentTime%2)?(blk_dot=1):(blk_dot=0);   // мигает по четности ...
 	ind_buf[3+position-1] = read_byte_flash(number[CurrentTime % 6000/600]); // здесь раскладываем число на разряды
 	ind_buf[2+position-1] = read_byte_flash(number[CurrentTime % 600 /60 ])|(blk_dot<<IND_COM);//(!(CurrentTime%2)?(1<<IND_COM):tralala()); // +точка
 	ind_buf[1+position-1] = read_byte_flash(number[CurrentTime % 60 /10]);					// выделяем десятки секунд 5 максимальное значение
 	ind_buf[0+position-1] = read_byte_flash(number[CurrentTime % 10]);
-
-    /*
-  if ((position <= IND_AMOUNT_NUM)&&(position != 0)){
-     for(i = 0; i < amount; i++){
-        tmp = CurrentTime % 10;
-        if ((i == 0)||(CurrentTime > 0)||(position <= comma)){
-           ind_buf[position-1] = read_byte_flash(number[tmp]);
-        }
-        else{
-           ind_buf[position-1] = read_byte_flash(number[IND_EMPTY_NUM]);
-        }
-        CurrentTime = CurrentTime/10;
-        position++;
-        if (position > IND_AMOUNT_NUM){
-           break;
-        }
-     }
-     //*/
-     /*
-    switch (segcounter){ 						// здесь выделяем минуты , секунды из одного значения секунд
-	case 0:PORTD = ~(SEGMENT[display1 % 6000/600]);delay(z);break; // здесь раскладываем число на разряды
-	case 1:PORTD = ~(SEGMENT[display1 % 600 /60 ]);CB(PORTD,7);delay(z);break; // +точка
-	case 2:PORTD = ~(SEGMENT[display1 % 60 /10]);delay(z);break;					// выделяем десятки секунд 5 максимальное значение
-	case 3:PORTD = ~(SEGMENT[display1 % 10]);delay(z);break;
-    //*/
-
 
 }
 
