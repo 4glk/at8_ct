@@ -3,7 +3,7 @@ extern uint16_t timerFunction;
 //TODO: переключатель по таймеру , обнуление счетчиков при остановке, блокировка ручного управления и наоборот
 
 void StateAutomate(KeyCode){
-    flags.State_Automate=0;
+    flags.State_Automate=1;
     switch (KeyCode){
         case 0: IND_OutputFormat(11, 7,  5,  3);break;
         case 1: IND_OutputFormatChar(" POD",0,1);

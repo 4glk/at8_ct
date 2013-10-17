@@ -12,7 +12,7 @@
 #include "timer.h"      // файл таймеров
 #include "compilers.h"  //откудато зачемто откручено
 #include "dispatch.h"   //диспетчер
-
+//TODO: необходимо меню или событийная система
 uint16_t Time=0;
 uint16_t FastTime=0;
 uint16_t i;
@@ -23,6 +23,11 @@ uint16_t timer2=0;
 uint16_t timer2_works=0;
 uint16_t timerFunction=0;
 uint16_t NextState=0;
+//template <typename AnyType>;
+//const AnyType Sum(const AnyType &a, const AnyType &b,const AnyType &c)
+//{
+//  return a + b + c ;
+//}
 
 void ToggleSupplyManual();
 void FuncINDTime();
@@ -35,6 +40,7 @@ int main (void)
     InitScheduler();
   IND_Init();
   InitControl();
+  // флаги нужны для флагового автомата , скоро они будут не нужны
     flags.KeyPin=0;
     flags.KeyPushLong=0;
     flags.KeyState=0;
@@ -46,16 +52,20 @@ int main (void)
     flags.Furnace=0;        //(C,5)
     flags.NextState=0;
     flags.RunFlag=1;
+    //добавляем задачи
     AddTask(IND_Update,5,5);
     AddTask(KeyScan,25,25);
-    AddTask(FuncINDTime,50,50);
-    AddTask(FuncINDOutput,50,50);
-  sei();
-while(1){
+ //   AddTask(FuncINDTime,50,50);
+//    AddTask(FuncINDOutput,50,50);
+//    AddTask(IND_Output(1234,1));
+    AddTask(StateAutomate,100,100);
 
-   DispatchTask();
+    sei();
+    while(1){
 
-}return 0;
+        DispatchTask();
+
+    }return 0;
 }
 void FuncINDTime(){
     IND_Time(CurrentTime,5);
