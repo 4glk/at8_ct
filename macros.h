@@ -104,6 +104,7 @@ typedef struct { //булеановы переменные , зачем тратить на каждый флаг по байту 
   bool RunFlag:1;
  } PackedBool;
 PackedBool flags;
+int *KeyCodePointer;
 //*/
 
 

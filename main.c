@@ -10,7 +10,7 @@
 #include "spi.h"        // последовательный интерфейс
 #include "automate.h"   // файл конечного автомата , скоро наверное будет не нужен
 #include "timer.h"      // файл таймеров
-#include "compilers.h"  //откудато зачемто откручено
+#include "compilers.h"  //откудато зачемто откручено , с чипэнабла макрос под разные компиляторы
 #include "dispatch.h"   //диспетчер
 //TODO: необходимо меню или событийная система
 uint16_t Time=0;
@@ -23,12 +23,13 @@ uint16_t timer2=0;
 uint16_t timer2_works=0;
 uint16_t timerFunction=0;
 uint16_t NextState=0;
+int KeyCurrentCode;
 //template <typename AnyType>;
 //const AnyType Sum(const AnyType &a, const AnyType &b,const AnyType &c)
 //{
 //  return a + b + c ;
 //}
-
+//Костыли :(
 void ToggleSupplyManual();
 void FuncINDTime();
 void FuncINDOutput();
@@ -38,9 +39,9 @@ int main (void)
 	InitTimer();
 	InitADC();
     InitScheduler();
-  IND_Init();
-  InitControl();
-  // флаги нужны для флагового автомата , скоро они будут не нужны
+    IND_Init();
+    InitControl();
+  // флаги нужны для флагового автомата , скоро они будут не нужны или не все
     flags.KeyPin=0;
     flags.KeyPushLong=0;
     flags.KeyState=0;
@@ -52,13 +53,14 @@ int main (void)
     flags.Furnace=0;        //(C,5)
     flags.NextState=0;
     flags.RunFlag=1;
+//    KeyCode=0;
     //добавляем задачи
     AddTask(IND_Update,5,5);
     AddTask(KeyScan,25,25);
- //   AddTask(FuncINDTime,50,50);
+    AddTask(FuncINDTime,500,500);
 //    AddTask(FuncINDOutput,50,50);
 //    AddTask(IND_Output(1234,1));
-    AddTask(StateAutomate,100,100);
+    AddTask(StateAutomate,50,50);
 
     sei();
     while(1){

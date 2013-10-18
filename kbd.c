@@ -1,4 +1,5 @@
 #include "kbd.h"
+//extern void AddTask (void (*taskfunc)(void), u16 taskdelay, u16 taskperiod);
 //  обработчик нажатий
 /*
 int trigger(int btn,int port){
@@ -50,6 +51,10 @@ void KeyState(){
         flags.State_Automate=1;
     }
     flags.KeyReleased=1;
+    KeyCurrentCode=flags.KeyPin;
+    flags.State_Automate=1;
+ //   AddTask(StateAutomate,5,0);
+ //   *KeyCodePointer = &KeyCurrentCode;
 }
 
 void KeyScan(){
@@ -57,7 +62,7 @@ void KeyScan(){
     flags.KeyReleased=0;
         if (++i > 25 ) {      //короткое нажатие 100 миллисекунд
             if (!flags.KeyPressed){flags.KeyPressed = 1;flags.KeyPin=(~PINC&0b00000111);}
-               if ( i >100 ){  //длинное нажатие 3 секунды
+               if ( i > 100 ){  //длинное нажатие 3 секунды
                  if (!flags.KeyPushLong){
 
                     flags.KeyPushLong=1;
