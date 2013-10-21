@@ -8,18 +8,23 @@ void StateAutomate(){
                 flags.State_Automate=0;
     switch (KeyCurrentCode){
         case 0:break;
-        case 1: AddTask(Supply_sw,Fire_sw,100,0);;break;     //3 кнопка подачи
-        case 2: AddTask(Fire_sw,Furnance_sw,100,0); break;     //4 кнопка горелки
-        case 3: AddTask(Timer_sw,100,0);break;     //1 кнопка старт/стоп счетчика
-        case 4: AddTask(Furnance_sw,100,0);break;     //5 кнопка трубы
-        case 5: IND_OutputFormatChar("AVTO",0,1);break;     //2 кнопка авто вкл/выкл
+        case 1: AddTask(Supply_sw,Fire_sw,1000,1000,0);break;     //3 кнопка подачи
+        case 2: AddTask(Fire_sw,Idle,100,0,0); break;     //4 кнопка горелки
+        case 3: //ResetTask(FuncINDTime);
+                AddTask(Timer_sw,Idle,100,0,0);
+                break;     //1 кнопка старт/стоп счетчика
+        case 4: ResetTask(FuncINDTime);
+                AddTask(Furnance_sw,AddCurrentTime,100,2500,0);break;     //5 кнопка трубы
+        case 5: ResetTask(FuncINDTime);
+               // IND_OutputFormatChar("AVTO",0,1);
+                break;     //2 кнопка авто вкл/выкл
 //        case 6: IND_OutputFormat(KeyCurrentCode, 5,  5,  3);break;     //----- не подключены кнопки
 //        case 7: IND_OutputFormat(KeyCurrentCode, 5,  5,  3);break;     //-----
  //       case 8: IND_OutputFormat(55, 5,  5,  3);break;          //долгое нажатие нуля :)
-        case 9: IND_OutputFormat(KeyCurrentCode, 5,  5,  3);break;     // 3
-        case 10: IND_OutputFormatChar("ECT",0,1);break;                        //4
-        case 11: AddTask(Furnance_sw,250,1) ;break;                        //1
-        case 12: AddTask(FuncINDOutput,250,1000);break;//5
+        case 9: ResetTask(FuncINDTime);break;     // 3
+        case 10: IND_OutputFormatChar("ECT",0,0);break;                        //4
+        case 11: AddTask(Furnance_sw,Idle,250,0,0) ;break;                        //1
+        case 12: AddTask(FuncINDOutput,Idle,250,0,1000);break;//5
         case 13: NextState=1;
                 flags.NextState=1;
                 IND_OutputFormatChar("ECT",0,1);
@@ -37,7 +42,7 @@ void StateAutomate(){
 }
 
 void Timer_sw(){
-                IND_OutputFormatChar("CTAP",0,1);
+                IND_OutputFormatChar("CTAP",0,5);
                 if (!flags.SupplyAuto){
                     flags.SupplyAuto=1;
                     flags.SupplyManual=0;
@@ -46,7 +51,7 @@ void Timer_sw(){
 }
 
 void Supply_sw(){
-            IND_OutputFormatChar(" POD",0,1);
+            IND_OutputFormatChar(" POD",0,5);
         //*
                 if (flags.SupplyManual){
                     flags.SupplyManual=0;
@@ -63,6 +68,10 @@ void Supply_sw(){
                 timer2_works=1000;
                 KeyCurrentCode=0;
 
+}
+
+void AddCurrentTime(){
+    AddTask(FuncINDTime,Idle,250,0,0xffff);
 }
 
 void FuncINDTime(){
@@ -88,8 +97,10 @@ void ToggleBitTruba(){
     IND_Output(1111,1);
 }
 
+
+
 void Furnance_sw(){
-                IND_OutputFormatChar("TPUB",0,1);
+                IND_OutputFormatChar("TPUB",0,5);
                 if (flags.Furnace){
                     flags.Furnace=0;
                     CB(C,5);
@@ -101,7 +112,7 @@ void Furnance_sw(){
 }
 
 void Fire_sw(){
-            IND_OutputFormatChar("_GOP",0,1);
+            IND_OutputFormatChar("_GOP",0,5);
                 if (flags.Fire){
                     flags.Fire=0;
                     CB(C,4);
@@ -114,6 +125,7 @@ void Fire_sw(){
 
 //TODO: display handler , что показывать , сколько показывать , как показывать :)
 //обошел костылями диспетчера гы гы
+// и снятием циклических задач гы гы гы
 /*
 void DisplayHandler(){
     switch(dispCode){

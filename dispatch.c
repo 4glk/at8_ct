@@ -7,7 +7,7 @@
 // другой вариант это куча костылей на каждую функцию , получится слишком громоздко , но зато для меня проще в реализации
 //             || || || || || || ||
 //             \/ \/ \/ \/ \/ \/ \/
-void AddTask (void (*taskfunc)(void),void (*nextfunc)(void), u16 taskdelay,u16 taskruns){
+void AddTask (void (*taskfunc)(void),void (*nextfunc)(void), uint16_t taskdelay,uint16_t nextdelay,u16 taskruns){
    u8 n=0;
    u8 position=0;
    while (((TaskArray[n].pfunc!=0)||(TaskArray[n].delay!=0))&&(TaskArray[n].delay<=((taskdelay==0)?(++taskdelay):(taskdelay))&&(n < MAXnTASKS)))n++;
@@ -18,10 +18,10 @@ void AddTask (void (*taskfunc)(void),void (*nextfunc)(void), u16 taskdelay,u16 t
    }
         TaskArray[position].pfunc = taskfunc;
         TaskArray[position].delay = taskdelay;
-//        TaskArray[position].period = taskperiod;
+        TaskArray[position].nextdelay = nextdelay;  // стал не нужен , все переместилось в таскранс
         TaskArray[position].run = 0;
         TaskArray[position].numRun = taskruns;
-        TaskArray[position].nextfunc = nextfunc;
+        TaskArray[position].nextfunc = nextfunc; //  вызывает следующую ф-ию с параметрами предыдущей :(
 }
 
 
@@ -53,9 +53,9 @@ void DispatchTask (void){
     // косяк скорее всего с тем , что нельзя будет поменять количество запусков или задержку
     // только через функцию посредник
     switch (tmp.numRun){
-            case 0: if (*tmp.nextfunc!=Idle) AddTask(*tmp.nextfunc,Idle,tmp.delay,tmp.numRun);break;
-            case 0xffff: AddTask(*tmp.pfunc,*tmp.nextfunc,tmp.delay,tmp.numRun);break;
-            default: if (tmp.numRun&&tmp.numRun!=0xffff) AddTask(*tmp.pfunc,*tmp.nextfunc,tmp.delay,--tmp.numRun);break;
+            case 0: if (*tmp.nextfunc!=Idle) AddTask(*tmp.nextfunc,Idle,tmp.nextdelay,0,tmp.numRun);break;
+            case 0xffff: AddTask(*tmp.pfunc,*tmp.nextfunc,tmp.delay,tmp.nextdelay,tmp.numRun);break;
+            default: if (tmp.numRun&&tmp.numRun!=0xffff) AddTask(*tmp.pfunc,*tmp.nextfunc,tmp.delay,tmp.nextdelay,--tmp.numRun);break;
     }
   //  if (tmp.period==0&&tmp.numRun==0) {AddTask(*tmp.pfunc,*tmp.nextfunc,tmp.delay,tmp.period,tmp.numRun);}
    // if (tmp.period&&tmp.numRun==0) {AddTask(*tmp.pfunc,*tmp.nextfunc,tmp.period,tmp.period,tmp.numRun);}
@@ -70,14 +70,22 @@ void DispatchTask (void){
    }
 }
 
+void ResetTask(void (*resfunc)(void)){
+//    task tmp;
+    int i=0;
+    while (TaskArray[i].pfunc!=*resfunc)i++;
+    TaskArray[i].numRun=0;
+}
+
 void DeleteTask (u8 j)
 {
    TaskArray[j].pfunc = 0x0000;
    TaskArray[j].delay = 0;
-   TaskArray[j].period = 0;
+//   TaskArray[j].period = 0;
    TaskArray[j].run = 0;
    TaskArray[j].nextfunc = 0x0000;
    TaskArray[j].numRun =0;
+   TaskArray[j].nextdelay=0;
 }
 
 void InitScheduler (void){

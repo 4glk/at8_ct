@@ -30,7 +30,7 @@ int KeyCurrentCode;
 //  return a + b + c ;
 //}
 //Костыли :(
-
+//extern void FuncINDTime();
 /***Главная функция***/
 int main (void)
 {
@@ -53,12 +53,12 @@ int main (void)
     flags.RunFlag=1;
 //    KeyCode=0;
     //добавляем задачи
-    AddTask(IND_Update,Idle,5,0xffff);
-    AddTask(KeyScan,Idle,25,0xffff);
-   AddTask(FuncINDTime,Idle,250,0);
+    AddTask(IND_Update,Idle,5,0,0xffff);
+    AddTask(KeyScan,Idle,25,0,0xffff);
+    AddTask(FuncINDTime,Idle,250,0,0xffff);
 //    AddTask(FuncINDOutput,50,50);
 //    AddTask(IND_Output(1234,1));
-    AddTask(StateAutomate,Idle,50,0xffff);
+    AddTask(StateAutomate,Idle,50,0,0xffff);
 
     sei();
     while(1){
