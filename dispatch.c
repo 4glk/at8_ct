@@ -7,7 +7,7 @@
 // другой вариант это куча костылей на каждую функцию , получится слишком громоздко , но зато для меня проще в реализации
 //             || || || || || || ||
 //             \/ \/ \/ \/ \/ \/ \/
-void AddTask (void (*taskfunc)(void), u16 taskdelay, u16 taskperiod){
+void AddTask (void (*taskfunc)(void),void (*nextfunc)(void), u16 taskdelay,u16 taskruns){
    u8 n=0;
    u8 position=0;
    while (((TaskArray[n].pfunc!=0)||(TaskArray[n].delay!=0))&&(TaskArray[n].delay<=((taskdelay==0)?(++taskdelay):(taskdelay))&&(n < MAXnTASKS)))n++;
@@ -18,8 +18,10 @@ void AddTask (void (*taskfunc)(void), u16 taskdelay, u16 taskperiod){
    }
         TaskArray[position].pfunc = taskfunc;
         TaskArray[position].delay = taskdelay;
-        TaskArray[position].period = taskperiod;
+//        TaskArray[position].period = taskperiod;
         TaskArray[position].run = 0;
+        TaskArray[position].numRun = taskruns;
+        TaskArray[position].nextfunc = nextfunc;
 }
 
 
@@ -36,13 +38,29 @@ void DispatchTask (void){
         task tmp;                       // переменная для хранения нулевого элемента
         tmp=TaskArray[0];
     while (((TaskArray[n].pfunc != 0) || (TaskArray[n].delay!=0)) && (n < MAXnTASKS)){
-        n++;
-        TaskArray[n-1]=TaskArray[n];
-        if (TaskArray[n-1].delay) TaskArray[n-1].delay-=dt;
+        n++; //мотаем пока счетчик не дойдет до задачи с нужной задержкой
+        TaskArray[n-1]=TaskArray[n];        //сдвигаем очередь вперед
+        if (TaskArray[n-1].delay) TaskArray[n-1].delay-=dt;     //вычитаем прошедшее время из каждой задачи
    }
-    DeleteTask(n);
-    if (tmp.period) {AddTask(*tmp.pfunc,tmp.period,tmp.period);}
-    else AddTask(*tmp.pfunc,tmp.period,tmp.period);
+    DeleteTask(n);      //удаляем последнюю задачу
+    // добавление задачи
+    // 1. Добавление одиночной задачи task delay
+    // 2. Добавление количества запусков одиночной задачи numRun
+    // 3. Добавление периодической задачи task period
+    // если намран равен 0 , то это одиночная задача , если след. ф-ия идл , то не ставить в очередь.
+    // если намран макс , то это зацикленная задача
+    // если другое значение , то значит это количество запусков , уменьшаем его с каждой вставкой
+    // косяк скорее всего с тем , что нельзя будет поменять количество запусков или задержку
+    // только через функцию посредник
+    switch (tmp.numRun){
+            case 0: if (*tmp.nextfunc!=Idle) AddTask(*tmp.nextfunc,Idle,tmp.delay,tmp.numRun);break;
+            case 0xffff: AddTask(*tmp.pfunc,*tmp.nextfunc,tmp.delay,tmp.numRun);break;
+            default: if (tmp.numRun&&tmp.numRun!=0xffff) AddTask(*tmp.pfunc,*tmp.nextfunc,tmp.delay,--tmp.numRun);break;
+    }
+  //  if (tmp.period==0&&tmp.numRun==0) {AddTask(*tmp.pfunc,*tmp.nextfunc,tmp.delay,tmp.period,tmp.numRun);}
+   // if (tmp.period&&tmp.numRun==0) {AddTask(*tmp.pfunc,*tmp.nextfunc,tmp.period,tmp.period,tmp.numRun);}
+   // if (tmp.period&&tmp.numRun!=0) {AddTask(*tmp.pfunc,*tmp.nextfunc,tmp.period,tmp.period,--tmp.numRun);}
+  //  else AddTask(*tmp.pfunc,tmp.period,tmp.period);
     //TODO:разобраться с задержками запуска функций, трабла с нулевым значением, временные интервалы не точны
     if (TaskArray[0].delay!=0) {delay_time=TaskArray[0].delay;} // если здесь +1 , то немного работает ))))
     else {delay_time=1;} //можно флаг запуска добавить сюда , но в очереди будет нечего убавлять и ф-ию зациклит
@@ -58,6 +76,8 @@ void DeleteTask (u8 j)
    TaskArray[j].delay = 0;
    TaskArray[j].period = 0;
    TaskArray[j].run = 0;
+   TaskArray[j].nextfunc = 0x0000;
+   TaskArray[j].numRun =0;
 }
 
 void InitScheduler (void){

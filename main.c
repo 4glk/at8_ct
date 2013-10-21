@@ -30,9 +30,7 @@ int KeyCurrentCode;
 //  return a + b + c ;
 //}
 //Костыли :(
-void ToggleSupplyManual();
-void FuncINDTime();
-void FuncINDOutput();
+
 /***Главная функция***/
 int main (void)
 {
@@ -55,12 +53,12 @@ int main (void)
     flags.RunFlag=1;
 //    KeyCode=0;
     //добавляем задачи
-    AddTask(IND_Update,5,5);
-    AddTask(KeyScan,25,25);
-    AddTask(FuncINDTime,500,500);
+    AddTask(IND_Update,Idle,5,0xffff);
+    AddTask(KeyScan,Idle,25,0xffff);
+   AddTask(FuncINDTime,Idle,250,0);
 //    AddTask(FuncINDOutput,50,50);
 //    AddTask(IND_Output(1234,1));
-    AddTask(StateAutomate,50,50);
+    AddTask(StateAutomate,Idle,50,0xffff);
 
     sei();
     while(1){
@@ -68,15 +66,4 @@ int main (void)
         DispatchTask();
 
     }return 0;
-}
-void FuncINDTime(){
-    IND_Time(CurrentTime,5);
-}
-
-void FuncINDOutput(){
-    IND_Output(1234,1);
-}
-
-void ToggleSupplyManual(){
-    TB(C,3);
 }

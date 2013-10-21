@@ -8,9 +8,11 @@ typedef unsigned char u8;
 typedef unsigned int u16;
 typedef struct task{
    void (*pfunc) (void);    // указатель на функцию
+   void (*nextfunc)(void);
    u16 delay;               // задержка перед первым запуском задачи
    u16 period;              // период запуска задачи
    u8 run;                  // флаг готовности задачи к запуску
+   u16 numRun;
 }task;                      // флаг запуска можно вынести за структуру
 
 uint16_t delay_time;
@@ -39,6 +41,8 @@ void InitScheduler (void);      //инициализация диспетчера
 void UpdateScheduler(void);     //обновление диспетчера
 void DeleteTask (u8 index);     //удаление задачи
 //TODO:нужно научить эту функцию брать указатель на функцию с любыми аргументами и без них
-void AddTask (void (*taskfunc)(void), u16 taskdelay, u16 taskperiod);   //добавление задачи
+void AddTask (void (*taskfunc)(void),void (*nextfunc)(void),u16 taskdelay,u16 taskruns);   //добавление задачи
+//void AddTask (void (*taskfunc)(void),void (*nextfunc)(void), u16 taskdelay, u16 taskperiod,u16 taskruns);
 void DispatchTask (void);       //собсна сам диспетчер и запуск задачи по флагу
+extern void Idle();
 
