@@ -1,22 +1,24 @@
 #include "automate.h"
 extern uint16_t timerFunction;
 //TODO: переключатель по таймеру , обнуление счетчиков при остановке, блокировка ручного управления и наоборот
-
+//TODO: неплохо было бы впилить таблицу , чтоб по диаграмме можно было функции пускать :)
 void StateAutomate(){
 
     if (flags.State_Automate==1){
                 flags.State_Automate=0;
     switch (KeyCurrentCode){
         case 0:break;
-        case 1: AddTask(Supply_sw,Fire_sw,1000,1000,0);break;     //3 кнопка подачи
-        case 2: AddTask(Fire_sw,Idle,100,0,0); break;     //4 кнопка горелки
+        case 1: ResetTask(FuncINDTime);
+                AddTask(Supply_sw,AddCurrentTime,100,2000,0);break;     //3 кнопка подачи
+        case 2: ResetTask(FuncINDTime);
+                AddTask(Fire_sw,AddCurrentTime,100,2000,0); break;     //4 кнопка горелки
         case 3: //ResetTask(FuncINDTime);
                 AddTask(Timer_sw,Idle,100,0,0);
                 break;     //1 кнопка старт/стоп счетчика
         case 4: ResetTask(FuncINDTime);
-                AddTask(Furnance_sw,AddCurrentTime,100,2500,0);break;     //5 кнопка трубы
-        case 5: ResetTask(FuncINDTime);
-               // IND_OutputFormatChar("AVTO",0,1);
+                AddTask(Furnance_sw,AddCurrentTime,100,2000,0);break;     //5 кнопка трубы
+        case 5: //ResetTask(FuncINDTime);
+                IND_OutputFormatChar("AVTO",0,1);
                 break;     //2 кнопка авто вкл/выкл
 //        case 6: IND_OutputFormat(KeyCurrentCode, 5,  5,  3);break;     //----- не подключены кнопки
 //        case 7: IND_OutputFormat(KeyCurrentCode, 5,  5,  3);break;     //-----
@@ -42,7 +44,7 @@ void StateAutomate(){
 }
 
 void Timer_sw(){
-                IND_OutputFormatChar("CTAP",0,5);
+                IND_OutputFormatChar("CTAP",0,1);
                 if (!flags.SupplyAuto){
                     flags.SupplyAuto=1;
                     flags.SupplyManual=0;
@@ -51,7 +53,7 @@ void Timer_sw(){
 }
 
 void Supply_sw(){
-            IND_OutputFormatChar(" POD",0,5);
+            IND_OutputFormatChar(" POD",0,1);
         //*
                 if (flags.SupplyManual){
                     flags.SupplyManual=0;
@@ -100,7 +102,7 @@ void ToggleBitTruba(){
 
 
 void Furnance_sw(){
-                IND_OutputFormatChar("TPUB",0,5);
+                IND_OutputFormatChar("TPUB",0,1);
                 if (flags.Furnace){
                     flags.Furnace=0;
                     CB(C,5);
@@ -112,7 +114,7 @@ void Furnance_sw(){
 }
 
 void Fire_sw(){
-            IND_OutputFormatChar("_GOP",0,5);
+            IND_OutputFormatChar("_GOP",0,1);
                 if (flags.Fire){
                     flags.Fire=0;
                     CB(C,4);

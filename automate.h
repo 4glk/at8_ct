@@ -28,3 +28,14 @@ void Fire_sw();
 void Supply_sw();
 void Timer_sw();
 //extern void AddTask (void (*taskfunc)(void),void (*nextfunc)(void), u16 taskdelay, u16 taskperiod,u16 taskruns);
+
+//ругается на точто объявил как функции в структуре
+/*
+typedef struct {
+    uint16_t tralala;
+    void Furnance(void);
+    void Supply();
+    void Fire();
+    void Timer();
+}sw;
+//*/
