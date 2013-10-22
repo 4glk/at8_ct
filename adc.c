@@ -2,22 +2,8 @@
 //TODO: добавить программные фильтры , типа среднего арефметического (прикрутить пашгановский)
 
 ISR (ADC_vect){
-    AdcMean();
-	//ADMUX  |= (0 << MUX3) | (1 << MUX2) | (1 << MUX1) | (0 << MUX0);adc6=ADCW;
-	//ADMUX  |= (0 << MUX3) | (1 << MUX2) | (1 << MUX1) | (1 << MUX0);adc7=ADCW;
-	/*
-if (ADMUX==6){
-		ADMUX=7; // Перекючить вход ADC6
-		adc6=ADCW/10; // снять показания в adc7
-		ADCSRA|=0x40;// // Начать следующее преобразоание (1<<ADSC)
-		}
-
-	else {
-		ADMUX=6; // Перекючить вход ADC7
-		adc7=ADCW/10*60; // снять показания ADC6
-		ADCSRA|=0x40; // Начать следующее преобразоание (1<<ADSC)
-	}
-	//*/
+    AddTask(AdcMean,Idle,100,0,0);   //отошлю в диспетчер гы гы , главное чтоб он успевал отработать , до того как новое придет
+ //   AdcMean();  //медленный диспетчер может засраться (
 }
 
 void AdcTaking(){
@@ -26,39 +12,33 @@ void AdcTaking(){
 
 void AdcMean(){
     static uint8_t counti = 0;
-//    uint16_t adcTemp=0;
-//    uint16_t adc_buf;
- //   uint16_t adc_result;
-//    adcTemp = ADCL;
-//    adcTemp |=(ADCH<<8);
-//    adc_buf+=adcTemp;
         ADCSRA|=(1<<ADSC);
       if (counti!=0) adc_buf+=ADCW; //опять костыли (((
       counti++;
-//    if (counti==8)
-//   одно значение попадает в другое ((( из за того что мукс переключается в след прерывании, а значение берет еще здесь (
+
     if (counti == 9){
         adc_result = (adc_buf>>3);
- //       adc_result = (adc_buf/8);
         adc_buf = 0;
         counti = 0;
         if (ADMUX==6){
+            if (adc6!=adc_result);
             adc6=adc_result;
+            ResetTask(FuncINDTime);
+            AddTask(ShowAdc6,FuncINDTime,50,1500,0);
             ADMUX=7;
-         //   ADCSRA|=(1<<ADSC);
-
-        }//*
+        }
         else {
-            adc7=adc_result*10;
+           // adc7=adc_result*10;
+            if (adc7!=adc_result);
+            adc7=adc_result;
+            ResetTask(FuncINDTime);
+            AddTask(ShowAdc7,FuncINDTime,50,1500,0);
             ADMUX=6;
-         //   ADCSRA|=(1<<ADSC);
-        }//*/
+        }
     }
- // ADCSRA |= (1<<ADSC);
- //   adc_buf+=ADCW;
-  //  counti++;
-
 }
+
+
 
 void InitADC(){
 //	cli();

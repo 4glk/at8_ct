@@ -77,7 +77,8 @@ void AddCurrentTime(){
 }
 
 void FuncINDTime(){
-    IND_Time(CurrentTime,5);
+    IND_Time(TimeSupply,5);
+    IND_Time(TimeStop,1);
 }
 
 void FuncINDOutput(){
@@ -117,6 +118,16 @@ void Fire_sw(){
                     SB(C,4);
                 }
                 KeyCurrentCode=0;
+}
+
+void ShowAdc6(){
+    IND_Time(adc6,5);
+//    IND_Time(adc7,1);
+}
+
+void ShowAdc7(){
+ //   IND_Time(adc6,5);
+    IND_Time(adc7,1);
 }
 
 //TODO: display handler , что показывать , сколько показывать , как показывать :)
