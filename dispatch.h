@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include "macros.h"
 
+#pragma once
 /// Типы данных //
 typedef unsigned char u8;
 typedef unsigned int u16;

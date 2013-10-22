@@ -20,6 +20,10 @@
 // а то циклится родимая в теле переключателя на антидребезге
 
 // тоже самое для порта C
+//#define FURNANCE_PIN(port,bit) (C,5)
+//#define FIRE_PIN(port,bit) (C,4)
+//#define SUPPLY C, 3
+//#define TIMER
 
 #define SBC(x) (PORTC|=(1<<x))		//setbit
 #define CBC(x)	(PORTC&= ~(1<<x))	//clearbit

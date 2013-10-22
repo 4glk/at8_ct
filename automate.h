@@ -3,7 +3,7 @@
 //#include <stdbool.h>
 #include "kbd.h"
 #include "indicator.h"
-//#include "macros.h"
+#include "macros.h"
 
 extern uint16_t timer2;
 extern uint16_t NextState;

@@ -55,20 +55,20 @@ void Timer_sw(){
 void Supply_sw(){
             IND_OutputFormatChar(" POD",0,1);
         //*
-                if (flags.SupplyManual){
-                    flags.SupplyManual=0;
+                if (CH(C,3)){
+                 //   flags.SupplyManual=0;
                     CB(C,3);
                 }else {
-                    flags.SupplyManual=1;
+                //    flags.SupplyManual=1;
                     SB(C,3);
                 }
         //*/
                 timer2=0;
                 timerFunction=timer2+1;
                 NextState=2;
-                flags.NextState=1;
+          //      flags.NextState=1;
                 timer2_works=1000;
-                KeyCurrentCode=0;
+         //       KeyCurrentCode=0;
 
 }
 
@@ -94,20 +94,14 @@ void Idle(){
 }
 //*/
 
-void ToggleBitTruba(){
-    TB(C,5);
-    IND_Output(1111,1);
-}
-
-
 
 void Furnance_sw(){
                 IND_OutputFormatChar("TPUB",0,1);
-                if (flags.Furnace){
-                    flags.Furnace=0;
+                if (CH(C,5)){
+          //          flags.Furnace=0;
                     CB(C,5);
                 }else {
-                    flags.Furnace=1;
+          //          flags.Furnace=1;
                     SB(C,5);
                 }
                 KeyCurrentCode=0;
@@ -115,11 +109,11 @@ void Furnance_sw(){
 
 void Fire_sw(){
             IND_OutputFormatChar("_GOP",0,1);
-                if (flags.Fire){
-                    flags.Fire=0;
+                if (CH(C,4)){
+            //        flags.Fire=0;
                     CB(C,4);
                 }else {
-                    flags.Fire=1;
+            //        flags.Fire=1;
                     SB(C,4);
                 }
                 KeyCurrentCode=0;
