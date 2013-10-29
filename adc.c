@@ -15,7 +15,7 @@ void AdcMean(){
         ADCSRA|=(1<<ADSC);
       if (counti!=0) adc_buf+=ADCW; //опять костыли (((
       counti++;
-
+//TODO:шатает ацп, исправить
     if (counti == 9){
         adc_result = (adc_buf>>3);
         adc_buf = 0;
