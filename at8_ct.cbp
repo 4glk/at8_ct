@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="mrg_at8ct" />
+		<Option title="at8_ct" />
 		<Option pch_mode="2" />
 		<Option compiler="avr-gcc" />
 		<Build>
