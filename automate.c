@@ -8,25 +8,26 @@ void StateAutomate(){
                 flags.State_Automate=0;
     switch (KeyCurrentCode){
         case 0:break;
-        case 1: ResetTask(FuncINDTime);
-                AddTask(Supply_sw,AddCurrentTime,100,2000,0);break;     //3 кнопка подачи
-        case 2: ResetTask(FuncINDTime);
-                AddTask(Fire_sw,AddCurrentTime,100,2000,0); break;     //4 кнопка горелки
+        case 1: //ResetTask(FuncINDTime);
+                AddTask(Supply_sw,100);break;     //3 кнопка подачи
+        case 2:// ResetTask(FuncINDTime);
+                AddTask(Fire_sw,100); break;     //4 кнопка горелки
         case 3: //ResetTask(FuncINDTime);
-                AddTask(Timer_sw,Idle,100,0,0);
+                AddTask(Timer_sw,100);
                 break;     //1 кнопка старт/стоп счетчика
-        case 4: ResetTask(FuncINDTime);
-                AddTask(Furnance_sw,AddCurrentTime,100,2000,0);break;     //5 кнопка трубы
+        case 4: //ResetTask(FuncINDTime);
+                AddTask(Furnance_sw,100);break;     //5 кнопка трубы
         case 5: //ResetTask(FuncINDTime);
                 IND_OutputFormatChar("AVTO",0,1);
                 break;     //2 кнопка авто вкл/выкл
 //        case 6: IND_OutputFormat(KeyCurrentCode, 5,  5,  3);break;     //----- не подключены кнопки
 //        case 7: IND_OutputFormat(KeyCurrentCode, 5,  5,  3);break;     //-----
  //       case 8: IND_OutputFormat(55, 5,  5,  3);break;          //долгое нажатие нуля :)
-        case 9: ResetTask(FuncINDTime);break;     // 3
+        case 9: //ResetTask(FuncINDTime);
+                break;     // 3
         case 10: IND_OutputFormatChar("ECT",0,0);break;                        //4
-        case 11: AddTask(Furnance_sw,Idle,250,0,0) ;break;                        //1
-        case 12: AddTask(FuncINDOutput,Idle,250,0,1000);break;//5
+        case 11: AddTask(Furnance_sw,250) ;break;                        //1
+        case 12: AddTask(FuncINDOutput,250);break;//5
         case 13: NextState=1;
                 flags.NextState=1;
                 IND_OutputFormatChar("ECT",0,1);
@@ -73,7 +74,7 @@ void Supply_sw(){
 }
 
 void AddCurrentTime(){
-    AddTask(FuncINDTime,Idle,250,0,0xffff);
+    AddTask(FuncINDTime,250);
 }
 
 void FuncINDTime(){

@@ -1,7 +1,8 @@
 #include "dispatch.h"
 
 //TODO: прикрутить диспетчер
-//чтобы передать параметры передаваемой функции нужно указать их тип для начала
+// если такая функция уже есть добавить ей время
+// чтобы передать параметры передаваемой функции нужно указать их тип для начала
 // а потом уже мутить перегрузку и шаблоны...
 // в голове пока крутится обратный вызов шаблона функции , которая по перегрузке выберет нужную функцию или где то так
 // другой вариант это куча костылей на каждую функцию , получится слишком громоздко , но зато для меня проще в реализации
@@ -12,16 +13,30 @@ void AddTask (void (*taskfunc)(void),void (*nextfunc)(void), uint16_t taskdelay,
    u8 position=0;
    while (((TaskArray[n].pfunc!=0)||(TaskArray[n].delay!=0))&&(TaskArray[n].delay<=((taskdelay==0)?(++taskdelay):(taskdelay))&&(n < MAXnTASKS)))n++;
     position=n;
+//    while ((((TaskArray[n].pfunc!=(taskfunc))&&(TaskArray[n].pfunc!=0))||(TaskArray[n].delay!=0))&&(TaskArray[n].delay<=((taskdelay==0)?(++taskdelay):(taskdelay))&&(n < MAXnTASKS)))n++;
+//    position=n;
+
+
    while ((TaskArray[n].pfunc != 0) && (TaskArray[n].delay!=0) && (n < MAXnTASKS))n++;
    for (/*.*/;n>position;n--){
         TaskArray[n]=TaskArray[n-1];
    }
+  //      if ((TaskArray[position].pfunc==(taskfunc))){// если есть уже такая функция в списке , то добавляем ей время
+ //       TaskArray[position].pfunc = taskfunc;
+  //      TaskArray[position].delay += taskdelay;
+  //      TaskArray[position].nextdelay = nextdelay;  // стал не нужен , все переместилось в таскранс
+ //       TaskArray[position].run = 0;
+ //       TaskArray[position].numRun = taskruns;
+  //      TaskArray[position].nextfunc = nextfunc; //  вызывает следующую ф-ию с параметрами предыдущей :(
+
+  //      }else {
         TaskArray[position].pfunc = taskfunc;
         TaskArray[position].delay = taskdelay;
         TaskArray[position].nextdelay = nextdelay;  // стал не нужен , все переместилось в таскранс
         TaskArray[position].run = 0;
         TaskArray[position].numRun = taskruns;
         TaskArray[position].nextfunc = nextfunc; //  вызывает следующую ф-ию с параметрами предыдущей :(
+  //      }
 }
 
 

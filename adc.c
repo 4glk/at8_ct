@@ -2,7 +2,7 @@
 //TODO: добавить программные фильтры , типа среднего арефметического (прикрутить пашгановский)
 
 ISR (ADC_vect){
-    AddTask(AdcMean,Idle,100,0,0);   //отошлю в диспетчер гы гы , главное чтоб он успевал отработать , до того как новое придет
+    AddTask(AdcMean,100);   //отошлю в диспетчер гы гы , главное чтоб он успевал отработать , до того как новое придет
  //   AdcMean();  //медленный диспетчер может засраться (
 }
 
@@ -23,19 +23,19 @@ void AdcMean(){
         if (ADMUX==6){
             if (adc6!=adc_result);
             adc6=adc_result;
-            ResetTask(FuncINDTime);
-            AddTask(ShowAdc6,FuncINDTime,50,1500,0);
+           // ResetTask(FuncINDTime);
+            AddTask(ShowAdc6,50);
             ADMUX=7;
         }
         else {
            // adc7=adc_result*10;
             if (adc7!=adc_result);
             adc7=adc_result;
-            ResetTask(FuncINDTime);
-            AddTask(ShowAdc7,FuncINDTime,50,1500,0);
+          //  ResetTask(FuncINDTime);
+            AddTask(ShowAdc7,50);
             ADMUX=6;
         }
-    }
+    }    AddTask(AdcMean,100);
 }
 
 

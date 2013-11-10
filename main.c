@@ -11,7 +11,7 @@
 #include "automate.h"   // файл конечного автомата , скоро наверное будет не нужен
 #include "timer.h"      // файл таймеров
 #include "compilers.h"  //откудато зачемто откручено , с чипэнабла макрос под разные компиляторы
-#include "dispatch.h"   //диспетчер
+#include "sheduler/dispatch.h"   //диспетчер
 //TODO: необходимо меню или событийная система
 uint16_t Time=0;
 uint16_t FastTime=0;
@@ -53,12 +53,12 @@ int main (void)
     flags.RunFlag=1;
 //    KeyCode=0;
     //добавляем задачи
-    AddTask(IND_Update,Idle,5,0,0xffff);
-    AddTask(KeyScan,Idle,25,0,0xffff);
-    AddTask(FuncINDTime,Idle,250,0,0xffff);
+    AddTask(IND_Update,5);
+    AddTask(KeyScan,25);
+    AddTask(FuncINDTime,250);
 //    AddTask(FuncINDOutput,50,50);
 //    AddTask(IND_Output(1234,1));
-    AddTask(StateAutomate,Idle,50,0,0xffff);
+    AddTask(StateAutomate,50);
 
     sei();
     while(1){
