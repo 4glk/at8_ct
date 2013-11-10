@@ -161,4 +161,7 @@ void IND_RunString(char ch_string,uint8_t speed,uint8_t field,uint8_t amount,uin
    @return обновление буффера индикатора
 */
 void IND_Time(uint16_t CurrentTime,uint8_t position);
+
+
+extern void AddTask (void (*taskfunc)(void), uint16_t taskdelay);
 #endif //INDICATOR_H

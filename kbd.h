@@ -12,4 +12,5 @@ uint16_t i;
 extern int KeyCurrentCode;
 //extern void AddTask (void (*taskfunc)(void), u16 taskdelay, u16 taskperiod);
 extern void StateAutomate();
+extern void AddTask (void (*taskfunc)(void), uint16_t taskdelay);
 //*(KeyCodePointer) = &KeyCurrentCode;

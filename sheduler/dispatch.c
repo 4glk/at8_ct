@@ -8,15 +8,14 @@ void AddTask (void (*taskfunc)(void), uint16_t taskdelay){
     position=n;
    while ((TaskArray[n].pfunc != 0) && (TaskArray[n].countdown!=0) && (n < MAXnTASKS))n++;
 
-   for (/*.*/;n>position;n--){TaskArray[n]=TaskArray[n-1];}
-
-        if ((TaskArray[position].pfunc==(taskfunc))){// если есть уже така€ функци€ в списке , то добавл€ем ей врем€
-            TaskArray[position].countdown += taskdelay;
+        if ((TaskArray[position-1].pfunc==(taskfunc))){// если есть уже така€ функци€ в списке , то добавл€ем ей врем€
+            TaskArray[position-1].countdown += taskdelay;
         }else {
+        for (/*.*/;n>position;n--){TaskArray[n]=TaskArray[n-1];}
         TaskArray[position].pfunc = taskfunc;
         TaskArray[position].countdown = taskdelay;
         }
-       if (n==0){ delay_time=TaskArray[0].countdown;dt=delay_time;}
+       if (n==0){ delay_time=TaskArray[0].countdown;dt=delay_time;} //если в очереди пусто вроде
 // при добавлении нужно обновл€ть счетчик, тк там старое значение
 }
 
@@ -159,7 +158,7 @@ ISR(TIMER2_OVF_vect){
 
 void InitScheduler (void){
    uint8_t i;
-   TCCR2 |= (1<<CS02)|(0<<CS01)|(1<<CS00);   // устанавливаем прескалер - 1024(101) 256(100) 64(011) 8(010) 0(001) off(000)
+   TCCR2 |= (1<<CS02)|(0<<CS01)|(0<<CS00);   // устанавливаем прескалер - 1024(101) 256(100) 64(011) 8(010) 0(001) off(000)
    TIFR = 1<<TOV0;   // очищаем флаг прерывани€ таймера “0
    TIMSK |= 1<<TOIE2;   // разрешаем прерывание по переполнению
    TCNT2 = StartFrom;    // загружаем начальное зн. в счетный регистр

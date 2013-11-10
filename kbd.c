@@ -60,7 +60,7 @@ void KeyState(){
 void KeyScan(){
   if(~PINC&0b00000111){ // обработчик нажатия
     flags.KeyReleased=0;
-        if (++i > 25 ) {      //короткое нажатие 100-250 миллисекунд
+        if (++i > 5 ) {      //короткое нажатие 100-250 миллисекунд
             if (!flags.KeyPressed){flags.KeyPressed = 1;flags.KeyPin=(~PINC&0b00000111);}
                if ( i > 100 ){  //длинное нажатие 1-3 секунды
                  if (!flags.KeyPushLong){
@@ -76,4 +76,5 @@ void KeyScan(){
         if (!flags.KeyReleased) {flags.KeyReleased=1;}
         KeyState();
     }
+        AddTask(KeyScan,25);
 }

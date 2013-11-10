@@ -41,10 +41,11 @@ void StateAutomate(){
         default:break;
     }
     }
-
+    AddTask(StateAutomate,50);
 }
 
 void Timer_sw(){
+                    AddTask(FuncINDTime,1500);
                 IND_OutputFormatChar("CTAP",0,1);
                 if (!flags.SupplyAuto){
                     flags.SupplyAuto=1;
@@ -70,6 +71,7 @@ void Supply_sw(){
           //      flags.NextState=1;
                 timer2_works=1000;
          //       KeyCurrentCode=0;
+             AddTask(FuncINDTime,1500);
 
 }
 
@@ -80,6 +82,7 @@ void AddCurrentTime(){
 void FuncINDTime(){
     IND_Time(TimeSupply,5);
     IND_Time(TimeStop,1);
+    AddTask(FuncINDTime,250);
 }
 
 void FuncINDOutput(){
@@ -98,6 +101,7 @@ void Idle(){
 
 
 void Furnance_sw(){
+           AddTask(FuncINDTime,1500);
                 IND_OutputFormatChar("TPUB",0,1);
                 if (CH(C,5)){
           //          flags.Furnace=0;
@@ -107,9 +111,11 @@ void Furnance_sw(){
                     SB(C,5);
                 }
                 KeyCurrentCode=0;
+
 }
 
 void Fire_sw(){
+         AddTask(FuncINDTime,1500);
             IND_OutputFormatChar("_GOP",0,1);
                 if (CH(C,4)){
             //        flags.Fire=0;
@@ -119,16 +125,21 @@ void Fire_sw(){
                     SB(C,4);
                 }
                 KeyCurrentCode=0;
+
 }
 
 void ShowAdc6(){
+    AddTask(FuncINDTime,500);
     IND_Time(adc6,5);
+
 //    IND_Time(adc7,1);
 }
 
 void ShowAdc7(){
  //   IND_Time(adc6,5);
+         AddTask(FuncINDTime,500);
     IND_Time(adc7,1);
+
 }
 
 //TODO: display handler , что показывать , сколько показывать , как показывать :)
