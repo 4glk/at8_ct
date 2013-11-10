@@ -1,6 +1,6 @@
 #ifndef MACROS_
 #define MACROS_
-
+#define StartFrom  0xD3
 /*************управление портами
 //старая версия
 #define SB(x,y) (x|=(1<<y))		//setbit (PORTx,y)
