@@ -55,6 +55,7 @@ void Timer_sw(){
 }
 
 void Supply_sw(){
+             AddTask(FuncINDTime,1500);
             IND_OutputFormatChar(" POD",0,1);
         //*
                 if (CH(C,3)){
@@ -71,7 +72,7 @@ void Supply_sw(){
           //      flags.NextState=1;
                 timer2_works=1000;
          //       KeyCurrentCode=0;
-             AddTask(FuncINDTime,1500);
+
 
 }
 
@@ -129,7 +130,7 @@ void Fire_sw(){
 }
 
 void ShowAdc6(){
-    AddTask(FuncINDTime,500);
+    AddTask(FuncINDTime,1000);
     IND_Time(adc6,5);
 
 //    IND_Time(adc7,1);
@@ -137,7 +138,7 @@ void ShowAdc6(){
 
 void ShowAdc7(){
  //   IND_Time(adc6,5);
-         AddTask(FuncINDTime,500);
+         AddTask(FuncINDTime,1000);
     IND_Time(adc7,1);
 
 }
