@@ -40,7 +40,6 @@
 			<Add option="-Wl,-Map=$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).map,--cref" />
 		</Linker>
 		<ExtraCommands>
-			<Add after="avr-size --mcu=atmega8 --format=avr $(TARGET_OUTPUT_FILE)" />
 			<Add after='cmd /c &quot;avr-objdump -h -S $(TARGET_OUTPUT_FILE) &gt; $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lss&quot;' />
 			<Add after="avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).hex" />
 			<Add after="avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).eep" />
@@ -54,6 +53,7 @@
 			<Add after="avr-objcopy --no-change-warnings -j .lock --change-section-lma .lock=0 -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lock" />
 			<Add after="avr-objcopy --no-change-warnings -j .signature --change-section-lma .signature=0 -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).sig" />
 			<Add after="avr-objcopy --no-change-warnings -j .fuse --change-section-lma .fuse=0 -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).fuse" />
+			<Add after="avr-size --mcu=atmega8 --format=avr $(TARGET_OUTPUT_FILE)" />
 		</ExtraCommands>
 		<Unit filename="adc.c">
 			<Option compilerVar="CC" />
@@ -64,10 +64,6 @@
 		</Unit>
 		<Unit filename="automate.h" />
 		<Unit filename="compilers.h" />
-		<Unit filename="dispatch.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="dispatch.h" />
 		<Unit filename="fuse.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -86,6 +82,10 @@
 		<Unit filename="mrg_at8ct.DSN" />
 		<Unit filename="mrg_at8ct.cbp" />
 		<Unit filename="scmRTOS_bitmacros.h" />
+		<Unit filename="sheduler/dispatch.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sheduler/dispatch.h" />
 		<Unit filename="spi.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -34,6 +34,14 @@ int KeyCurrentCode;
 /***Главная функция***/
 int main (void)
 {
+        AddTask(IND_Update,5);
+        AddTask(IND_Update,15);
+            AddTask(IND_Update,25);
+        AddTask(IND_Update,35);
+                AddTask(IND_Update,45);
+        AddTask(IND_Update,55);
+            AddTask(IND_Update,65);
+        AddTask(IND_Update,75);
 	InitTimer();
 	InitADC();
     InitScheduler();
@@ -54,12 +62,13 @@ int main (void)
 //    KeyCode=0;
     //добавляем задачи
     AddTask(IND_Update,5);
+        AddTask(IND_Update,5);
     AddTask(KeyScan,25);
     AddTask(FuncINDTime,250);
 //    AddTask(FuncINDOutput,50,50);
 //    AddTask(IND_Output(1234,1));
     AddTask(StateAutomate,50);
-
+    AddTask(FuncINDTime,250);
     sei();
     while(1){
 
