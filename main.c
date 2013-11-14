@@ -31,6 +31,7 @@ uint16_t timer2_works=0;
 uint16_t timerFunction=0;
 uint16_t NextState=0;
 int KeyCurrentCode;
+extern void doubleCountdown();
 //template <typename AnyType>;
 //const AnyType Sum(const AnyType &a, const AnyType &b,const AnyType &c)
 //{
@@ -69,7 +70,12 @@ int main (void)
  //   AddTask(FuncINDTime,250);
     sei();
     while(1){
-
+  /*//попытка запуска извращенческой переключалки по флагу переполнения таймера
+        if (!(TIFR&(1<<TOV1))){
+            AddTask(doubleCountdown,5);
+           // (TIFR |= (1<<TOV1));
+         //   (TIFR&= ~(1<<TOV1));
+        }   //*/
         DispatchTask();
 
     }return 0;

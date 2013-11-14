@@ -27,7 +27,7 @@ void StateAutomate(){
                 break;     // 3
         case 10: IND_OutputFormatChar("ECT",0,0);break;                        //4
         case 11: AddTask(Furnance_sw,250) ;break;                        //1
-        case 12: AddTask(FuncINDOutput,250);break;//5
+        case 12: break;//5
         case 13: NextState=1;
                 flags.NextState=1;
                 IND_OutputFormatChar("ECT",0,1);
@@ -57,6 +57,11 @@ void Timer_sw(){
 void Supply_sw(){
              AddTask(FuncINDTime,1500);
             IND_OutputFormatChar(" POD",0,1);
+            if (flags.SupplyAuto==1){
+              flags.SupplyAuto=0;
+                TimeSupply=1;
+                TimeStop=1;
+            }
         //*
                 if (CH(C,3)){
                  //   flags.SupplyManual=0;
@@ -66,32 +71,21 @@ void Supply_sw(){
                     SB(C,3);
                 }
         //*/
-                timer2=0;
-                timerFunction=timer2+1;
-                NextState=2;
+         //       timer2=0;
+         //       timerFunction=timer2+1;
+         //       NextState=2;
           //      flags.NextState=1;
-                timer2_works=1000;
+          //      timer2_works=1000;
          //       KeyCurrentCode=0;
 
 
 }
 
-void AddCurrentTime(){
-    AddTask(FuncINDTime,250);
-}
 
 void FuncINDTime(){
     IND_Time(TimeSupply,5);
     IND_Time(TimeStop,1);
     AddTask(FuncINDTime,250);
-}
-
-void FuncINDOutput(){
-    IND_Output(1234,1);
-}
-
-void ToggleSupplyManual(){
-    TB(C,3);
 }
 
 //*
