@@ -1,5 +1,5 @@
 #include "automate.h"
-extern uint16_t timerFunction;
+
 //TODO: переключатель по таймеру , обнуление счетчиков при остановке, блокировка ручного управления и наоборот
 //TODO: неплохо было бы впилить таблицу , чтоб по диаграмме можно было функции пускать :)
 void StateAutomate(){
@@ -28,12 +28,12 @@ void StateAutomate(){
         case 10: IND_OutputFormatChar("ECT",0,0);break;                        //4
         case 11: AddTask(Furnance_sw,250) ;break;                        //1
         case 12: break;//5
-        case 13: NextState=1;
-                flags.NextState=1;
-                IND_OutputFormatChar("ECT",0,1);
-                timer2=0;
-                timer2_works=500;
-                timerFunction=timer2+1;
+        case 13: //NextState=1;
+                //flags.NextState=1;
+                //IND_OutputFormatChar("ECT",0,1);
+                //timer2=0;
+                //timer2_works=500;
+                //timerFunction=timer2+1;
                 break;    //2
 //        case 14: IND_OutputFormat(KeyCurrentCode, 5,  5,  3);break;    // не подключены кнопки
 //        case 15: IND_OutputFormat(KeyCurrentCode, 5,  5,  3);break;    //------
@@ -44,13 +44,18 @@ void StateAutomate(){
     AddTask(StateAutomate,50);
 }
 
-void Timer_sw(){
+void Timer_sw(){    // при нажатии проверить включена ли подача и обнулить таймеры если выключаем
                     AddTask(FuncINDTime,1500);
                 IND_OutputFormatChar("CTAP",0,1);
                 if (!flags.SupplyAuto){
                     flags.SupplyAuto=1;
                     flags.SupplyManual=0;
-                }else flags.SupplyAuto=0;
+                }else {
+                    flags.SupplyAuto=0;
+                    CB(C,3);
+                  //  TimeStop=adc6;
+                  //  TimeSupply=adc7;
+                }
                 KeyCurrentCode=0;
 }
 
@@ -59,8 +64,8 @@ void Supply_sw(){
             IND_OutputFormatChar(" POD",0,1);
             if (flags.SupplyAuto==1){
               flags.SupplyAuto=0;
-                TimeSupply=1;
-                TimeStop=1;
+              //  TimeSupply=0;
+              //  TimeStop=0;
             }
         //*
                 if (CH(C,3)){
@@ -71,14 +76,6 @@ void Supply_sw(){
                     SB(C,3);
                 }
         //*/
-         //       timer2=0;
-         //       timerFunction=timer2+1;
-         //       NextState=2;
-          //      flags.NextState=1;
-          //      timer2_works=1000;
-         //       KeyCurrentCode=0;
-
-
 }
 
 

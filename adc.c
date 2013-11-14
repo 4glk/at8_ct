@@ -6,10 +6,6 @@ ISR (ADC_vect){
    // AdcMean();  //медленный диспетчер может засраться (
 }
 
-void AdcTaking(){
- //   AdcMean();
-}
-
 void AdcMean(){
     static uint8_t counti = 0;
         ADCSRA|=(1<<ADSC);

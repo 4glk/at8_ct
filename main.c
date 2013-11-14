@@ -20,16 +20,9 @@
 //функции автомата
 
 //TODO: необходимо меню или событийная система
-uint16_t Time=0;
-uint16_t FastTime=0;
-uint16_t i;
 uint16_t TimeStop=0;
 uint16_t TimeSupply=0;
 uint16_t CurrentTime=0;
-uint16_t timer2=0;
-uint16_t timer2_works=0;
-uint16_t timerFunction=0;
-uint16_t NextState=0;
 int KeyCurrentCode;
 extern void doubleCountdown();
 //template <typename AnyType>;
@@ -59,15 +52,12 @@ int main (void)
     flags.Furnace=0;        //(C,5)
     flags.NextState=0;
     flags.RunFlag=1;
-//    KeyCode=0;
-    //добавляем задачи
+    flags.TimerFlag=0;
     AddTask(IND_Update,10);
     AddTask(KeyScan,25);
     AddTask(FuncINDTime,250);
-//    AddTask(FuncINDOutput,50,50);
-//    AddTask(IND_Output(1234,1));
     AddTask(StateAutomate,50);
- //   AddTask(FuncINDTime,250);
+    AddTask(doubleCountdown,100);
     sei();
     while(1){
   /*//попытка запуска извращенческой переключалки по флагу переполнения таймера

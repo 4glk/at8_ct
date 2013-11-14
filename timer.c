@@ -7,37 +7,41 @@
 ISR( TIMER1_OVF_vect )  //на осциллограффе в протеусе ровно 1 сек ^^
 {
 	TCNT1=57724;
-	AddTask(doubleCountdown,5);
+    if (flags.SupplyAuto==1)flags.TimerFlag=1;
 }
 
 void doubleCountdown(){
 //TODO: разобраться с переменными времени , кажется что есть лишние , время состояний можно в ацп закинуть ,
 // а здесь просто присваивать
-if (flags.SupplyAuto==1){   //отправить в диспетчер наверное ... можно даже при хорошей настройке диспетчера
-if (CurrentTime!=0){        //отключить этот таймер
-		CurrentTime--;
-	}
-	else{
-		if (flags.ADC_Channel==0){
-			CurrentTime=adc6;
-			TimeSupply=CurrentTime+1;
-			flags.ADC_Channel=1;
-			SB(C,3);
-		}
-			else{
-			CurrentTime=adc7;
-			TimeStop=CurrentTime+1;
-			flags.ADC_Channel=0;
-			CB(C,3);
-		}
+if (flags.TimerFlag==1){
+    if (flags.SupplyAuto==1){   //отправить в диспетчер наверное ... можно даже при хорошей настройке диспетчера
+        if (CurrentTime!=0){        //отключить этот таймер
+                CurrentTime--;
+            }
+            else{
+                if (flags.ADC_Channel==0){
+                    CurrentTime=adc6;
+                    TimeSupply=CurrentTime+1;
+                    flags.ADC_Channel=1;
+                    SB(C,3);
+                    }
+                    else{
+                    CurrentTime=adc7;
+                    TimeStop=CurrentTime+1;
+                    flags.ADC_Channel=0;
+                    CB(C,3);
+            }
+        }
+    }
+    flags.TimerFlag=0;
 
-	}
+    if (flags.ADC_Channel==0) {TimeStop--;}
+        else {TimeSupply--;}
 
-if (flags.ADC_Channel==0) {TimeStop--;}
-	else {TimeSupply--;}
-}
+    }
 //*/
 
+    AddTask(doubleCountdown,100);
 }
 void InitTimer(){
 

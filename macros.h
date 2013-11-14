@@ -103,12 +103,13 @@ typedef struct { //булеановы переменные , зачем тратить на каждый флаг по байту 
   bool Furnace:1;         //флаг циркул€рной печи
   bool SupplyManual:1;
   bool SupplyAuto:1;          //флаг подачи
+  bool TimerFlag:1;
   bool ADC_Channel:1;      // канал ацп
   bool NextState:1;
   bool RunFlag:1;
  } PackedBool;
 PackedBool flags;
-int *KeyCodePointer;
+//int *KeyCodePointer;
 //*/
 
 
