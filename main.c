@@ -19,7 +19,6 @@
 //+кнопки
 //функции автомата
 
-//TODO: необходимо меню или событийная система
 uint16_t TimeStop=0;
 uint16_t TimeSupply=0;
 uint16_t CurrentTime=0;

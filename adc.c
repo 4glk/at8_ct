@@ -1,5 +1,4 @@
 #include "adc.h"
-//TODO: добавить программные фильтры , типа среднего арефметического (прикрутить пашгановский)
 
 ISR (ADC_vect){
     AddTask(AdcMean,100);   //отошлю в диспетчер гы гы , главное чтоб он успевал отработать , до того как новое придет
@@ -11,7 +10,6 @@ void AdcMean(){
         ADCSRA|=(1<<ADSC);
       if (counti!=0) adc_buf+=ADCW; //опять костыли (((
       counti++;
-//TODO:шатает ацп, исправить
     if (counti == 9){
         adc_result = (adc_buf>>3);
         adc_buf = 0;
@@ -19,6 +17,7 @@ void AdcMean(){
         if (ADMUX==6){
             if (adc6!=adc_result){
             adc6=adc_result;
+         //   TimeStop=adc6;
             AddTask(ShowAdc6,50);}
             ADMUX=7;
         }
@@ -26,6 +25,7 @@ void AdcMean(){
            // adc7=adc_result*10;
             if (adc7!=adc_result){
                 adc7=adc_result;
+             //   TimeSupply=adc7;
                 AddTask(ShowAdc7,50);}
                 ADMUX=6;
         }

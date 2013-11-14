@@ -1,39 +1,30 @@
 #include "automate.h"
 
 //TODO: переключатель по таймеру , обнуление счетчиков при остановке, блокировка ручного управления и наоборот
-//TODO: неплохо было бы впилить таблицу , чтоб по диаграмме можно было функции пускать :)
 void StateAutomate(){
 
     if (flags.State_Automate==1){
                 flags.State_Automate=0;
     switch (KeyCurrentCode){
         case 0:break;
-        case 1: //ResetTask(FuncINDTime);
-                AddTask(Supply_sw,100);break;     //3 кнопка подачи
-        case 2:// ResetTask(FuncINDTime);
-                AddTask(Fire_sw,100); break;     //4 кнопка горелки
-        case 3: //ResetTask(FuncINDTime);
-                AddTask(Timer_sw,100);
+        case 1: AddTask(Supply_sw,100);break;     //3 кнопка подачи
+        case 2: AddTask(Fire_sw,100); break;     //4 кнопка горелки
+        case 3: AddTask(Timer_sw,100);
                 break;     //1 кнопка старт/стоп счетчика
-        case 4: //ResetTask(FuncINDTime);
-                AddTask(Furnance_sw,100);break;     //5 кнопка трубы
-        case 5: //ResetTask(FuncINDTime);
-                IND_OutputFormatChar("AVTO",0,1);
+        case 4: AddTask(Furnance_sw,100);break;     //5 кнопка трубы
+        case 5: IND_OutputFormatChar("AVTO",0,1);
                 break;     //2 кнопка авто вкл/выкл
 //        case 6: IND_OutputFormat(KeyCurrentCode, 5,  5,  3);break;     //----- не подключены кнопки
 //        case 7: IND_OutputFormat(KeyCurrentCode, 5,  5,  3);break;     //-----
  //       case 8: IND_OutputFormat(55, 5,  5,  3);break;          //долгое нажатие нуля :)
         case 9: //ResetTask(FuncINDTime);
                 break;     // 3
-        case 10: IND_OutputFormatChar("ECT",0,0);break;                        //4
-        case 11: AddTask(Furnance_sw,250) ;break;                        //1
+        case 10:// IND_OutputFormatChar("ECT",0,0);
+                break;                        //4
+        case 11: AddTask(Furnance_sw,250) ;
+                break;                        //1
         case 12: break;//5
-        case 13: //NextState=1;
-                //flags.NextState=1;
-                //IND_OutputFormatChar("ECT",0,1);
-                //timer2=0;
-                //timer2_works=500;
-                //timerFunction=timer2+1;
+        case 13:
                 break;    //2
 //        case 14: IND_OutputFormat(KeyCurrentCode, 5,  5,  3);break;    // не подключены кнопки
 //        case 15: IND_OutputFormat(KeyCurrentCode, 5,  5,  3);break;    //------
@@ -46,15 +37,22 @@ void StateAutomate(){
 
 void Timer_sw(){    // при нажатии проверить включена ли подача и обнулить таймеры если выключаем
                     AddTask(FuncINDTime,1500);
-                IND_OutputFormatChar("CTAP",0,1);
                 if (!flags.SupplyAuto){
+                    IND_OutputFormatChar("CTAP",0,1);
                     flags.SupplyAuto=1;
-                    flags.SupplyManual=0;
+                  //  flags.SupplyManual=0;
+                    flags.ADC_Channel=1;
+                    CurrentTime=adc7;
+                    TimeStop=adc6;
+                    TimeSupply=adc7;
+                    SB(C,3);
                 }else {
+                    IND_OutputFormatChar("CTOP",0,1);
                     flags.SupplyAuto=0;
                     CB(C,3);
-                  //  TimeStop=adc6;
-                  //  TimeSupply=adc7;
+                    TimeStop=adc6;
+                    TimeSupply=adc7;
+                    CurrentTime=adc7;
                 }
                 KeyCurrentCode=0;
 }
@@ -64,10 +62,10 @@ void Supply_sw(){
             IND_OutputFormatChar(" POD",0,1);
             if (flags.SupplyAuto==1){
               flags.SupplyAuto=0;
-              //  TimeSupply=0;
-              //  TimeStop=0;
+                TimeSupply=adc7;
+                TimeStop=adc6;
+                CurrentTime=adc7;
             }
-        //*
                 if (CH(C,3)){
                  //   flags.SupplyManual=0;
                     CB(C,3);
@@ -75,7 +73,6 @@ void Supply_sw(){
                 //    flags.SupplyManual=1;
                     SB(C,3);
                 }
-        //*/
 }
 
 
@@ -84,13 +81,6 @@ void FuncINDTime(){
     IND_Time(TimeStop,1);
     AddTask(FuncINDTime,250);
 }
-
-//*
-void Idle(){
-
-}
-//*/
-
 
 void Furnance_sw(){
            AddTask(FuncINDTime,1500);
@@ -117,35 +107,15 @@ void Fire_sw(){
                     SB(C,4);
                 }
                 KeyCurrentCode=0;
-
 }
 
 void ShowAdc6(){
     AddTask(FuncINDTime,1000);
     IND_Time(adc6,5);
-
-//    IND_Time(adc7,1);
 }
 
 void ShowAdc7(){
- //   IND_Time(adc6,5);
-         AddTask(FuncINDTime,1000);
+    AddTask(FuncINDTime,1000);
     IND_Time(adc7,1);
 
 }
-
-//TODO: display handler , что показывать , сколько показывать , как показывать :)
-//обошел костылями диспетчера гы гы
-// и снятием циклических задач гы гы гы
-/*
-void DisplayHandler(){
-    switch(dispCode){
-        case 0 : break;     // очистить
-        case 1 : break;     // мигать
-        case 2 : break;     // показать недолго
-        case 3 : break;     // показывать долго
-        case 4 : break;     // показвать , пока не произойдет какое либо событие
-        default: break;
-    }
-}
-//*/

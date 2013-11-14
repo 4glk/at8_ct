@@ -10,3 +10,4 @@ uint16_t adc_buf;
 uint16_t adc_result;
 extern void AddTask (void (*taskfunc)(void), uint16_t taskdelay);
 extern void FuncINDTime();
+extern uint16_t TimeStop,TimeSupply;
