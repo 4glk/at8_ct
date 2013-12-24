@@ -1,7 +1,8 @@
 /***таймер-контроллер***/
-
+//#include <boost/lambda/lambda.hpp>
 #include <avr/io.h>
 #include <avr/interrupt.h>
+//#include <avrlib/encoder.h>
 //#include <util/delay.h>       //КЭП
 #include "macros.h"     //описание флагов и работа с битами
 #include "kbd.h"        //работа с клавиатурой
@@ -12,6 +13,8 @@
 #include "timer.h"      // файл таймеров
 #include "compilers.h"  //откудато зачемто откручено , с чипэнабла макрос под разные компиляторы
 #include "sheduler/dispatch.h"   //диспетчер
+//test
+// TODO: косяк с пашгановским драйвером в железе , рассмотреть частоту обновления буффера
 //TODO: осталось вроде только таймер допилить ну и основные функции
 //+ацп
 //таймер
@@ -52,7 +55,7 @@ int main (void)
     flags.NextState=0;
     flags.RunFlag=1;
     flags.TimerFlag=0;
-    AddTask(IND_Update,10);
+    AddTask(IND_Update,5);
     AddTask(KeyScan,25);
     AddTask(FuncINDTime,250);
     AddTask(StateAutomate,50);
