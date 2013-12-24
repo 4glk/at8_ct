@@ -28,7 +28,7 @@
 //#define IND_SPI_CONNECTION
 
 /*закомментировать, если используется поразрядная развертка*/
-#define IND_SCAN_SEGMENT
+//#define IND_SCAN_SEGMENT
 
 /*активный уровень сегмента 0 или 1*/
 #define IND_ACTIVE_LEVEL_SEG   0    //негатив

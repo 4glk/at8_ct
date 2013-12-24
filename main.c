@@ -55,7 +55,7 @@ int main (void)
     flags.NextState=0;
     flags.RunFlag=1;
     flags.TimerFlag=0;
-    AddTask(IND_Update,5);
+    AddTask(IND_Update,1);
     AddTask(KeyScan,25);
     AddTask(FuncINDTime,250);
     AddTask(StateAutomate,50);
