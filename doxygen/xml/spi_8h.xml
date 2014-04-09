@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.1.2">
+  <compounddef id="spi_8h" kind="file">
+    <compoundname>spi.h</compoundname>
+    <includes refid="compilers_8h" local="yes">compilers.h</includes>
+    <includedby refid="indicator_8h" local="yes">indicator.h</includedby>
+    <includedby refid="spi_8c" local="yes">spi.c</includedby>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <incdepgraph>
+      <node id="297">
+        <label>stdint.h</label>
+      </node>
+      <node id="295">
+        <label>spi.h</label>
+        <link refid="spi.h"/>
+        <childnode refid="296" relation="include">
+        </childnode>
+      </node>
+      <node id="296">
+        <label>compilers.h</label>
+        <link refid="compilers_8h"/>
+        <childnode refid="297" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="304">
+        <label>spi.c</label>
+        <link refid="spi_8c"/>
+      </node>
+      <node id="298">
+        <label>spi.h</label>
+        <link refid="spi.h"/>
+        <childnode refid="299" relation="include">
+        </childnode>
+        <childnode refid="304" relation="include">
+        </childnode>
+        <childnode refid="302" relation="include">
+        </childnode>
+      </node>
+      <node id="303">
+        <label>indicator.c</label>
+        <link refid="indicator_8c"/>
+      </node>
+      <node id="299">
+        <label>indicator.h</label>
+        <link refid="indicator_8h"/>
+        <childnode refid="300" relation="include">
+        </childnode>
+        <childnode refid="303" relation="include">
+        </childnode>
+        <childnode refid="302" relation="include">
+        </childnode>
+      </node>
+      <node id="302">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="301">
+        <label>automate.c</label>
+        <link refid="automate_8c"/>
+      </node>
+      <node id="300">
+        <label>automate.h</label>
+        <link refid="automate_8h"/>
+        <childnode refid="301" relation="include">
+        </childnode>
+        <childnode refid="302" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="spi_8h_1a6f5296638eb1632e342f63b7d9d5b635" prot="public" static="no">
+        <name>SPI_PORTX</name>
+        <initializer>PORTB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/spi.h" line="19" bodyfile="/home/geraki/mcu_dev/at8_ct/spi.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="spi_8h_1a292196e767158c66f03cbcc244fc802b" compoundref="spi_8c" startline="18" endline="28">SPI_Init</referencedby>
+        <referencedby refid="spi_8h_1a723a605b8afa759496ae2a9b5ad0453a" compoundref="spi_8c" startline="31" endline="37">SPI_WriteByte</referencedby>
+        <referencedby refid="spi_8h_1a3b99985602162e372c530ce03647c54d" compoundref="spi_8c" startline="41" endline="52">SPI_ReadByte</referencedby>
+        <referencedby refid="spi_8h_1a47b45aed3d09db2fcd47a4ead3a029f6" compoundref="spi_8c" startline="55" endline="63">SPI_WriteArray</referencedby>
+        <referencedby refid="spi_8h_1ac150ae8ca6f9510f924a67292b57fed3" compoundref="spi_8c" startline="66" endline="75">SPI_ReadArray</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spi_8h_1a21e12998291d444a3fc6e5e2911c981e" prot="public" static="no">
+        <name>SPI_DDRX</name>
+        <initializer>DDRB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/spi.h" line="20" bodyfile="/home/geraki/mcu_dev/at8_ct/spi.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="spi_8h_1a292196e767158c66f03cbcc244fc802b" compoundref="spi_8c" startline="18" endline="28">SPI_Init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spi_8h_1ab142cc77dfa97010c9d2b616d0992b64" prot="public" static="no">
+        <name>SPI_MISO</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/spi.h" line="22" bodyfile="/home/geraki/mcu_dev/at8_ct/spi.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="spi_8h_1a292196e767158c66f03cbcc244fc802b" compoundref="spi_8c" startline="18" endline="28">SPI_Init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spi_8h_1a7dbebab5f7dd57885adccf6711b13592" prot="public" static="no">
+        <name>SPI_MOSI</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/spi.h" line="23" bodyfile="/home/geraki/mcu_dev/at8_ct/spi.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="spi_8h_1a292196e767158c66f03cbcc244fc802b" compoundref="spi_8c" startline="18" endline="28">SPI_Init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spi_8h_1a750ca7c9b92cfc9e57272ff3a49db48b" prot="public" static="no">
+        <name>SPI_SCK</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/spi.h" line="24" bodyfile="/home/geraki/mcu_dev/at8_ct/spi.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="spi_8h_1a292196e767158c66f03cbcc244fc802b" compoundref="spi_8c" startline="18" endline="28">SPI_Init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spi_8h_1a81f0aae3c3a2adba06ac3b802b38915a" prot="public" static="no">
+        <name>SPI_SS</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/spi.h" line="25" bodyfile="/home/geraki/mcu_dev/at8_ct/spi.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="spi_8h_1a292196e767158c66f03cbcc244fc802b" compoundref="spi_8c" startline="18" endline="28">SPI_Init</referencedby>
+        <referencedby refid="spi_8h_1a723a605b8afa759496ae2a9b5ad0453a" compoundref="spi_8c" startline="31" endline="37">SPI_WriteByte</referencedby>
+        <referencedby refid="spi_8h_1a3b99985602162e372c530ce03647c54d" compoundref="spi_8c" startline="41" endline="52">SPI_ReadByte</referencedby>
+        <referencedby refid="spi_8h_1a47b45aed3d09db2fcd47a4ead3a029f6" compoundref="spi_8c" startline="55" endline="63">SPI_WriteArray</referencedby>
+        <referencedby refid="spi_8h_1ac150ae8ca6f9510f924a67292b57fed3" compoundref="spi_8c" startline="66" endline="75">SPI_ReadArray</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="spi_8h_1a292196e767158c66f03cbcc244fc802b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SPI_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>SPI_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/spi.h" line="30" bodyfile="/home/geraki/mcu_dev/at8_ct/spi.c" bodystart="18" bodyend="28"/>
+        <references refid="spi_8h_1a21e12998291d444a3fc6e5e2911c981e" compoundref="spi_8h" startline="20">SPI_DDRX</references>
+        <references refid="spi_8h_1a7dbebab5f7dd57885adccf6711b13592" compoundref="spi_8h" startline="23">SPI_MOSI</references>
+        <references refid="spi_8h_1a750ca7c9b92cfc9e57272ff3a49db48b" compoundref="spi_8h" startline="24">SPI_SCK</references>
+        <references refid="spi_8h_1a81f0aae3c3a2adba06ac3b802b38915a" compoundref="spi_8h" startline="25">SPI_SS</references>
+        <references refid="spi_8h_1ab142cc77dfa97010c9d2b616d0992b64" compoundref="spi_8h" startline="22">SPI_MISO</references>
+        <references refid="spi_8h_1a6f5296638eb1632e342f63b7d9d5b635" compoundref="spi_8h" startline="19">SPI_PORTX</references>
+        <referencedby refid="indicator_8h_1a380138acbd9424c5d40301e35549ba9a" compoundref="indicator_8c" startline="178" endline="196">IND_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="spi_8h_1a723a605b8afa759496ae2a9b5ad0453a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SPI_WriteByte</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>SPI_WriteByte</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/spi.h" line="33" bodyfile="/home/geraki/mcu_dev/at8_ct/spi.c" bodystart="31" bodyend="37"/>
+        <references refid="spi_8h_1a6f5296638eb1632e342f63b7d9d5b635" compoundref="spi_8h" startline="19">SPI_PORTX</references>
+        <references refid="spi_8h_1a81f0aae3c3a2adba06ac3b802b38915a" compoundref="spi_8h" startline="25">SPI_SS</references>
+      </memberdef>
+      <memberdef kind="function" id="spi_8h_1a3b99985602162e372c530ce03647c54d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SPI_ReadByte</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>SPI_ReadByte</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/spi.h" line="36" bodyfile="/home/geraki/mcu_dev/at8_ct/spi.c" bodystart="41" bodyend="52"/>
+        <references refid="spi_8h_1a6f5296638eb1632e342f63b7d9d5b635" compoundref="spi_8h" startline="19">SPI_PORTX</references>
+        <references refid="spi_8h_1a81f0aae3c3a2adba06ac3b802b38915a" compoundref="spi_8h" startline="25">SPI_SS</references>
+      </memberdef>
+      <memberdef kind="function" id="spi_8h_1a47b45aed3d09db2fcd47a4ead3a029f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SPI_WriteArray</definition>
+        <argsstring>(uint8_t num, uint8_t *data)</argsstring>
+        <name>SPI_WriteArray</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/spi.h" line="39" bodyfile="/home/geraki/mcu_dev/at8_ct/spi.c" bodystart="55" bodyend="63"/>
+        <references refid="spi_8h_1a6f5296638eb1632e342f63b7d9d5b635" compoundref="spi_8h" startline="19">SPI_PORTX</references>
+        <references refid="spi_8h_1a81f0aae3c3a2adba06ac3b802b38915a" compoundref="spi_8h" startline="25">SPI_SS</references>
+        <referencedby refid="indicator_8h_1a3de511c73fd66b0009b6a1e743bcab30" compoundref="indicator_8c" startline="250" endline="364">IND_Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="spi_8h_1ac150ae8ca6f9510f924a67292b57fed3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SPI_ReadArray</definition>
+        <argsstring>(uint8_t num, uint8_t *data)</argsstring>
+        <name>SPI_ReadArray</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/spi.h" line="42" bodyfile="/home/geraki/mcu_dev/at8_ct/spi.c" bodystart="66" bodyend="75"/>
+        <references refid="spi_8h_1a6f5296638eb1632e342f63b7d9d5b635" compoundref="spi_8h" startline="19">SPI_PORTX</references>
+        <references refid="spi_8h_1a81f0aae3c3a2adba06ac3b802b38915a" compoundref="spi_8h" startline="25">SPI_SS</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Author(s)...:<sp/>Pashgan<sp/><sp/><sp/><sp/>http://ChipEnable.Ru<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Target(s)...:<sp/>Mega</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Compiler....:<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Description.:<sp/>Драйвер<sp/>SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Data........:<sp/>2.10.12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SPI_H</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SPI_H</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="compilers_8h" kindref="compound">compilers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="spi_8h_1a6f5296638eb1632e342f63b7d9d5b635" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPI_PORTX<sp/><sp/><sp/>PORTB</highlight></codeline>
+<codeline lineno="20" refid="spi_8h_1a21e12998291d444a3fc6e5e2911c981e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SPI_DDRX<sp/><sp/><sp/><sp/>DDRB</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="spi_8h_1ab142cc77dfa97010c9d2b616d0992b64" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPI_MISO<sp/><sp/><sp/>6<sp/></highlight></codeline>
+<codeline lineno="23" refid="spi_8h_1a7dbebab5f7dd57885adccf6711b13592" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SPI_MOSI<sp/><sp/><sp/>5</highlight></codeline>
+<codeline lineno="24" refid="spi_8h_1a750ca7c9b92cfc9e57272ff3a49db48b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SPI_SCK<sp/><sp/><sp/><sp/>7</highlight></codeline>
+<codeline lineno="25" refid="spi_8h_1a81f0aae3c3a2adba06ac3b802b38915a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SPI_SS<sp/><sp/><sp/><sp/><sp/>4</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*____________функции____________________*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*инициализация<sp/>SPI<sp/>модуля*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="spi_8c_1a292196e767158c66f03cbcc244fc802b" kindref="member">SPI_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*отправить<sp/>байт<sp/>данных<sp/>по<sp/>SPI*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="spi_8c_1a723a605b8afa759496ae2a9b5ad0453a" kindref="member">SPI_WriteByte</ref>(uint8_t<sp/>data);<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*отправить<sp/>и<sp/>получить<sp/>байт<sp/>данных<sp/>по<sp/>SPI*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">uint8_t<sp/><ref refid="spi_8c_1a3b99985602162e372c530ce03647c54d" kindref="member">SPI_ReadByte</ref>(uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*отправить<sp/>несколько<sp/>байт<sp/>данных<sp/>по<sp/>SPI*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="spi_8c_1a47b45aed3d09db2fcd47a4ead3a029f6" kindref="member">SPI_WriteArray</ref>(uint8_t<sp/>num,<sp/>uint8_t<sp/>*data);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*отправить<sp/>и<sp/>получить<sp/>несколько<sp/>байт<sp/>данных<sp/>по<sp/>SPI*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="spi_8c_1ac150ae8ca6f9510f924a67292b57fed3" kindref="member">SPI_ReadArray</ref>(uint8_t<sp/>num,<sp/>uint8_t<sp/>*data);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//SPI_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/geraki/mcu_dev/at8_ct/spi.h"/>
+  </compounddef>
+</doxygen>

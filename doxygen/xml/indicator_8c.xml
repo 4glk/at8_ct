@@ -1,0 +1,820 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.1.2">
+  <compounddef id="indicator_8c" kind="file">
+    <compoundname>indicator.c</compoundname>
+    <includes refid="indicator_8h" local="yes">indicator.h</includes>
+    <incdepgraph>
+      <node id="230">
+        <label>stdint.h</label>
+      </node>
+      <node id="231">
+        <label>spi.h</label>
+        <link refid="spi_8h"/>
+        <childnode refid="229" relation="include">
+        </childnode>
+      </node>
+      <node id="229">
+        <label>compilers.h</label>
+        <link refid="compilers_8h"/>
+        <childnode refid="230" relation="include">
+        </childnode>
+      </node>
+      <node id="226">
+        <label>indicator.c</label>
+        <link refid="indicator.c"/>
+        <childnode refid="227" relation="include">
+        </childnode>
+      </node>
+      <node id="227">
+        <label>indicator.h</label>
+        <link refid="indicator_8h"/>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+      </node>
+      <node id="228">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="indicator_8c_1a6166ed9b9a4e515ae50f929618be91c5" prot="public" static="no">
+        <name>IND_LIGHT_OUT</name>
+        <initializer>0xff</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="42" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="42" bodyend="-1"/>
+        <referencedby refid="indicator_8h_1a3de511c73fd66b0009b6a1e743bcab30" compoundref="indicator_8c" startline="250" endline="364">IND_Update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="indicator_8c_1a2a9784a47b8732dd3eb8b70a2c432cca" prot="public" static="no">
+        <name>IND_OutSeg</name>
+        <param><defname>port</defname></param>
+        <param><defname>value</defname></param>
+        <initializer>port &amp;= ~(value)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="45" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="45" bodyend="-1"/>
+        <referencedby refid="indicator_8h_1a3de511c73fd66b0009b6a1e743bcab30" compoundref="indicator_8c" startline="250" endline="364">IND_Update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="indicator_8c_1a6b63bd129652e6f0a4843e94a105b181" prot="public" static="no">
+        <name>IND_LightOutSeg</name>
+        <param><defname>port</defname></param>
+        <param><defname>value</defname></param>
+        <initializer>port |= (value)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="46" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="46" bodyend="-1"/>
+        <referencedby refid="indicator_8h_1a3de511c73fd66b0009b6a1e743bcab30" compoundref="indicator_8c" startline="250" endline="364">IND_Update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="indicator_8c_1a04c1d8ce416ff96afb45c7ecfcf52443" prot="public" static="no">
+        <name>IND_OutDig</name>
+        <param><defname>port</defname></param>
+        <param><defname>value</defname></param>
+        <initializer>port |= (value)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="56" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="56" bodyend="-1"/>
+        <referencedby refid="indicator_8h_1a3de511c73fd66b0009b6a1e743bcab30" compoundref="indicator_8c" startline="250" endline="364">IND_Update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="indicator_8c_1aa3a9220f814b0c64e6fabc1d5f9e5e89" prot="public" static="no">
+        <name>IND_LightOutDig</name>
+        <param><defname>port</defname></param>
+        <param><defname>value</defname></param>
+        <initializer>port &amp;= ~(value)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="57" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="57" bodyend="-1"/>
+        <referencedby refid="indicator_8h_1a3de511c73fd66b0009b6a1e743bcab30" compoundref="indicator_8c" startline="250" endline="364">IND_Update</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="indicator_8c_1a60fb8869c909002a3ebfbe0c9ee9f291" prot="public" static="no">
+        <name>IND_EMPTY_NUM</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="60" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="60" bodyend="-1"/>
+        <referencedby refid="indicator_8h_1ae86de0baebd2e17c0af1ec95e37e0c34" compoundref="indicator_8c" startline="199" endline="219">IND_Output</referencedby>
+        <referencedby refid="indicator_8h_1acd4dbbc0afe32337d15902ae36c23118" compoundref="indicator_8c" startline="222" endline="247">IND_OutputFormat</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="indicator_8c_1af356ae7fec89523ff0f79860057833f9" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ind_buf[IND_AMOUNT_NUM]</definition>
+        <argsstring>[IND_AMOUNT_NUM]</argsstring>
+        <name>ind_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="63" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="63" bodyend="-1"/>
+        <referencedby refid="indicator_8h_1a28fc0d56da8c2d1fbd529d12003278e2" compoundref="indicator_8c" startline="106" endline="126">IND_OutputFormatChar</referencedby>
+        <referencedby refid="indicator_8h_1a6ef4c7141a57a829f312df655f43b94e" compoundref="indicator_8c" startline="128" endline="136">IND_Time</referencedby>
+        <referencedby refid="indicator_8h_1a380138acbd9424c5d40301e35549ba9a" compoundref="indicator_8c" startline="178" endline="196">IND_Init</referencedby>
+        <referencedby refid="indicator_8h_1ae86de0baebd2e17c0af1ec95e37e0c34" compoundref="indicator_8c" startline="199" endline="219">IND_Output</referencedby>
+        <referencedby refid="indicator_8h_1acd4dbbc0afe32337d15902ae36c23118" compoundref="indicator_8c" startline="222" endline="247">IND_OutputFormat</referencedby>
+        <referencedby refid="indicator_8h_1a3de511c73fd66b0009b6a1e743bcab30" compoundref="indicator_8c" startline="250" endline="364">IND_Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="indicator_8c_1a50ec565d51ec46918926166c052e99b9" prot="public" static="no" mutable="no">
+        <type>__flash uint8_t</type>
+        <definition>__flash uint8_t number[][2]</definition>
+        <argsstring>[][2]</argsstring>
+        <name>number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="99" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="68" bodyend="-1"/>
+        <referencedby refid="indicator_8h_1a28fc0d56da8c2d1fbd529d12003278e2" compoundref="indicator_8c" startline="106" endline="126">IND_OutputFormatChar</referencedby>
+        <referencedby refid="indicator_8h_1a6ef4c7141a57a829f312df655f43b94e" compoundref="indicator_8c" startline="128" endline="136">IND_Time</referencedby>
+        <referencedby refid="indicator_8h_1ae86de0baebd2e17c0af1ec95e37e0c34" compoundref="indicator_8c" startline="199" endline="219">IND_Output</referencedby>
+        <referencedby refid="indicator_8h_1acd4dbbc0afe32337d15902ae36c23118" compoundref="indicator_8c" startline="222" endline="247">IND_OutputFormat</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="indicator_8c_1a0555fd5164ca009c356fc654f58dd6a6" prot="public" static="no" mutable="no">
+        <type>__flash uint8_t</type>
+        <definition>__flash uint8_t digit[]</definition>
+        <argsstring>[]</argsstring>
+        <name>digit</name>
+        <initializer>
+{
+   <ref refid="indicator_8h_1a9c941317544dd73ee8e8ce90120b1c90" kindref="member">IND_NUM1</ref>,
+   <ref refid="indicator_8h_1a7e8f2eef8b648065bbd877eb2b9a07bf" kindref="member">IND_NUM2</ref>,
+   <ref refid="indicator_8h_1a5a99ddf4c9145fb6b1af6e5a2de39e78" kindref="member">IND_NUM3</ref>,
+   <ref refid="indicator_8h_1aa2a194f6386d91054d85fa3a86413594" kindref="member">IND_NUM4</ref>,
+   <ref refid="indicator_8h_1a20d61d8c22d5313fead758d2dadc0461" kindref="member">IND_NUM5</ref>,
+   <ref refid="indicator_8h_1aa1c6289b5f9e70091eec000183d9b565" kindref="member">IND_NUM6</ref>,
+   <ref refid="indicator_8h_1a9bd321775ab25e439f13b7c642204629" kindref="member">IND_NUM7</ref>,
+   <ref refid="indicator_8h_1ac6624f40f1ab08d095370c7a8686d864" kindref="member">IND_NUM8</ref>
+
+   ,<ref refid="indicator_8h_1acc8643291a1d2e12b95685e092f69f94" kindref="member">IND_NUM9</ref>,
+   <ref refid="indicator_8h_1acee1b59cff6144b8e28f1343c28f3b47" kindref="member">IND_NUM10</ref>,
+   <ref refid="indicator_8h_1a5fd61779608fa55d2349bdfbdc01c8bd" kindref="member">IND_NUM11</ref>,
+   <ref refid="indicator_8h_1a22c22bae525b3e1873d8c3889ef0b777" kindref="member">IND_NUM12</ref>,
+   <ref refid="indicator_8h_1a04540808f3ce42949ffc9034407eb4c3" kindref="member">IND_NUM13</ref>,
+   <ref refid="indicator_8h_1abc358861441e9f220f4b6a02b606aecb" kindref="member">IND_NUM14</ref>,
+   <ref refid="indicator_8h_1a0b7e1bc60f57784452d1531f208fad86" kindref="member">IND_NUM15</ref>,
+   <ref refid="indicator_8h_1a10f63ff9ce685bab16872793a0427088" kindref="member">IND_NUM16</ref>
+
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="160" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="indicator_8c_1a6b9742eca1cad646a779b9be7ba21e2d" prot="public" static="no" mutable="no">
+        <type>__flash uint8_t</type>
+        <definition>__flash uint8_t mask[]</definition>
+        <argsstring>[]</argsstring>
+        <name>mask</name>
+        <initializer>
+{
+   (1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>),
+   (1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>),
+   (1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>),
+   (1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>),
+   (1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>),
+   (1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>),
+   (1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),
+   (1&lt;&lt;<ref refid="indicator_8h_1a671b5c8e2f65387cb904972744706555" kindref="member">IND_COM</ref>)
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="174" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="indicator_8c_1a05bfab9e55bca0851a0b367438439ec4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ascii2int</definition>
+        <argsstring>(uint8_t symbol)</argsstring>
+        <name>ascii2int</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>symbol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="101" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="indicator_8c_1a28fc0d56da8c2d1fbd529d12003278e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IND_OutputFormatChar</definition>
+        <argsstring>(char char_string[], uint8_t comma, uint8_t position)</argsstring>
+        <name>IND_OutputFormatChar</name>
+        <param>
+          <type>char</type>
+          <declname>char_string</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>comma</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="108" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="106" bodyend="126"/>
+        <references refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" compoundref="kbd_8h" startline="11">i</references>
+        <references refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" compoundref="indicator_8c" startline="68">number</references>
+        <references refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" compoundref="indicator_8c" startline="63">ind_buf</references>
+        <references refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" compoundref="indicator_8h" startline="25">IND_AMOUNT_NUM</references>
+        <references refid="indicator_8h_1a671b5c8e2f65387cb904972744706555" compoundref="indicator_8h" startline="83">IND_COM</references>
+        <referencedby refid="automate_8h_1a648a2fa2697c358cefdbc198c77b0206" compoundref="automate_8c" startline="4" endline="36">StateAutomate</referencedby>
+        <referencedby refid="automate_8h_1a4cc8fd1ed483012c97d1a9e9ebf8e93d" compoundref="automate_8c" startline="38" endline="58">Timer_sw</referencedby>
+        <referencedby refid="automate_8h_1ac41ed6f23d52707933276309ca058269" compoundref="automate_8c" startline="60" endline="76">Supply_sw</referencedby>
+        <referencedby refid="automate_8h_1adab77d4a76e9465ecbd2eaa9cacf8b61" compoundref="automate_8c" startline="85" endline="97">Furnance_sw</referencedby>
+        <referencedby refid="automate_8h_1a7a84985ae54f57552f93b35a907b0542" compoundref="automate_8c" startline="99" endline="110">Fire_sw</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="indicator_8c_1a6ef4c7141a57a829f312df655f43b94e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IND_Time</definition>
+        <argsstring>(uint16_t CurrentTime, uint8_t position)</argsstring>
+        <name>IND_Time</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>CurrentTime</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>����� �� ��������� ����� � ������. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>����</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>���-�� ������ � ��� </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argument2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>explanation . . . </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>���������� ������� ���������� </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="128" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="128" bodyend="136"/>
+        <references refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" compoundref="indicator_8c" startline="63">ind_buf</references>
+        <references refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" compoundref="indicator_8c" startline="68">number</references>
+        <references refid="indicator_8h_1a671b5c8e2f65387cb904972744706555" compoundref="indicator_8h" startline="83">IND_COM</references>
+        <referencedby refid="automate_8h_1aec96046bbb47e80657e6439eda9dc665" compoundref="automate_8c" startline="79" endline="83">FuncINDTime</referencedby>
+        <referencedby refid="automate_8h_1ab82d42f4ec48e743663fb90c550e4fa5" compoundref="automate_8c" startline="112" endline="115">ShowAdc6</referencedby>
+        <referencedby refid="automate_8h_1a29ef358bb3f19d4b696b300c61bc0da1" compoundref="automate_8c" startline="117" endline="121">ShowAdc7</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="indicator_8c_1a380138acbd9424c5d40301e35549ba9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IND_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>IND_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="179" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="178" bodyend="196"/>
+        <references refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" compoundref="kbd_8h" startline="11">i</references>
+        <references refid="indicator_8h_1a9b0b6be82437568daf1fc76fb6b3862d" compoundref="indicator_8h" startline="40">IND_PORT_SEG</references>
+        <references refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" compoundref="indicator_8h" startline="76">IND_A</references>
+        <references refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" compoundref="indicator_8h" startline="77">IND_B</references>
+        <references refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" compoundref="indicator_8h" startline="78">IND_C</references>
+        <references refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" compoundref="indicator_8h" startline="79">IND_D</references>
+        <references refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" compoundref="indicator_8h" startline="80">IND_E</references>
+        <references refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" compoundref="indicator_8h" startline="81">IND_F</references>
+        <references refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" compoundref="indicator_8h" startline="82">IND_G</references>
+        <references refid="indicator_8h_1a671b5c8e2f65387cb904972744706555" compoundref="indicator_8h" startline="83">IND_COM</references>
+        <references refid="indicator_8h_1ae38e02b6ef0d4dd47845e3eab13e286c" compoundref="indicator_8h" startline="41">IND_DDR_SEG</references>
+        <references refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" compoundref="indicator_8h" startline="25">IND_AMOUNT_NUM</references>
+        <references refid="indicator_8h_1a99df790efe9a7145a8114f996e176a54" compoundref="indicator_8h" startline="44">IND_PORT_DIG</references>
+        <references refid="indicator_8h_1add0d00ddbc3bb77fb21c44e4fad04ca0" compoundref="indicator_8h" startline="45">IND_DDR_DIG</references>
+        <references refid="spi_8c_1a292196e767158c66f03cbcc244fc802b" compoundref="spi_8c" startline="18" endline="28">SPI_Init</references>
+        <references refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" compoundref="indicator_8c" startline="63">ind_buf</references>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="indicator_8c_1ae86de0baebd2e17c0af1ec95e37e0c34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IND_Output</definition>
+        <argsstring>(uint16_t value, uint8_t comma)</argsstring>
+        <name>IND_Output</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>comma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="200" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="199" bodyend="219"/>
+        <references refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" compoundref="kbd_8h" startline="11">i</references>
+        <references refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" compoundref="indicator_8h" startline="25">IND_AMOUNT_NUM</references>
+        <references refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" compoundref="indicator_8c" startline="63">ind_buf</references>
+        <references refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" compoundref="indicator_8c" startline="68">number</references>
+        <references refid="indicator_8c_1a60fb8869c909002a3ebfbe0c9ee9f291" compoundref="indicator_8c" startline="60">IND_EMPTY_NUM</references>
+        <references refid="indicator_8h_1a671b5c8e2f65387cb904972744706555" compoundref="indicator_8h" startline="83">IND_COM</references>
+      </memberdef>
+      <memberdef kind="function" id="indicator_8c_1acd4dbbc0afe32337d15902ae36c23118" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IND_OutputFormat</definition>
+        <argsstring>(uint16_t value, uint8_t comma, uint8_t position, uint8_t amount)</argsstring>
+        <name>IND_OutputFormat</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>comma</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="223" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="222" bodyend="247"/>
+        <references refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" compoundref="kbd_8h" startline="11">i</references>
+        <references refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" compoundref="indicator_8h" startline="25">IND_AMOUNT_NUM</references>
+        <references refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" compoundref="indicator_8c" startline="63">ind_buf</references>
+        <references refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" compoundref="indicator_8c" startline="68">number</references>
+        <references refid="indicator_8c_1a60fb8869c909002a3ebfbe0c9ee9f291" compoundref="indicator_8c" startline="60">IND_EMPTY_NUM</references>
+        <references refid="indicator_8h_1a671b5c8e2f65387cb904972744706555" compoundref="indicator_8h" startline="83">IND_COM</references>
+      </memberdef>
+      <memberdef kind="function" id="indicator_8c_1a3de511c73fd66b0009b6a1e743bcab30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IND_Update</definition>
+        <argsstring>(void)</argsstring>
+        <name>IND_Update</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/indicator.c" line="251" bodyfile="/home/geraki/mcu_dev/at8_ct/indicator.c" bodystart="250" bodyend="364"/>
+        <references refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" compoundref="kbd_8h" startline="11">i</references>
+        <references refid="indicator_8c_1a6b63bd129652e6f0a4843e94a105b181" compoundref="indicator_8c" startline="46">IND_LightOutSeg</references>
+        <references refid="indicator_8h_1a5f332ec7a59e416fe40188c179fafe84" compoundref="indicator_8h" startline="50">IND_SHIFT_REG_SEG</references>
+        <references refid="indicator_8c_1a6166ed9b9a4e515ae50f929618be91c5" compoundref="indicator_8c" startline="42">IND_LIGHT_OUT</references>
+        <references refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" compoundref="indicator_8h" startline="25">IND_AMOUNT_NUM</references>
+        <references refid="indicator_8c_1aa3a9220f814b0c64e6fabc1d5f9e5e89" compoundref="indicator_8c" startline="57">IND_LightOutDig</references>
+        <references refid="indicator_8h_1ab74adf8ac36f98f291f9c9cfdb0ca4af" compoundref="indicator_8h" startline="51">IND_SHIFT_REG_DIG1</references>
+        <references refid="indicator_8h_1a94b61717a6e3864a96e0c81ed393ba1f" compoundref="indicator_8h" startline="52">IND_SHIFT_REG_DIG2</references>
+        <references refid="spi_8c_1a47b45aed3d09db2fcd47a4ead3a029f6" compoundref="spi_8c" startline="55" endline="63">SPI_WriteArray</references>
+        <references refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" compoundref="indicator_8c" startline="63">ind_buf</references>
+        <references refid="indicator_8c_1a04c1d8ce416ff96afb45c7ecfcf52443" compoundref="indicator_8c" startline="56">IND_OutDig</references>
+        <references refid="indicator_8c_1a2a9784a47b8732dd3eb8b70a2c432cca" compoundref="indicator_8c" startline="45">IND_OutSeg</references>
+        <references refid="indicator_8h_1a9b0b6be82437568daf1fc76fb6b3862d" compoundref="indicator_8h" startline="40">IND_PORT_SEG</references>
+        <references refid="indicator_8h_1a99df790efe9a7145a8114f996e176a54" compoundref="indicator_8h" startline="44">IND_PORT_DIG</references>
+        <references refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" compoundref="dispatch_8c" startline="4" endline="34">AddTask</references>
+        <references refid="indicator_8c_1a3de511c73fd66b0009b6a1e743bcab30" compoundref="indicator_8c" startline="250" endline="364">IND_Update</references>
+        <referencedby refid="indicator_8h_1a3de511c73fd66b0009b6a1e743bcab30" compoundref="indicator_8c" startline="250" endline="364">IND_Update</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Author(s)...:<sp/>Pashgan<sp/><sp/><sp/><sp/>http://ChipEnable.Ru</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Target(s)...:<sp/>AVR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Compiler....:<sp/>любой</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Description.:<sp/>Драйвер<sp/>7-ми<sp/>сегментного<sp/>4-ех<sp/>разрядного<sp/>индикатора</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Data........:<sp/>15.04.10<sp/><sp/>Создан</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Data........:<sp/>8.03.13<sp/><sp/>Добавил<sp/>поддержку<sp/>SPI<sp/>и<sp/>посегментную<sp/>развертку</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="indicator_8h" kindref="compound">indicator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>IND_SPI_CONNECTION</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#if<sp/>(IND_AMOUNT_NUM<sp/>&gt;<sp/>8)</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>&quot;При<sp/>данной<sp/>конфигурации<sp/>IND_AMOUNT_NUM<sp/>должно<sp/>быть<sp/>меньше<sp/>8&quot;</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>IND_SHIFT_REG_DIG2</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/>#if<sp/>(IND_AMOUNT_NUM<sp/>&gt;<sp/>8)</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>&quot;При<sp/>данной<sp/>конфигурации<sp/>IND_AMOUNT_NUM<sp/>должно<sp/>быть<sp/>меньше<sp/>8&quot;</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#if<sp/>((IND_SHIFT_REG_SEG<sp/>&gt;<sp/>1)||(IND_SHIFT_REG_DIG1<sp/>&gt;<sp/>1))</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>&quot;При<sp/>данной<sp/>конфигурации<sp/>IND_SHIFT_REG_SEG<sp/>и<sp/>IND_SHIFT_REG_DIG1<sp/>должны<sp/>быть<sp/>меньше<sp/>2&quot;</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IND_SPI_CONNECTION</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/>#ifdef<sp/>IND_SHIFT_REG_DIG2</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>IND_AMOUNT_REG<sp/>3</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/>#else</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>IND_AMOUNT_REG<sp/>2</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/>#endif</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/>spi_buf[IND_AMOUNT_REG];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="indicator_8c_1a6166ed9b9a4e515ae50f929618be91c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IND_LIGHT_OUT<sp/>0xff</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(IND_ACTIVE_LEVEL_SEG<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="45" refid="indicator_8c_1a2a9784a47b8732dd3eb8b70a2c432cca" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>IND_OutSeg(port,<sp/>value)<sp/>port<sp/>&amp;=<sp/>~(value)</highlight></codeline>
+<codeline lineno="46" refid="indicator_8c_1a6b63bd129652e6f0a4843e94a105b181" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>IND_LightOutSeg(port,<sp/>value)<sp/>port<sp/>|=<sp/>(value)</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>IND_OutSeg(port,<sp/>value)<sp/>port<sp/>|=<sp/>(value)</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>IND_LightOutSeg(port,<sp/>value)<sp/>port<sp/>&amp;=<sp/>~(value)</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(IND_ACTIVE_LEVEL_DIG<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>IND_OutDig(port,<sp/>value)<sp/>port<sp/>&amp;=<sp/>~(value)</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>IND_LightOutDig(port,<sp/>value)<sp/>port<sp/>|=<sp/>(value)</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="56" refid="indicator_8c_1a04c1d8ce416ff96afb45c7ecfcf52443" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>IND_OutDig(port,<sp/>value)<sp/>port<sp/>|=<sp/>(value)</highlight></codeline>
+<codeline lineno="57" refid="indicator_8c_1aa3a9220f814b0c64e6fabc1d5f9e5e89" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>IND_LightOutDig(port,<sp/>value)<sp/>port<sp/>&amp;=<sp/>~(value)</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="indicator_8c_1a60fb8869c909002a3ebfbe0c9ee9f291" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IND_EMPTY_NUM<sp/>10</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*буфер<sp/>7-ми<sp/>сегметного<sp/>индикатора*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[<ref refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" kindref="member">IND_AMOUNT_NUM</ref>];</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>забить<sp/>таблицу<sp/>под<sp/>завязку,<sp/>транслит<sp/>,<sp/>добавляем<sp/>все<sp/>совпадающие<sp/>символы</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*таблица<sp/>перекодировки*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" refkind="member"><highlight class="normal">__flash<sp/>uint8_t<sp/><ref refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" kindref="member">number</ref>[][2]<sp/>=<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>скоро<sp/>она<sp/>потолстеет<sp/>,<sp/>будет<sp/>+<sp/>46<sp/>символов<sp/>,<sp/>с<sp/>повторяющимися<sp/>,<sp/>а<sp/>может<sp/>и<sp/>больше</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),0},<sp/></highlight><highlight class="comment">//0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>{(0&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),1},<sp/></highlight><highlight class="comment">//1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),2},</highlight><highlight class="comment">//2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),3},<sp/></highlight><highlight class="comment">//3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>{(0&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),4},</highlight><highlight class="comment">//4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),5},<sp/></highlight><highlight class="comment">//5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),6},<sp/></highlight><highlight class="comment">//6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),7},<sp/></highlight><highlight class="comment">//7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),8},<sp/></highlight><highlight class="comment">//8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),9},<sp/></highlight><highlight class="comment">//9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>{(0&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),10},<sp/><sp/></highlight><highlight class="comment">//IND_EMPTY_NUM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>{(0&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),11},<sp/></highlight><highlight class="comment">//MINUS<sp/>,<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>{(0&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),32},<sp/></highlight><highlight class="comment">//SPACE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>{(0&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),95},<sp/></highlight><highlight class="comment">//_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),65},<sp/></highlight><highlight class="comment">//a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>{(0&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),66},</highlight><highlight class="comment">//b</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),67},<sp/></highlight><highlight class="comment">//c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>{(0&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),68},<sp/></highlight><highlight class="comment">//d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),69},<sp/></highlight><highlight class="comment">//e</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),70},<sp/></highlight><highlight class="comment">//f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),71},<sp/></highlight><highlight class="comment">//G<sp/>Г</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>{(0&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),72},<sp/></highlight><highlight class="comment">//h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),79},<sp/></highlight><highlight class="comment">//O</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),80},<sp/></highlight><highlight class="comment">//P<sp/>P</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>{(0&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),84},<sp/></highlight><highlight class="comment">//T<sp/>t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>{(0&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),85},<sp/></highlight><highlight class="comment">//U<sp/>Y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>{(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),86},<sp/></highlight><highlight class="comment">//V<sp/>B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>{(0&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(0&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),89},<sp/></highlight><highlight class="comment">//Y<sp/>Y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="indicator_8h_1a05bfab9e55bca0851a0b367438439ec4" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="indicator_8c_1a05bfab9e55bca0851a0b367438439ec4" kindref="member">ascii2int</ref>(uint8_t<sp/>symbol){</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tmp=(int)(symbol);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="indicator_8h_1a28fc0d56da8c2d1fbd529d12003278e2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="indicator_8c_1a28fc0d56da8c2d1fbd529d12003278e2" kindref="member">IND_OutputFormatChar</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>char_string[],<sp/>uint8_t<sp/>comma,<sp/>uint8_t<sp/>position)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>реализовать<sp/>бегущую<sp/>строку<sp/>с<sp/>использованием<sp/>количества<sp/>элементов,<sp/>а<sp/>также<sp/>мигание<sp/>символов</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref>,j,amount;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>tmp[strlen(char_string)];</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>amount=strlen(char_string);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0,j=strlen(char_string);i&lt;strlen(char_string);i++,j--){<sp/></highlight><highlight class="comment">//зеркалирование<sp/>строки</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp[j-1]=char_string[<ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref>];</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j=0;j&lt;amount;j++){</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=11;i&lt;=((int)tmp[j]);++<ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref>){<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//добавлено<sp/>стартовое<sp/>значение<sp/>,<sp/>перескакиваем<sp/>цифры</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(read_byte_flash(<ref refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" kindref="member">number</ref>[i][1])==(int)tmp[j])<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>вся<sp/>трабла<sp/>была<sp/>с<sp/>чтением<sp/>с<sp/>пзу</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[j+position-1]<sp/>=<sp/>read_byte_flash(<ref refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" kindref="member">number</ref>[i][0]);<sp/></highlight><highlight class="comment">//это<sp/>конечно<sp/>не<sp/>оптимально<sp/>искать<sp/>в<sp/>пзу</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>но<sp/>не<sp/>забивать<sp/>же<sp/>туда<sp/>всю<sp/>таблицу</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((comma<sp/>&lt;=<sp/><ref refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" kindref="member">IND_AMOUNT_NUM</ref>)<sp/>&amp;&amp;<sp/>(comma<sp/>!=<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[comma-1]<sp/>|=<sp/>1&lt;&lt;<ref refid="indicator_8h_1a671b5c8e2f65387cb904972744706555" kindref="member">IND_COM</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="indicator_8h_1a6ef4c7141a57a829f312df655f43b94e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="indicator_8c_1a6ef4c7141a57a829f312df655f43b94e" kindref="member">IND_Time</ref>(uint16_t<sp/><ref refid="timer_8h_1a3769a4fac1f7c715cfca0a9bc66ffc09" kindref="member">CurrentTime</ref>,uint8_t<sp/>position){</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>blk_dot;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>!(CurrentTime%2)?(blk_dot=1):(blk_dot=0);<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>мигает<sp/>по<sp/>четности<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[3+position-1]<sp/>=<sp/>read_byte_flash(<ref refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" kindref="member">number</ref>[CurrentTime<sp/>%<sp/>6000/600]);<sp/></highlight><highlight class="comment">//<sp/>здесь<sp/>раскладываем<sp/>число<sp/>на<sp/>разряды</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[2+position-1]<sp/>=<sp/>read_byte_flash(<ref refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" kindref="member">number</ref>[CurrentTime<sp/>%<sp/>600<sp/>/60<sp/>])|(blk_dot&lt;&lt;<ref refid="indicator_8h_1a671b5c8e2f65387cb904972744706555" kindref="member">IND_COM</ref>);</highlight><highlight class="comment">//(!(CurrentTime%2)?(1&lt;&lt;IND_COM):tralala());<sp/>//<sp/>+точка</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[1+position-1]<sp/>=<sp/>read_byte_flash(<ref refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" kindref="member">number</ref>[CurrentTime<sp/>%<sp/>60<sp/>/10]);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>выделяем<sp/>десятки<sp/>секунд<sp/>5<sp/>максимальное<sp/>значение</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[0+position-1]<sp/>=<sp/>read_byte_flash(<ref refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" kindref="member">number</ref>[CurrentTime<sp/>%<sp/>10]);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="indicator_8c_1a0555fd5164ca009c356fc654f58dd6a6" refkind="member"><highlight class="normal">__flash<sp/>uint8_t<sp/><ref refid="indicator_8c_1a0555fd5164ca009c356fc654f58dd6a6" kindref="member">digit</ref>[]<sp/>=</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1a9c941317544dd73ee8e8ce90120b1c90" kindref="member">IND_NUM1</ref>,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1a7e8f2eef8b648065bbd877eb2b9a07bf" kindref="member">IND_NUM2</ref>,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1a5a99ddf4c9145fb6b1af6e5a2de39e78" kindref="member">IND_NUM3</ref>,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1aa2a194f6386d91054d85fa3a86413594" kindref="member">IND_NUM4</ref>,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1a20d61d8c22d5313fead758d2dadc0461" kindref="member">IND_NUM5</ref>,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1aa1c6289b5f9e70091eec000183d9b565" kindref="member">IND_NUM6</ref>,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1a9bd321775ab25e439f13b7c642204629" kindref="member">IND_NUM7</ref>,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1ac6624f40f1ab08d095370c7a8686d864" kindref="member">IND_NUM8</ref></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IND_SHIFT_REG_DIG2</highlight></codeline>
+<codeline lineno="151"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/>,<ref refid="indicator_8h_1acc8643291a1d2e12b95685e092f69f94" kindref="member">IND_NUM9</ref>,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1acee1b59cff6144b8e28f1343c28f3b47" kindref="member">IND_NUM10</ref>,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1a5fd61779608fa55d2349bdfbdc01c8bd" kindref="member">IND_NUM11</ref>,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1a22c22bae525b3e1873d8c3889ef0b777" kindref="member">IND_NUM12</ref>,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1a04540808f3ce42949ffc9034407eb4c3" kindref="member">IND_NUM13</ref>,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1abc358861441e9f220f4b6a02b606aecb" kindref="member">IND_NUM14</ref>,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1a0b7e1bc60f57784452d1531f208fad86" kindref="member">IND_NUM15</ref>,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><ref refid="indicator_8h_1a10f63ff9ce685bab16872793a0427088" kindref="member">IND_NUM16</ref></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="160"><highlight class="preprocessor"></highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IND_SCAN_SEGMENT</highlight></codeline>
+<codeline lineno="164" refid="indicator_8c_1a6b9742eca1cad646a779b9be7ba21e2d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="normal">__flash<sp/>uint8_t<sp/><ref refid="indicator_8c_1a6b9742eca1cad646a779b9be7ba21e2d" kindref="member">mask</ref>[]<sp/>=</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/>(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>),</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/>(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>),</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/>(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>),</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/>(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>),</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/>(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>),</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/>(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>),</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/>(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>),</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/>(1&lt;&lt;<ref refid="indicator_8h_1a671b5c8e2f65387cb904972744706555" kindref="member">IND_COM</ref>)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="176"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="indicator_8h_1a380138acbd9424c5d40301e35549ba9a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="indicator_8c_1a380138acbd9424c5d40301e35549ba9a" kindref="member">IND_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>IND_SPI_CONNECTION</highlight></codeline>
+<codeline lineno="182"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><ref refid="indicator_8h_1a9b0b6be82437568daf1fc76fb6b3862d" kindref="member">IND_PORT_SEG</ref><sp/>=<sp/>(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a671b5c8e2f65387cb904972744706555" kindref="member">IND_COM</ref>);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><ref refid="indicator_8h_1ae38e02b6ef0d4dd47845e3eab13e286c" kindref="member">IND_DDR_SEG</ref><sp/>=<sp/>(1&lt;&lt;<ref refid="indicator_8h_1a062c61a509dd7a54b5e7bf3a931193d5" kindref="member">IND_A</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aeeea41ed366ddc725b29487aa0701448" kindref="member">IND_B</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a92811401ba22001d488f1cad2e6ea3da" kindref="member">IND_C</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a88e8654262f24c4ae04f35869e442616" kindref="member">IND_D</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a76b34390bc53f2b4b9969ec33b65a78c" kindref="member">IND_E</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a55680b2305fa93c9ca1244496dc46b36" kindref="member">IND_F</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1aaf16f6ed10762438498a20428ca1f2eb" kindref="member">IND_G</ref>)|(1&lt;&lt;<ref refid="indicator_8h_1a671b5c8e2f65387cb904972744706555" kindref="member">IND_COM</ref>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" kindref="member">IND_AMOUNT_NUM</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="indicator_8h_1a99df790efe9a7145a8114f996e176a54" kindref="member">IND_PORT_DIG</ref><sp/>|=<sp/>(1&lt;&lt;read_byte_flash(digit[i]));</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="indicator_8h_1add0d00ddbc3bb77fb21c44e4fad04ca0" kindref="member">IND_DDR_DIG</ref><sp/>|=<sp/>(1&lt;&lt;read_byte_flash(digit[i]));</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="190"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spi_8c_1a292196e767158c66f03cbcc244fc802b" kindref="member">SPI_Init</ref>();</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="192"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" kindref="member">IND_AMOUNT_NUM</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[<ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref>]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="indicator_8h_1ae86de0baebd2e17c0af1ec95e37e0c34" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="indicator_8c_1ae86de0baebd2e17c0af1ec95e37e0c34" kindref="member">IND_Output</ref>(uint16_t<sp/>value,<sp/>uint8_t<sp/>comma)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>uint8_t<sp/>tmp;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" kindref="member">IND_AMOUNT_NUM</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>tmp<sp/>=<sp/>value<sp/>%<sp/>10;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((i<sp/>==<sp/>0)||(value<sp/>&gt;<sp/>0)||(i<sp/>&lt;=<sp/>comma)){</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[<ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref>]<sp/>=<sp/>read_byte_flash(<ref refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" kindref="member">number</ref>[tmp]);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[<ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref>]<sp/>=<sp/>read_byte_flash(<ref refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" kindref="member">number</ref>[<ref refid="indicator_8c_1a60fb8869c909002a3ebfbe0c9ee9f291" kindref="member">IND_EMPTY_NUM</ref>]);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>value/10;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((comma<sp/>&lt;=<sp/>IND_AMOUNT_NUM)<sp/>&amp;&amp;<sp/>(comma<sp/>!=<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[comma-1]<sp/>|=<sp/>1&lt;&lt;<ref refid="indicator_8h_1a671b5c8e2f65387cb904972744706555" kindref="member">IND_COM</ref>;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="indicator_8h_1acd4dbbc0afe32337d15902ae36c23118" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="indicator_8c_1acd4dbbc0afe32337d15902ae36c23118" kindref="member">IND_OutputFormat</ref>(uint16_t<sp/>value,<sp/>uint8_t<sp/>comma,<sp/>uint8_t<sp/>position,<sp/>uint8_t<sp/>amount)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/>uint8_t<sp/>tmp;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((position<sp/>&lt;=<sp/><ref refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" kindref="member">IND_AMOUNT_NUM</ref>)&amp;&amp;(position<sp/>!=<sp/>0)){</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>amount;<sp/>i++){</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp<sp/>=<sp/>value<sp/>%<sp/>10;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((i<sp/>==<sp/>0)||(value<sp/>&gt;<sp/>0)||(position<sp/>&lt;=<sp/>comma)){</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[position-1]<sp/>=<sp/>read_byte_flash(<ref refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" kindref="member">number</ref>[tmp]);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[position-1]<sp/>=<sp/>read_byte_flash(<ref refid="indicator_8c_1a50ec565d51ec46918926166c052e99b9" kindref="member">number</ref>[<ref refid="indicator_8c_1a60fb8869c909002a3ebfbe0c9ee9f291" kindref="member">IND_EMPTY_NUM</ref>]);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>value/10;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position++;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(position<sp/>&gt;<sp/><ref refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" kindref="member">IND_AMOUNT_NUM</ref>){</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((comma<sp/>&lt;=<sp/><ref refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" kindref="member">IND_AMOUNT_NUM</ref>)<sp/>&amp;&amp;<sp/>(comma<sp/>!=<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[comma-1]<sp/>|=<sp/>1&lt;&lt;<ref refid="indicator_8h_1a671b5c8e2f65387cb904972744706555" kindref="member">IND_COM</ref>;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="indicator_8h_1a3de511c73fd66b0009b6a1e743bcab30" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="indicator_8c_1a3de511c73fd66b0009b6a1e743bcab30" kindref="member">IND_Update</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IND_SPI_CONNECTION</highlight></codeline>
+<codeline lineno="256"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*________________<sp/>подключение<sp/>по<sp/>SPI____________________________*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#ifdef<sp/>IND_SHIFT_REG_DIG2</highlight></codeline>
+<codeline lineno="259"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/>uint16_t<sp/>tmp;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#else</highlight></codeline>
+<codeline lineno="261"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/>uint8_t<sp/>tmp;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight></codeline>
+<codeline lineno="263"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*гасим<sp/>индикатор*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><ref refid="indicator_8c_1a6b63bd129652e6f0a4843e94a105b181" kindref="member">IND_LightOutSeg</ref>(spi_buf[<ref refid="indicator_8h_1a5f332ec7a59e416fe40188c179fafe84" kindref="member">IND_SHIFT_REG_SEG</ref>],<ref refid="indicator_8c_1a6166ed9b9a4e515ae50f929618be91c5" kindref="member">IND_LIGHT_OUT</ref>);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/>tmp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" kindref="member">IND_AMOUNT_NUM</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>tmp<sp/>|=<sp/>(1&lt;&lt;read_byte_flash(digit[i]));</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><ref refid="indicator_8c_1aa3a9220f814b0c64e6fabc1d5f9e5e89" kindref="member">IND_LightOutDig</ref>(spi_buf[<ref refid="indicator_8h_1ab74adf8ac36f98f291f9c9cfdb0ca4af" kindref="member">IND_SHIFT_REG_DIG1</ref>],((uint8_t)tmp));</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#ifdef<sp/>IND_SHIFT_REG_DIG2</highlight></codeline>
+<codeline lineno="274"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><ref refid="indicator_8c_1aa3a9220f814b0c64e6fabc1d5f9e5e89" kindref="member">IND_LightOutDig</ref>(spi_buf[<ref refid="indicator_8h_1a94b61717a6e3864a96e0c81ed393ba1f" kindref="member">IND_SHIFT_REG_DIG2</ref>],(tmp&gt;&gt;8));</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight></codeline>
+<codeline lineno="276"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><ref refid="spi_8c_1a47b45aed3d09db2fcd47a4ead3a029f6" kindref="member">SPI_WriteArray</ref>(IND_AMOUNT_REG,<sp/>spi_buf);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#ifdef<sp/>IND_SCAN_SEGMENT</highlight></codeline>
+<codeline lineno="280"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*___________реализация<sp/>посегментной<sp/>развертки___________*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/>tmp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" kindref="member">IND_AMOUNT_NUM</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[i]&amp;read_byte_flash(mask[count]))<sp/>{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp<sp/>|=<sp/>(1&lt;&lt;read_byte_flash(digit[i]));</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><ref refid="indicator_8c_1a04c1d8ce416ff96afb45c7ecfcf52443" kindref="member">IND_OutDig</ref>(spi_buf[IND_SHIFT_REG_DIG1],<sp/>((uint8_t)tmp));</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#ifdef<sp/>IND_SHIFT_REG_DIG2</highlight></codeline>
+<codeline lineno="291"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><ref refid="indicator_8c_1a04c1d8ce416ff96afb45c7ecfcf52443" kindref="member">IND_OutDig</ref>(spi_buf[IND_SHIFT_REG_DIG2],(tmp&gt;&gt;8));</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight></codeline>
+<codeline lineno="293"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><ref refid="indicator_8c_1a2a9784a47b8732dd3eb8b70a2c432cca" kindref="member">IND_OutSeg</ref>(spi_buf[IND_SHIFT_REG_SEG],<sp/>read_byte_flash(mask[count]));</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/>count<sp/>&amp;=<sp/>0x07;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#else</highlight></codeline>
+<codeline lineno="300"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*___________реализация<sp/>поразрядной<sp/>развертки___________*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/>tmp<sp/>=<sp/>1&lt;&lt;read_byte_flash(digit[count]);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><ref refid="indicator_8c_1a04c1d8ce416ff96afb45c7ecfcf52443" kindref="member">IND_OutDig</ref>(spi_buf[IND_SHIFT_REG_DIG1],<sp/>((uint8_t)tmp));</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#ifdef<sp/>IND_SHIFT_REG_DIG2</highlight></codeline>
+<codeline lineno="306"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><ref refid="indicator_8c_1a04c1d8ce416ff96afb45c7ecfcf52443" kindref="member">IND_OutDig</ref>(spi_buf[IND_SHIFT_REG_DIG2],(tmp&gt;&gt;8));</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight></codeline>
+<codeline lineno="308"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><ref refid="indicator_8c_1a2a9784a47b8732dd3eb8b70a2c432cca" kindref="member">IND_OutSeg</ref>(spi_buf[IND_SHIFT_REG_SEG],<sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[count]);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count<sp/>&gt;=<sp/>IND_AMOUNT_NUM){</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight></codeline>
+<codeline lineno="316"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*вывод<sp/>на<sp/>индикатор*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><ref refid="spi_8c_1a47b45aed3d09db2fcd47a4ead3a029f6" kindref="member">SPI_WriteArray</ref>(IND_AMOUNT_REG,<sp/>spi_buf);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="321"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*____________________обычное<sp/>подключение____________________________*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/>uint8_t<sp/>tmp;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/></highlight><highlight class="comment">/*гасим<sp/>все<sp/>индикаторы*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><ref refid="indicator_8c_1a6b63bd129652e6f0a4843e94a105b181" kindref="member">IND_LightOutSeg</ref>(<ref refid="indicator_8h_1a9b0b6be82437568daf1fc76fb6b3862d" kindref="member">IND_PORT_SEG</ref>,<sp/><ref refid="indicator_8c_1a6166ed9b9a4e515ae50f929618be91c5" kindref="member">IND_LIGHT_OUT</ref>);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/>tmp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" kindref="member">IND_AMOUNT_NUM</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>tmp<sp/>|=<sp/>(1&lt;&lt;read_byte_flash(digit[i]));</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><ref refid="indicator_8c_1aa3a9220f814b0c64e6fabc1d5f9e5e89" kindref="member">IND_LightOutDig</ref>(<ref refid="indicator_8h_1a99df790efe9a7145a8114f996e176a54" kindref="member">IND_PORT_DIG</ref>,<sp/>tmp);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#ifdef<sp/>IND_SCAN_SEGMENT</highlight></codeline>
+<codeline lineno="335"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*____________реализация<sp/>посегментной<sp/>развертки___________*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/>tmp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="indicator_8h_1af843ec88ec15b5a7b5f8d8c9065e4fdf" kindref="member">IND_AMOUNT_NUM</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[i]&amp;read_byte_flash(mask[count]))<sp/>{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp<sp/>|=<sp/>(1&lt;&lt;read_byte_flash(digit[i]));</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><ref refid="indicator_8c_1a04c1d8ce416ff96afb45c7ecfcf52443" kindref="member">IND_OutDig</ref>(<ref refid="indicator_8h_1a99df790efe9a7145a8114f996e176a54" kindref="member">IND_PORT_DIG</ref>,<sp/>tmp);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><ref refid="indicator_8c_1a2a9784a47b8732dd3eb8b70a2c432cca" kindref="member">IND_OutSeg</ref>(<ref refid="indicator_8h_1a9b0b6be82437568daf1fc76fb6b3862d" kindref="member">IND_PORT_SEG</ref>,<sp/>read_byte_flash(mask[count]));</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/>count<sp/>&amp;=<sp/>0x07;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#else</highlight></codeline>
+<codeline lineno="352"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*____________реализаци<sp/>поразрядной<sp/>развертки____________*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><ref refid="indicator_8c_1a04c1d8ce416ff96afb45c7ecfcf52443" kindref="member">IND_OutDig</ref>(<ref refid="indicator_8h_1a99df790efe9a7145a8114f996e176a54" kindref="member">IND_PORT_DIG</ref>,<sp/>(1&lt;&lt;read_byte_flash(digit[count])));</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><ref refid="indicator_8c_1a2a9784a47b8732dd3eb8b70a2c432cca" kindref="member">IND_OutSeg</ref>(<ref refid="indicator_8h_1a9b0b6be82437568daf1fc76fb6b3862d" kindref="member">IND_PORT_SEG</ref>,<sp/><ref refid="indicator_8c_1af356ae7fec89523ff0f79860057833f9" kindref="member">ind_buf</ref>[count]);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count<sp/>&gt;=<sp/>IND_AMOUNT_NUM){</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight></codeline>
+<codeline lineno="362"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="363"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" kindref="member">AddTask</ref>(<ref refid="indicator_8c_1a3de511c73fd66b0009b6a1e743bcab30" kindref="member">IND_Update</ref>,5);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/geraki/mcu_dev/at8_ct/indicator.c"/>
+  </compounddef>
+</doxygen>

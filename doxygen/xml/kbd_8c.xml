@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.1.2">
+  <compounddef id="kbd_8c" kind="file">
+    <compoundname>kbd.c</compoundname>
+    <includes refid="kbd_8h" local="yes">kbd.h</includes>
+    <incdepgraph>
+      <node id="247">
+        <label>macros.h</label>
+        <link refid="macros_8h"/>
+        <childnode refid="248" relation="include">
+        </childnode>
+      </node>
+      <node id="248">
+        <label>stdbool.h</label>
+      </node>
+      <node id="245">
+        <label>avr/interrupt.h</label>
+      </node>
+      <node id="243">
+        <label>kbd.c</label>
+        <link refid="kbd.c"/>
+        <childnode refid="244" relation="include">
+        </childnode>
+      </node>
+      <node id="244">
+        <label>kbd.h</label>
+        <link refid="kbd_8h"/>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+      </node>
+      <node id="246">
+        <label>avr/io.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="kbd_8c_1a3337a8a50d7f05b98e18ce3484bacb89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitControl</definition>
+        <argsstring>()</argsstring>
+        <name>InitControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/kbd.c" line="30" bodyfile="/home/geraki/mcu_dev/at8_ct/kbd.c" bodystart="30" bodyend="34"/>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="kbd_8c_1ac24268e43ab02c713950ac04cd01bf4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t KeyCode</definition>
+        <argsstring>()</argsstring>
+        <name>KeyCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/kbd.c" line="37" bodyfile="/home/geraki/mcu_dev/at8_ct/kbd.c" bodystart="37" bodyend="40"/>
+        <references refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" compoundref="macros_8h" startline="111">flags</references>
+        <references refid="struct_packed_bool_1abaad87249bbff85ac78c58eb36cd16c5" compoundref="macros_8h" startline="101">PackedBool::KeyPin</references>
+      </memberdef>
+      <memberdef kind="function" id="kbd_8c_1a8602ac7725d183564812f39737d61f3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KeyState</definition>
+        <argsstring>()</argsstring>
+        <name>KeyState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/kbd.c" line="42" bodyfile="/home/geraki/mcu_dev/at8_ct/kbd.c" bodystart="42" bodyend="58"/>
+        <references refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" compoundref="macros_8h" startline="111">flags</references>
+        <references refid="struct_packed_bool_1a4632f42a77835db7258b0b8ad0dee075" compoundref="macros_8h" startline="97">PackedBool::KeyPressed</references>
+        <references refid="struct_packed_bool_1a746c49c375112b4b43a2ae974bed69d3" compoundref="macros_8h" startline="98">PackedBool::KeyReleased</references>
+        <references refid="struct_packed_bool_1a1dc85c6cfe92c1b73cbdd6f1eae7efb5" compoundref="macros_8h" startline="99">PackedBool::KeyPushLong</references>
+        <references refid="struct_packed_bool_1abaad87249bbff85ac78c58eb36cd16c5" compoundref="macros_8h" startline="101">PackedBool::KeyPin</references>
+        <references refid="struct_packed_bool_1afc83916c55a3756dd50bb0a558a6ed5f" compoundref="macros_8h" startline="96">PackedBool::State_Automate</references>
+        <references refid="kbd_8h_1a11099369cfb983a02f78ffdee298e974" compoundref="main_8c" startline="26">KeyCurrentCode</references>
+        <referencedby refid="kbd_8c_1a119554f5f29d82aa2bd6259ee28ab2f9" compoundref="kbd_8c" startline="60" endline="80">KeyScan</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="kbd_8c_1a119554f5f29d82aa2bd6259ee28ab2f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KeyScan</definition>
+        <argsstring>()</argsstring>
+        <name>KeyScan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/kbd.c" line="60" bodyfile="/home/geraki/mcu_dev/at8_ct/kbd.c" bodystart="60" bodyend="80"/>
+        <references refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" compoundref="macros_8h" startline="111">flags</references>
+        <references refid="struct_packed_bool_1a746c49c375112b4b43a2ae974bed69d3" compoundref="macros_8h" startline="98">PackedBool::KeyReleased</references>
+        <references refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" compoundref="kbd_8h" startline="11">i</references>
+        <references refid="struct_packed_bool_1a4632f42a77835db7258b0b8ad0dee075" compoundref="macros_8h" startline="97">PackedBool::KeyPressed</references>
+        <references refid="struct_packed_bool_1abaad87249bbff85ac78c58eb36cd16c5" compoundref="macros_8h" startline="101">PackedBool::KeyPin</references>
+        <references refid="struct_packed_bool_1a1dc85c6cfe92c1b73cbdd6f1eae7efb5" compoundref="macros_8h" startline="99">PackedBool::KeyPushLong</references>
+        <references refid="timer_8h_1a8602ac7725d183564812f39737d61f3b" compoundref="kbd_8c" startline="42" endline="58">KeyState</references>
+        <references refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" compoundref="dispatch_8c" startline="4" endline="34">AddTask</references>
+        <references refid="timer_8h_1a119554f5f29d82aa2bd6259ee28ab2f9" compoundref="kbd_8c" startline="60" endline="80">KeyScan</references>
+        <referencedby refid="kbd_8c_1a119554f5f29d82aa2bd6259ee28ab2f9" compoundref="kbd_8c" startline="60" endline="80">KeyScan</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="kbd_8h" kindref="compound">kbd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//extern<sp/>void<sp/>AddTask<sp/>(void<sp/>(*taskfunc)(void),<sp/>u16<sp/>taskdelay,<sp/>u16<sp/>taskperiod);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>обработчик<sp/>нажатий</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">int<sp/>trigger(int<sp/>btn,int<sp/>port){</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(btn&amp;&amp;(!(CH(C,port))))<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(250);</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(btn&amp;&amp;(!(CH(C,port))))</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SBC(port);</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//{SBC(port);while<sp/>((btn)){if((!btn))break;};}</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(750);</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>выключить</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>((CH(C,port))&amp;&amp;btn)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(250);</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>((CH(C,port))&amp;&amp;btn)</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CB(C,port));</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//{(CB(C,port));while<sp/>((btn)){if((!btn))break;};}</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(750);</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">//*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;kbd.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="kbd_8c_1a3337a8a50d7f05b98e18ce3484bacb89" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="kbd_8h_1a3337a8a50d7f05b98e18ce3484bacb89" kindref="member">InitControl</ref>(){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DDRC=0b00111000;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DDRA<sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/>PC1)|(1<sp/>&lt;&lt;<sp/>PC2)|(1<sp/>&lt;&lt;<sp/>PC3)|(1<sp/>&lt;&lt;<sp/>PC4)|(1<sp/>&lt;&lt;<sp/>PC5)|(1<sp/>&lt;&lt;<sp/>PC6);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PORTC=0b00000111;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="kbd_8c_1ac24268e43ab02c713950ac04cd01bf4c" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="kbd_8h_1ac24268e43ab02c713950ac04cd01bf4c" kindref="member">KeyCode</ref>(){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1abaad87249bbff85ac78c58eb36cd16c5" kindref="member">KeyPin</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="kbd_8c_1a8602ac7725d183564812f39737d61f3b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="timer_8h_1a8602ac7725d183564812f39737d61f3b" kindref="member">KeyState</ref>(){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(((<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a4632f42a77835db7258b0b8ad0dee075" kindref="member">KeyPressed</ref>)&amp;&amp;(<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a746c49c375112b4b43a2ae974bed69d3" kindref="member">KeyReleased</ref>))||((<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a4632f42a77835db7258b0b8ad0dee075" kindref="member">KeyPressed</ref>)&amp;&amp;(<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a1dc85c6cfe92c1b73cbdd6f1eae7efb5" kindref="member">KeyPushLong</ref>))){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a4632f42a77835db7258b0b8ad0dee075" kindref="member">KeyPressed</ref>=0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a1dc85c6cfe92c1b73cbdd6f1eae7efb5" kindref="member">KeyPushLong</ref>){</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1abaad87249bbff85ac78c58eb36cd16c5" kindref="member">KeyPin</ref>+=8;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//flags.KeyPushLong=0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a1dc85c6cfe92c1b73cbdd6f1eae7efb5" kindref="member">KeyPushLong</ref>=0;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1afc83916c55a3756dd50bb0a558a6ed5f" kindref="member">State_Automate</ref>=1;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a746c49c375112b4b43a2ae974bed69d3" kindref="member">KeyReleased</ref>=1;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="kbd_8h_1a11099369cfb983a02f78ffdee298e974" kindref="member">KeyCurrentCode</ref>=<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1abaad87249bbff85ac78c58eb36cd16c5" kindref="member">KeyPin</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>flags.State_Automate=1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>AddTask(StateAutomate,5,0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>*KeyCodePointer<sp/>=<sp/>&amp;KeyCurrentCode;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="kbd_8c_1a119554f5f29d82aa2bd6259ee28ab2f9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="timer_8h_1a119554f5f29d82aa2bd6259ee28ab2f9" kindref="member">KeyScan</ref>(){</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(~PINC&amp;0b00000111){<sp/></highlight><highlight class="comment">//<sp/>обработчик<sp/>нажатия</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a746c49c375112b4b43a2ae974bed69d3" kindref="member">KeyReleased</ref>=0;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(++<ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref><sp/>&gt;<sp/>5<sp/>)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//короткое<sp/>нажатие<sp/>100-250<sp/>миллисекунд</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a4632f42a77835db7258b0b8ad0dee075" kindref="member">KeyPressed</ref>){<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a4632f42a77835db7258b0b8ad0dee075" kindref="member">KeyPressed</ref><sp/>=<sp/>1;<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1abaad87249bbff85ac78c58eb36cd16c5" kindref="member">KeyPin</ref>=(~PINC&amp;0b00000111);}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref><sp/>&gt;<sp/>100<sp/>){<sp/><sp/></highlight><highlight class="comment">//длинное<sp/>нажатие<sp/>1-3<sp/>секунды</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a1dc85c6cfe92c1b73cbdd6f1eae7efb5" kindref="member">KeyPushLong</ref>){</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a1dc85c6cfe92c1b73cbdd6f1eae7efb5" kindref="member">KeyPushLong</ref>=1;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a8602ac7725d183564812f39737d61f3b" kindref="member">KeyState</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref>=0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a746c49c375112b4b43a2ae974bed69d3" kindref="member">KeyReleased</ref>)<sp/>{<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a746c49c375112b4b43a2ae974bed69d3" kindref="member">KeyReleased</ref>=1;}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a8602ac7725d183564812f39737d61f3b" kindref="member">KeyState</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" kindref="member">AddTask</ref>(<ref refid="timer_8h_1a119554f5f29d82aa2bd6259ee28ab2f9" kindref="member">KeyScan</ref>,25);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/geraki/mcu_dev/at8_ct/kbd.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,584 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.1.2">
+  <compounddef id="scm_r_t_o_s__bitmacros_8h" kind="file">
+    <compoundname>scmRTOS_bitmacros.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1aef8856aff35621cceff35a36a1ab253a" prot="public" static="no">
+        <name>PORT_TOGGLE_BY_PIN_WRITE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="63" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1acd51628efae6f5e555e7ac2faaa54bca" prot="public" static="no">
+        <name>PM_BITNUM</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>(bit)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="66" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a8a63eee53f365aad7e436b4070c1ec09" prot="public" static="no">
+        <name>BITNUM</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1acd51628efae6f5e555e7ac2faaa54bca" kindref="member">PM_BITNUM</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="67" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1aa611d8f7e5aa7a82486ee4fb0c64bc05" prot="public" static="no">
+        <name>BITMASK</name>
+        <param><defname>x</defname></param>
+        <initializer>(1&lt;&lt;<ref refid="scm_r_t_o_s__bitmacros_8h_1acd51628efae6f5e555e7ac2faaa54bca" kindref="member">PM_BITNUM</ref>(x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="68" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a14ff7494a8e6bae2607c362bd26c0af4" prot="public" static="no">
+        <name>PM_SETOUT</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <initializer>(DDR##port |= (1&lt;&lt;(bit)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="70" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a66a8b68e0cc7454849a82898ed3a289f" prot="public" static="no">
+        <name>PM_SETIN</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <initializer>(DDR##port &amp;= ~(1&lt;&lt;(bit)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="71" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a5f7da1bcc002a8fbe1c282044a9e6ab5" prot="public" static="no">
+        <name>PM_SETPULLUP</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <initializer>(PORT##port |= (1&lt;&lt;(bit)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="72" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a426651a7ec58867202e3caf871828e40" prot="public" static="no">
+        <name>PM_SETHIZ</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <initializer>(PORT##port &amp;= ~(1&lt;&lt;(bit)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="73" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1aa8381942a507cf9fd98558ecd9d9d71d" prot="public" static="no">
+        <name>PM_DRIVER</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>val</defname></param>
+        <param><defname>mode</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1ab7b2e24a60f38d510ab22f4717d44846" kindref="member">PM_SET</ref>##mode(port,bit)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="74" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a3b1acb21fc3bb55932d3fc842548a661" prot="public" static="no">
+        <name>DRIVER</name>
+        <param><defname>x</defname></param>
+        <param><defname>mode</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1aa8381942a507cf9fd98558ecd9d9d71d" kindref="member">PM_DRIVER</ref>(x,mode)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="76" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a91f6cdc8d0c86dc91159b52fde7e0c3d" prot="public" static="no">
+        <name>PM_SETL</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>dummy</defname></param>
+        <initializer>(PORT##port &amp;= ~(1&lt;&lt;(bit)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="78" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1ac92a9b2d3c33385eaf49cedf41aa3ab5" prot="public" static="no">
+        <name>PM_SETH</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>dummy</defname></param>
+        <initializer>(PORT##port |= (1&lt;&lt;(bit)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="79" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1ab7b2e24a60f38d510ab22f4717d44846" prot="public" static="no">
+        <name>PM_SET</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>PM_SET##val(port,bit,dummy)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="80" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a327590f376df057caf1541ffc3deb31f" prot="public" static="no">
+        <name>ON</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1ab7b2e24a60f38d510ab22f4717d44846" kindref="member">PM_SET</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="81" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a1e573d4c5b004a71c86c15800b65708f" prot="public" static="no">
+        <name>SET</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1ac92a9b2d3c33385eaf49cedf41aa3ab5" kindref="member">PM_SETH</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="82" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a74bc9444cf3ef3289a07cea717e16764" prot="public" static="no">
+        <name>CLR</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1a91f6cdc8d0c86dc91159b52fde7e0c3d" kindref="member">PM_SETL</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="83" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1acdffa2129a3a337633cf6463ad5d7d2a" prot="public" static="no">
+        <name>PM_CLRL</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>dummy</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1ac92a9b2d3c33385eaf49cedf41aa3ab5" kindref="member">PM_SETH</ref>(port,bit,dummy)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="85" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1abd688b96cf4944e53a301aa3bd667bd5" prot="public" static="no">
+        <name>PM_CLRH</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>dummy</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1a91f6cdc8d0c86dc91159b52fde7e0c3d" kindref="member">PM_SETL</ref>(port,bit,dummy)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="86" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a564aa36998e5d04f6d4492d34655caf0" prot="public" static="no">
+        <name>PM_CLR</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>PM_CLR##val(port,bit,dummy)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="87" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a4521467edec9387fad3ae8761f0f4b1d" prot="public" static="no">
+        <name>OFF</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1a564aa36998e5d04f6d4492d34655caf0" kindref="member">PM_CLR</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="88" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a87da8eb6d4b4d14bcfbdf1ca2cd33b64" prot="public" static="no">
+        <name>PM_PINH</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>dummy</defname></param>
+        <initializer>(PIN##port &amp; (1&lt;&lt;(bit)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="90" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1ac15c7bbd87b514f08c6123aea4911a61" prot="public" static="no">
+        <name>PM_PINL</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>dummy</defname></param>
+        <initializer>!<ref refid="scm_r_t_o_s__bitmacros_8h_1a87da8eb6d4b4d14bcfbdf1ca2cd33b64" kindref="member">PM_PINH</ref>(port,bit,dummy)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="91" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a0d71c442d435f90fa64e4f27947ee4f7" prot="public" static="no">
+        <name>PM_PIN</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>PM_PIN##val(port,bit,dummy)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="92" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a74e496c928b7a7b86ad52253f5995363" prot="public" static="no">
+        <name>ACTIVE</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1a0d71c442d435f90fa64e4f27947ee4f7" kindref="member">PM_PIN</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="93" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a7bacdbbf412a44abfcffa6665b755dd4" prot="public" static="no">
+        <name>PIN_H</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1a87da8eb6d4b4d14bcfbdf1ca2cd33b64" kindref="member">PM_PINH</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="94" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1ad1b410659583ad9e9efc65c221998a53" prot="public" static="no">
+        <name>PIN_L</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1ac15c7bbd87b514f08c6123aea4911a61" kindref="member">PM_PINL</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="95" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a82edfe7e7e0887fd40b0e7dcac951827" prot="public" static="no">
+        <name>PM_LATCHH</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>dummy</defname></param>
+        <initializer>(PORT##port &amp; (1&lt;&lt;(bit)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="97" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1ac59d84ebf2efe432b70768fce970df31" prot="public" static="no">
+        <name>PM_LATCHL</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>dummy</defname></param>
+        <initializer>!<ref refid="scm_r_t_o_s__bitmacros_8h_1a82edfe7e7e0887fd40b0e7dcac951827" kindref="member">PM_LATCHH</ref>(port,bit,dummy)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="98" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1aada44cd8de5a239e23d85248b530b1e0" prot="public" static="no">
+        <name>PM_LATCH</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>PM_LATCH##val(port,bit,dummy)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="99" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1ac29b270d21fb82df16e5a6fdcf860ab1" prot="public" static="no">
+        <name>LATCH</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1aada44cd8de5a239e23d85248b530b1e0" kindref="member">PM_LATCH</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="100" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a62362198d3afe359ed12662804b15f05" prot="public" static="no">
+        <name>LATCH_H</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1a82edfe7e7e0887fd40b0e7dcac951827" kindref="member">PM_LATCHH</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="101" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a35d4c98ec05f1c4f144104c8ebb4aeeb" prot="public" static="no">
+        <name>LATCH_L</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1ac59d84ebf2efe432b70768fce970df31" kindref="member">PM_LATCHL</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="102" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a05fbbabea3c99c1abd266ad97a75a357" prot="public" static="no">
+        <name>PM_CPL</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>(PIN##port |= (1 &lt;&lt; (bit)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="106" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a5f0f4210b8e3cd585410657a64dc9c9c" prot="public" static="no">
+        <name>CPL</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1a05fbbabea3c99c1abd266ad97a75a357" kindref="member">PM_CPL</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="111" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scm_r_t_o_s__bitmacros_8h_1a10801dd855e20334cd83cace96616de6" prot="public" static="no">
+        <name>TOGGLE</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="scm_r_t_o_s__bitmacros_8h_1a05fbbabea3c99c1abd266ad97a75a357" kindref="member">PM_CPL</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" line="112" bodyfile="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*----------------------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>pin_macros.h<sp/><sp/>(AVR/avr-gcc)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*----------------------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Author:<sp/><sp/>Oleksandr<sp/>Redchuk<sp/>aka<sp/>ReAl<sp/>(real@real.kiev.ua)</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Description:<sp/>port<sp/>bits<sp/>access<sp/>macros<sp/>for<sp/>AVR<sp/>uC<sp/>family<sp/>(avr-gcc<sp/>compiler)</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Based<sp/>on<sp/>macros<sp/>by<sp/>Ascold<sp/>Volkov,<sp/>Andy<sp/>Mozzevilov,<sp/>Aleksey<sp/>Musin</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*----------------------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">examples</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">#define<sp/>Pin1<sp/>A,2,H</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">#define<sp/>Pin2<sp/>B,3,L</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>^<sp/>^<sp/>^</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>port<sp/>|<sp/>|</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit<sp/>\active<sp/>level</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight></codeline>
+<codeline lineno="22"><highlight class="comment">void<sp/>main(void)</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/>DRIVER(Pin1,OUT);<sp/><sp/><sp/><sp/>//as<sp/>output</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/>DRIVER(Pin2,IN);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//as<sp/>input</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/>DRIVER(Pin2,PULLUP);<sp/><sp/><sp/><sp/>//<sp/>with<sp/>pullup</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/>ON(Pin1);</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(ACTIVE(Pin2))<sp/>OFF(Pin1);</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(LATCH(Pin1))<sp/>{<sp/>//if<sp/>active<sp/>level<sp/>presents<sp/>on<sp/>Pin1<sp/>for<sp/>drive<sp/>something</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//do<sp/>something</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PIN_MACROS_H</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PIN_MACROS_H</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>assume<sp/>chip<sp/>has<sp/>PORT_TOGGLE_BY_PIN_WRITE<sp/>feature<sp/>by<sp/>default<sp/>(all<sp/>new<sp/>AVR<sp/>chips)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>check<sp/>only<sp/>old-style<sp/>chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/><sp/><sp/><sp/>defined(__AVR_AT94K__)<sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_AT43USB320__)<sp/>||<sp/>defined(__AVR_AT43USB355__)<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_AT76C711__)<sp/>||<sp/>defined(__AVR_AT86RF401__)<sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_AT90C8534__)<sp/>||<sp/>defined(__AVR_AT90S4434__)<sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_AT90S1200__)<sp/>||<sp/>defined(__AVR_AT90S2343__)<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_AT90S2333__)<sp/>||<sp/>defined(__AVR_AT90S2323__)<sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_AT90S2313__)<sp/>||<sp/>defined(__AVR_AT90S4433__)<sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_AT90S4414__)<sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_AT90S8515__)<sp/>||<sp/>defined(__AVR_AT90S8535__)<sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_ATmega8515__)<sp/>||<sp/>defined(__AVR_ATmega8535__)<sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_ATmega103__)<sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_ATmega64__)<sp/>||<sp/>defined(__AVR_ATmega128__)<sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_ATmega8__)<sp/>||<sp/>defined(__AVR_ATmega16__)<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_ATmega32__)<sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_ATtiny11__)<sp/>||<sp/>defined(__AVR_ATtiny12__)<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_ATtiny15__)<sp/>||<sp/>defined(__AVR_ATtiny28__)<sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_ATtiny22__)<sp/>||<sp/>defined(__AVR_ATtiny26__)<sp/>\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_ATmega161__)<sp/>||<sp/>defined(__AVR_ATmega162__)<sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_ATmega163__)<sp/>||<sp/>defined(__AVR_ATmega323__)<sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>defined(__AVR_ATmega8HVA__)<sp/>||<sp/>defined(__AVR_ATmega16HVA__)</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>PORT_TOGGLE_BY_PIN_WRITE<sp/>0</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="63" refid="scm_r_t_o_s__bitmacros_8h_1aef8856aff35621cceff35a36a1ab253a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>PORT_TOGGLE_BY_PIN_WRITE<sp/>1</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="scm_r_t_o_s__bitmacros_8h_1acd51628efae6f5e555e7ac2faaa54bca" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PM_BITNUM(port,bit,val)<sp/>(bit)</highlight></codeline>
+<codeline lineno="67" refid="scm_r_t_o_s__bitmacros_8h_1a8a63eee53f365aad7e436b4070c1ec09" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BITNUM(x)<sp/>PM_BITNUM(x)</highlight></codeline>
+<codeline lineno="68" refid="scm_r_t_o_s__bitmacros_8h_1aa611d8f7e5aa7a82486ee4fb0c64bc05" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BITMASK(x)<sp/>(1&lt;&lt;PM_BITNUM(x))</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="scm_r_t_o_s__bitmacros_8h_1a14ff7494a8e6bae2607c362bd26c0af4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PM_SETOUT(port,bit)<sp/>(DDR##port<sp/>|=<sp/>(1&lt;&lt;(bit)))</highlight></codeline>
+<codeline lineno="71" refid="scm_r_t_o_s__bitmacros_8h_1a66a8b68e0cc7454849a82898ed3a289f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PM_SETIN(port,bit)<sp/>(DDR##port<sp/>&amp;=<sp/>~(1&lt;&lt;(bit)))</highlight></codeline>
+<codeline lineno="72" refid="scm_r_t_o_s__bitmacros_8h_1a5f7da1bcc002a8fbe1c282044a9e6ab5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PM_SETPULLUP(port,bit)<sp/>(PORT##port<sp/>|=<sp/>(1&lt;&lt;(bit)))</highlight></codeline>
+<codeline lineno="73" refid="scm_r_t_o_s__bitmacros_8h_1a426651a7ec58867202e3caf871828e40" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PM_SETHIZ(port,bit)<sp/>(PORT##port<sp/>&amp;=<sp/>~(1&lt;&lt;(bit)))</highlight></codeline>
+<codeline lineno="74" refid="scm_r_t_o_s__bitmacros_8h_1aa8381942a507cf9fd98558ecd9d9d71d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PM_DRIVER(port,bit,val,mode)<sp/>PM_SET##mode(port,bit)</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>dmode<sp/>=<sp/>OUT<sp/>or<sp/>IN,<sp/>PULLUP<sp/>or<sp/>HIZ<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="scm_r_t_o_s__bitmacros_8h_1a3b1acb21fc3bb55932d3fc842548a661" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DRIVER(x,mode)<sp/>PM_DRIVER(x,mode)</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="scm_r_t_o_s__bitmacros_8h_1a91f6cdc8d0c86dc91159b52fde7e0c3d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PM_SETL(port,bit,dummy)<sp/>(PORT##port<sp/>&amp;=<sp/>~(1&lt;&lt;(bit)))</highlight></codeline>
+<codeline lineno="79" refid="scm_r_t_o_s__bitmacros_8h_1ac92a9b2d3c33385eaf49cedf41aa3ab5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PM_SETH(port,bit,dummy)<sp/>(PORT##port<sp/>|=<sp/>(1&lt;&lt;(bit)))</highlight></codeline>
+<codeline lineno="80" refid="scm_r_t_o_s__bitmacros_8h_1ab7b2e24a60f38d510ab22f4717d44846" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PM_SET(port,bit,val)<sp/>PM_SET##val(port,bit,dummy)</highlight></codeline>
+<codeline lineno="81" refid="scm_r_t_o_s__bitmacros_8h_1a327590f376df057caf1541ffc3deb31f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ON(x)<sp/>PM_SET(x)</highlight></codeline>
+<codeline lineno="82" refid="scm_r_t_o_s__bitmacros_8h_1a1e573d4c5b004a71c86c15800b65708f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SET(x)<sp/>PM_SETH(x)</highlight></codeline>
+<codeline lineno="83" refid="scm_r_t_o_s__bitmacros_8h_1a74bc9444cf3ef3289a07cea717e16764" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CLR(x)<sp/>PM_SETL(x)</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="scm_r_t_o_s__bitmacros_8h_1acdffa2129a3a337633cf6463ad5d7d2a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PM_CLRL(port,bit,dummy)<sp/>PM_SETH(port,bit,dummy)</highlight></codeline>
+<codeline lineno="86" refid="scm_r_t_o_s__bitmacros_8h_1abd688b96cf4944e53a301aa3bd667bd5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PM_CLRH(port,bit,dummy)<sp/>PM_SETL(port,bit,dummy)</highlight></codeline>
+<codeline lineno="87" refid="scm_r_t_o_s__bitmacros_8h_1a564aa36998e5d04f6d4492d34655caf0" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PM_CLR(port,bit,val)<sp/>PM_CLR##val(port,bit,dummy)</highlight></codeline>
+<codeline lineno="88" refid="scm_r_t_o_s__bitmacros_8h_1a4521467edec9387fad3ae8761f0f4b1d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>OFF(x)<sp/>PM_CLR(x)</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="scm_r_t_o_s__bitmacros_8h_1a87da8eb6d4b4d14bcfbdf1ca2cd33b64" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PM_PINH(port,bit,dummy)<sp/>(PIN##port<sp/>&amp;<sp/>(1&lt;&lt;(bit)))</highlight></codeline>
+<codeline lineno="91" refid="scm_r_t_o_s__bitmacros_8h_1ac15c7bbd87b514f08c6123aea4911a61" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PM_PINL(port,bit,dummy)<sp/>!PM_PINH(port,bit,dummy)</highlight></codeline>
+<codeline lineno="92" refid="scm_r_t_o_s__bitmacros_8h_1a0d71c442d435f90fa64e4f27947ee4f7" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PM_PIN(port,bit,val)<sp/>PM_PIN##val(port,bit,dummy)</highlight></codeline>
+<codeline lineno="93" refid="scm_r_t_o_s__bitmacros_8h_1a74e496c928b7a7b86ad52253f5995363" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ACTIVE(x)<sp/>PM_PIN(x)</highlight></codeline>
+<codeline lineno="94" refid="scm_r_t_o_s__bitmacros_8h_1a7bacdbbf412a44abfcffa6665b755dd4" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PIN_H(x)<sp/>PM_PINH(x)</highlight></codeline>
+<codeline lineno="95" refid="scm_r_t_o_s__bitmacros_8h_1ad1b410659583ad9e9efc65c221998a53" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PIN_L(x)<sp/>PM_PINL(x)</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="scm_r_t_o_s__bitmacros_8h_1a82edfe7e7e0887fd40b0e7dcac951827" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PM_LATCHH(port,bit,dummy)<sp/>(PORT##port<sp/>&amp;<sp/>(1&lt;&lt;(bit)))</highlight></codeline>
+<codeline lineno="98" refid="scm_r_t_o_s__bitmacros_8h_1ac59d84ebf2efe432b70768fce970df31" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PM_LATCHL(port,bit,dummy)<sp/>!PM_LATCHH(port,bit,dummy)</highlight></codeline>
+<codeline lineno="99" refid="scm_r_t_o_s__bitmacros_8h_1aada44cd8de5a239e23d85248b530b1e0" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PM_LATCH(port,bit,val)<sp/>PM_LATCH##val(port,bit,dummy)</highlight></codeline>
+<codeline lineno="100" refid="scm_r_t_o_s__bitmacros_8h_1ac29b270d21fb82df16e5a6fdcf860ab1" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LATCH(x)<sp/>PM_LATCH(x)</highlight></codeline>
+<codeline lineno="101" refid="scm_r_t_o_s__bitmacros_8h_1a62362198d3afe359ed12662804b15f05" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LATCH_H(x)<sp/>PM_LATCHH(x)</highlight></codeline>
+<codeline lineno="102" refid="scm_r_t_o_s__bitmacros_8h_1a35d4c98ec05f1c4f144104c8ebb4aeeb" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LATCH_L(x)<sp/>PM_LATCHL(x)</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>PORT_TOGGLE_BY_PIN_WRITE</highlight></codeline>
+<codeline lineno="106" refid="scm_r_t_o_s__bitmacros_8h_1a05fbbabea3c99c1abd266ad97a75a357" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>PM_CPL(port,bit,val)<sp/><sp/><sp/><sp/><sp/><sp/>(PIN##port<sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/>(bit)))</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>PM_CPL(port,bit,val)<sp/><sp/><sp/><sp/><sp/><sp/>(PORT##port<sp/>^=<sp/>(1<sp/>&lt;&lt;<sp/>(bit)))</highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="scm_r_t_o_s__bitmacros_8h_1a5f0f4210b8e3cd585410657a64dc9c9c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CPL(x)<sp/>PM_CPL(x)</highlight></codeline>
+<codeline lineno="112" refid="scm_r_t_o_s__bitmacros_8h_1a10801dd855e20334cd83cace96616de6" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TOGGLE(x)<sp/>PM_CPL(x)</highlight></codeline>
+<codeline lineno="113"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/>//<sp/>PIN_MACROS_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/geraki/mcu_dev/at8_ct/scmRTOS_bitmacros.h"/>
+  </compounddef>
+</doxygen>

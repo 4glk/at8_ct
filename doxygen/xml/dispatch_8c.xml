@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.1.2">
+  <compounddef id="dispatch_8c" kind="file">
+    <compoundname>dispatch.c</compoundname>
+    <includes refid="dispatch_8h" local="yes">dispatch.h</includes>
+    <incdepgraph>
+      <node id="212">
+        <label>../macros.h</label>
+        <link refid="macros_8h"/>
+        <childnode refid="213" relation="include">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>stdbool.h</label>
+      </node>
+      <node id="208">
+        <label>dispatch.c</label>
+        <link refid="dispatch.c"/>
+        <childnode refid="209" relation="include">
+        </childnode>
+      </node>
+      <node id="209">
+        <label>dispatch.h</label>
+        <link refid="dispatch_8h"/>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="211">
+        <label>avr/interrupt.h</label>
+      </node>
+      <node id="210">
+        <label>avr/io.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dispatch_8c_1a20948c9b12c543546cdca3c5419d14b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddTask</definition>
+        <argsstring>(void(*taskfunc)(void), uint16_t taskdelay)</argsstring>
+        <name>AddTask</name>
+        <param>
+          <type>void(*)(void)</type>
+          <declname>taskfunc</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>taskdelay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/sheduler/dispatch.c" line="4" bodyfile="/home/geraki/mcu_dev/at8_ct/sheduler/dispatch.c" bodystart="4" bodyend="34"/>
+        <references refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" compoundref="dispatch_8h" startline="36">TaskArray</references>
+        <references refid="dispatch_8h_1af6b099574c54d63872fc626dcdeef94a" compoundref="dispatch_8h" startline="29">MAXnTASKS</references>
+        <references refid="structtask_1ac587accd9b614b8337dad2636e84488c" compoundref="dispatch_8h" startline="15">task::countdown</references>
+        <references refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" compoundref="dispatch_8h" startline="13">task::pfunc</references>
+        <references refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" compoundref="dispatch_8h" startline="25">delay_time</references>
+        <references refid="dispatch_8h_1a7f5f503663caaac1aba5da597ea15416" compoundref="dispatch_8h" startline="26">dt</references>
+        <referencedby refid="adc_8c_1a05c2e5b588ced1cd7312f5b0edc5b295" compoundref="adc_8c" startline="3" endline="6">ISR</referencedby>
+        <referencedby refid="adc_8h_1aebdad809d69c09c4dd29da66ebcdac6a" compoundref="adc_8c" startline="8" endline="33">AdcMean</referencedby>
+        <referencedby refid="automate_8h_1a648a2fa2697c358cefdbc198c77b0206" compoundref="automate_8c" startline="4" endline="36">StateAutomate</referencedby>
+        <referencedby refid="automate_8h_1a4cc8fd1ed483012c97d1a9e9ebf8e93d" compoundref="automate_8c" startline="38" endline="58">Timer_sw</referencedby>
+        <referencedby refid="automate_8h_1ac41ed6f23d52707933276309ca058269" compoundref="automate_8c" startline="60" endline="76">Supply_sw</referencedby>
+        <referencedby refid="automate_8h_1aec96046bbb47e80657e6439eda9dc665" compoundref="automate_8c" startline="79" endline="83">FuncINDTime</referencedby>
+        <referencedby refid="automate_8h_1adab77d4a76e9465ecbd2eaa9cacf8b61" compoundref="automate_8c" startline="85" endline="97">Furnance_sw</referencedby>
+        <referencedby refid="automate_8h_1a7a84985ae54f57552f93b35a907b0542" compoundref="automate_8c" startline="99" endline="110">Fire_sw</referencedby>
+        <referencedby refid="automate_8h_1ab82d42f4ec48e743663fb90c550e4fa5" compoundref="automate_8c" startline="112" endline="115">ShowAdc6</referencedby>
+        <referencedby refid="automate_8h_1a29ef358bb3f19d4b696b300c61bc0da1" compoundref="automate_8c" startline="117" endline="121">ShowAdc7</referencedby>
+        <referencedby refid="indicator_8h_1a3de511c73fd66b0009b6a1e743bcab30" compoundref="indicator_8c" startline="250" endline="364">IND_Update</referencedby>
+        <referencedby refid="kbd_8c_1a119554f5f29d82aa2bd6259ee28ab2f9" compoundref="kbd_8c" startline="60" endline="80">KeyScan</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+        <referencedby refid="main_8c_1a9a336e2a30206a895d000a9d07775b4b" compoundref="timer_8c" startline="13" endline="43">doubleCountdown</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dispatch_8c_1aa46f19a6d870d46a2749a8c623a7ef68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DispatchTask</definition>
+        <argsstring>(void)</argsstring>
+        <name>DispatchTask</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Прототипы фукнций ////////. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/sheduler/dispatch.c" line="36" bodyfile="/home/geraki/mcu_dev/at8_ct/sheduler/dispatch.c" bodystart="36" bodyend="55"/>
+        <references refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" compoundref="macros_8h" startline="111">flags</references>
+        <references refid="struct_packed_bool_1ae5a80210d04730e10c09be516366933e" compoundref="macros_8h" startline="109">PackedBool::RunFlag</references>
+        <references refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" compoundref="dispatch_8h" startline="36">TaskArray</references>
+        <references refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" compoundref="dispatch_8h" startline="13">task::pfunc</references>
+        <references refid="dispatch_8h_1af6b099574c54d63872fc626dcdeef94a" compoundref="dispatch_8h" startline="29">MAXnTASKS</references>
+        <references refid="structtask_1ac587accd9b614b8337dad2636e84488c" compoundref="dispatch_8h" startline="15">task::countdown</references>
+        <references refid="dispatch_8h_1a7f5f503663caaac1aba5da597ea15416" compoundref="dispatch_8h" startline="26">dt</references>
+        <references refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" compoundref="dispatch_8h" startline="25">delay_time</references>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dispatch_8c_1a44e5d840f344e39cc9676a13e4270669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeleteTask</definition>
+        <argsstring>(uint8_t j)</argsstring>
+        <name>DeleteTask</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/sheduler/dispatch.c" line="58" bodyfile="/home/geraki/mcu_dev/at8_ct/sheduler/dispatch.c" bodystart="57" bodyend="63"/>
+        <references refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" compoundref="dispatch_8h" startline="36">TaskArray</references>
+        <references refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" compoundref="dispatch_8h" startline="13">task::pfunc</references>
+        <references refid="structtask_1ac587accd9b614b8337dad2636e84488c" compoundref="dispatch_8h" startline="15">task::countdown</references>
+      </memberdef>
+      <memberdef kind="function" id="dispatch_8c_1a7cfcbe42bd266750aeb6e5d71e5ea479" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TIMER2_OVF_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TIMER2_OVF_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/sheduler/dispatch.c" line="139" bodyfile="/home/geraki/mcu_dev/at8_ct/sheduler/dispatch.c" bodystart="139" bodyend="144"/>
+        <references refid="macros_8h_1ad43a21637bce77bed55008276c26d3b9" compoundref="macros_8h" startline="3">StartFrom</references>
+        <references refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" compoundref="macros_8h" startline="111">flags</references>
+        <references refid="struct_packed_bool_1ae5a80210d04730e10c09be516366933e" compoundref="macros_8h" startline="109">PackedBool::RunFlag</references>
+        <references refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" compoundref="dispatch_8h" startline="25">delay_time</references>
+      </memberdef>
+      <memberdef kind="function" id="dispatch_8c_1aeeccb93d922e4fb825916b6ca880ec10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitScheduler</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitScheduler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/sheduler/dispatch.c" line="146" bodyfile="/home/geraki/mcu_dev/at8_ct/sheduler/dispatch.c" bodystart="146" bodyend="153"/>
+        <references refid="macros_8h_1ad43a21637bce77bed55008276c26d3b9" compoundref="macros_8h" startline="3">StartFrom</references>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dispatch_8h" kindref="compound">dispatch.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//delay_time=50;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>LSHED</highlight></codeline>
+<codeline lineno="4" refid="dispatch_8c_1a20948c9b12c543546cdca3c5419d14b2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" kindref="member">AddTask</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*taskfunc)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">),<sp/>uint16_t<sp/>taskdelay){</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/>n=0;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/>position=0;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>крутить<sp/>пока<sp/>:<sp/>не<sp/>попадется<sp/>функция<sp/>или<sp/>пустая<sp/>функция<sp/>или<sp/>пустой<sp/>отсчет<sp/><sp/>и<sp/>отсчет<sp/>больше<sp/>следующих<sp/>и<sp/>не<sp/>больше<sp/>количества<sp/>задач</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(((<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].pfunc!=(*taskfunc))&amp;&amp;((<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].pfunc!=0)||(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].countdown!=0)))&amp;&amp;(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].countdown&lt;=((taskdelay==0)?(++taskdelay):(taskdelay))&amp;&amp;(n<sp/>&lt;<sp/><ref refid="dispatch_8h_1af6b099574c54d63872fc626dcdeef94a" kindref="member">MAXnTASKS</ref>)))n++;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>position=n;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[position].pfunc==(*taskfunc))){</highlight><highlight class="comment">//<sp/>если<sp/>есть<sp/>уже<sp/>такая<sp/>функция<sp/>в<sp/>списке<sp/>,<sp/>то<sp/>добавляем<sp/>ей<sp/>время</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[position].<ref refid="structtask_1ac587accd9b614b8337dad2636e84488c" kindref="member">countdown</ref><sp/>+=<sp/>taskdelay;<sp/><sp/></highlight><highlight class="comment">//<sp/>прибавили<sp/>время<sp/>,<sp/>нужно<sp/>еще<sp/>раз<sp/>сортировать<sp/>вниз<sp/>по<sp/>очереди</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>как<sp/>бы<sp/>это<sp/>сделать<sp/>без<sp/>goto<sp/>и<sp/>лишних<sp/>функций</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>еще<sp/>один<sp/>проход<sp/>ничего<sp/>не<sp/>изменит<sp/>т.к<sp/>он<sp/>найдет<sp/>эту<sp/>же<sp/>функцию</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>как<sp/>вариант<sp/>разбить<sp/>на<sp/>функции<sp/>,<sp/>но<sp/>как<sp/>с<sp/>передачей<sp/>имени<sp/>функции<sp/>???</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>перемотаем<sp/>до<sp/>конца<sp/>или<sp/>пока<sp/>счетчики<sp/>меньше<sp/>текущего</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtask" kindref="compound">task</ref><sp/>tmp2;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n+1].pfunc!=0)&amp;&amp;(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n+1].countdown&lt;=<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].countdown)){</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp2=<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n+1];</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n+1]=<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n];</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n]=tmp2;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n++;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//while<sp/>(((TaskArray[n].pfunc!=0)||(TaskArray[n].countdown!=0))&amp;&amp;(TaskArray[n].countdown&lt;=(TaskArray[position].countdown))&amp;&amp;(n<sp/>&lt;<sp/>MAXnTASKS)))n++;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>а<sp/>теперь<sp/>нужно<sp/>сдвинуть<sp/>очередь<sp/>:)<sp/>теперь<sp/>наверное<sp/>нужна<sp/>новая<sp/>позиция<sp/>,<sp/>здесь<sp/>скорее<sp/>пойдет<sp/>сортировка<sp/>перестановкой</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>чтож<sp/>,<sp/>еще<sp/>одна<sp/>временная<sp/>структура</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].pfunc<sp/>!=<sp/>0)<sp/>&amp;&amp;<sp/>(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].countdown!=0)<sp/>&amp;&amp;<sp/>(n<sp/>&lt;<sp/><ref refid="dispatch_8h_1af6b099574c54d63872fc626dcdeef94a" kindref="member">MAXnTASKS</ref>))n++;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>этот<sp/>цикл<sp/>мотает<sp/>до<sp/>конца<sp/>очереди</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="comment">/*.*/</highlight><highlight class="normal">;n&gt;position;n--){<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n]=<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n-1];}<sp/></highlight><highlight class="comment">//<sp/>этот<sp/>сдвигает<sp/>с<sp/>конца<sp/>до<sp/>позиции</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[position].<ref refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" kindref="member">pfunc</ref><sp/>=<sp/>*taskfunc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>если<sp/>присвоить<sp/>раньше<sp/><sp/>,<sp/>то<sp/>значение<sp/>потеряется???<sp/>да!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[position].<ref refid="structtask_1ac587accd9b614b8337dad2636e84488c" kindref="member">countdown</ref><sp/>=<sp/>taskdelay;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n==0){<sp/><ref refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" kindref="member">delay_time</ref>=<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[0].<ref refid="structtask_1ac587accd9b614b8337dad2636e84488c" kindref="member">countdown</ref>;<ref refid="dispatch_8h_1a7f5f503663caaac1aba5da597ea15416" kindref="member">dt</ref>=<ref refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" kindref="member">delay_time</ref>;}<sp/></highlight><highlight class="comment">//если<sp/>в<sp/>очереди<sp/>пусто<sp/>вроде</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>при<sp/>добавлении<sp/>нужно<sp/>обновлять<sp/>счетчик,<sp/>тк<sp/>там<sp/>старое<sp/>значение</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="dispatch_8c_1aa46f19a6d870d46a2749a8c623a7ef68" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dispatch_8h_1aa46f19a6d870d46a2749a8c623a7ef68" kindref="member" tooltip="Прототипы фукнций ////////.">DispatchTask</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>n=0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1ae5a80210d04730e10c09be516366933e" kindref="member">RunFlag</ref>==1&amp;&amp;<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[0].<ref refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" kindref="member">pfunc</ref><sp/>!=<sp/>0){</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtask" kindref="compound">task</ref><sp/>tmp;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[0];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//сдвигаем<sp/>очередь<sp/>и<sp/>затираем<sp/>первое<sp/>в<sp/><sp/>очереди<sp/>,<sp/>т.к.<sp/>оно<sp/>у<sp/>нас<sp/>уже<sp/>на<sp/>запуске</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(((<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].pfunc<sp/>!=<sp/>0)<sp/>||<sp/>(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].countdown!=0))<sp/>&amp;&amp;<sp/>(n<sp/>&lt;<sp/><ref refid="dispatch_8h_1af6b099574c54d63872fc626dcdeef94a" kindref="member">MAXnTASKS</ref>)){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n++;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n-1]=<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//сдвигаем<sp/>очередь<sp/>вперед</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n-1].countdown)<sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n-1].<ref refid="structtask_1ac587accd9b614b8337dad2636e84488c" kindref="member">countdown</ref>-=<ref refid="dispatch_8h_1a7f5f503663caaac1aba5da597ea15416" kindref="member">dt</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//вычитаем<sp/>прошедшее<sp/>время<sp/>из<sp/>каждой<sp/>задачи</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[0].pfunc<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" kindref="member">delay_time</ref>=<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[0].<ref refid="structtask_1ac587accd9b614b8337dad2636e84488c" kindref="member">countdown</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a7f5f503663caaac1aba5da597ea15416" kindref="member">dt</ref>=<ref refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" kindref="member">delay_time</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*tmp.<ref refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" kindref="member">pfunc</ref>!=0)(*tmp.<ref refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" kindref="member">pfunc</ref>)();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1ae5a80210d04730e10c09be516366933e" kindref="member">RunFlag</ref>=0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="dispatch_8c_1a44e5d840f344e39cc9676a13e4270669" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dispatch_8h_1af9614f9097c425adde3c7154c962173a" kindref="member">DeleteTask</ref><sp/>(uint8_t<sp/>j)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[j].<ref refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" kindref="member">pfunc</ref><sp/>=<sp/>0x0000;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[j].<ref refid="structtask_1ac587accd9b614b8337dad2636e84488c" kindref="member">countdown</ref>=0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>TaskArray[j].delay<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>usartWrite(&apos;S&apos;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>LSHED</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LSHED</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" kindref="member">AddTask</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*taskfunc)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">),</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*nextfunc)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">),<sp/>uint16_t<sp/>taskdelay,uint16_t<sp/>nextdelay,uint16_t<sp/>taskruns){</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/>n=0;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/>position=0;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(((<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].pfunc!=0)||(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].countdown!=0))&amp;&amp;(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].countdown&lt;=((taskdelay==0)?(++taskdelay):(taskdelay))&amp;&amp;(n<sp/>&lt;<sp/><ref refid="dispatch_8h_1af6b099574c54d63872fc626dcdeef94a" kindref="member">MAXnTASKS</ref>)))n++;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>position=n;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].pfunc<sp/>!=<sp/>0)<sp/>&amp;&amp;<sp/>(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].countdown!=0)<sp/>&amp;&amp;<sp/>(n<sp/>&lt;<sp/><ref refid="dispatch_8h_1af6b099574c54d63872fc626dcdeef94a" kindref="member">MAXnTASKS</ref>))n++;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="comment">/*.*/</highlight><highlight class="normal">;n&gt;position;n--){</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n]=<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n-1];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[position].<ref refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" kindref="member">pfunc</ref><sp/>=<sp/>taskfunc;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[position].delay<sp/>=<sp/>taskdelay;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[position].nextdelay<sp/>=<sp/>nextdelay;<sp/><sp/></highlight><highlight class="comment">//<sp/>стал<sp/>не<sp/>нужен<sp/>,<sp/>все<sp/>переместилось<sp/>в<sp/>таскранс</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[position].run<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[position].numRun<sp/>=<sp/>taskruns;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[position].nextfunc<sp/>=<sp/>nextfunc;<sp/></highlight><highlight class="comment">//<sp/><sp/>вызывает<sp/>следующую<sp/>ф-ию<sp/>с<sp/>параметрами<sp/>предыдущей<sp/>:(</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[position].<ref refid="structtask_1ac587accd9b614b8337dad2636e84488c" kindref="member">countdown</ref><sp/>=<sp/>taskdelay;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dispatch_8h_1aa46f19a6d870d46a2749a8c623a7ef68" kindref="member" tooltip="Прототипы фукнций ////////.">DispatchTask</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>n=0;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1ae5a80210d04730e10c09be516366933e" kindref="member">RunFlag</ref>==1){<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>если<sp/>таймер<sp/>выставил<sp/>флаг</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtask" kindref="compound">task</ref><sp/>tmp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>переменная<sp/>для<sp/>хранения<sp/>нулевого<sp/>элемента</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[0];</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(((<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].pfunc<sp/>!=<sp/>0)<sp/>||<sp/>(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n].countdown!=0))<sp/>&amp;&amp;<sp/>(n<sp/>&lt;<sp/><ref refid="dispatch_8h_1af6b099574c54d63872fc626dcdeef94a" kindref="member">MAXnTASKS</ref>)){</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n++;<sp/></highlight><highlight class="comment">//мотаем<sp/>пока<sp/>счетчик<sp/>не<sp/>дойдет<sp/>до<sp/>задачи<sp/>с<sp/>нужной<sp/>задержкой</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n-1]=<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//сдвигаем<sp/>очередь<sp/>вперед</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n-1].countdown)<sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[n-1].<ref refid="structtask_1ac587accd9b614b8337dad2636e84488c" kindref="member">countdown</ref>-=<ref refid="dispatch_8h_1a7f5f503663caaac1aba5da597ea15416" kindref="member">dt</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//вычитаем<sp/>прошедшее<sp/>время<sp/>из<sp/>каждой<sp/>задачи</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1af9614f9097c425adde3c7154c962173a" kindref="member">DeleteTask</ref>(n);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//удаляем<sp/>последнюю<sp/>задачу</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(tmp.numRun){</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*tmp.nextfunc!=<ref refid="dispatch_8h_1a2242f9428023ff0aacadb5fa210a6686" kindref="member">Idle</ref>)<sp/><ref refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" kindref="member">AddTask</ref>(*tmp.nextfunc,<ref refid="dispatch_8h_1a2242f9428023ff0aacadb5fa210a6686" kindref="member">Idle</ref>,tmp.nextdelay,0,tmp.numRun);</highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0xffff:<sp/><ref refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" kindref="member">AddTask</ref>(*tmp.<ref refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" kindref="member">pfunc</ref>,*tmp.nextfunc,tmp.delay,tmp.nextdelay,tmp.numRun);</highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmp.numRun&amp;&amp;tmp.numRun!=0xffff)<sp/><ref refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" kindref="member">AddTask</ref>(*tmp.<ref refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" kindref="member">pfunc</ref>,*tmp.nextfunc,tmp.delay,tmp.nextdelay,--tmp.numRun);</highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[0].countdown!=0)<sp/>{<ref refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" kindref="member">delay_time</ref>=<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[0].<ref refid="structtask_1ac587accd9b614b8337dad2636e84488c" kindref="member">countdown</ref>;}<sp/></highlight><highlight class="comment">//<sp/>если<sp/>здесь<sp/>+1<sp/>,<sp/>то<sp/>немного<sp/>работает<sp/>))))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<ref refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" kindref="member">delay_time</ref>=1;}<sp/></highlight><highlight class="comment">//можно<sp/>флаг<sp/>запуска<sp/>добавить<sp/>сюда<sp/>,<sp/>но<sp/>в<sp/>очереди<sp/>будет<sp/>нечего<sp/>убавлять<sp/>и<sp/>ф-ию<sp/>зациклит</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a7f5f503663caaac1aba5da597ea15416" kindref="member">dt</ref>=<ref refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" kindref="member">delay_time</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//или<sp/>воткнуть<sp/>туда<sp/>значение<sp/>уменьшения<sp/>,<sp/>только<sp/>его<sp/>нужно<sp/>брать<sp/>для<sp/>точности</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>(*tmp.<ref refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" kindref="member">pfunc</ref>)();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1ae5a80210d04730e10c09be516366933e" kindref="member">RunFlag</ref>=0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//из<sp/>расчета<sp/>кол-ва<sp/>тиков<sp/>выполняемой<sp/>функции<sp/>и<sp/>частоты<sp/>прерывания<sp/>таймера</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ResetTask(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*resfunc)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)){</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>task<sp/>tmp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref>=0;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[i].pfunc!=*resfunc)i++;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[<ref refid="kbd_8h_1a78f7a37dba921e0b0347b960fb40bc51" kindref="member">i</ref>].numRun=0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dispatch_8h_1af9614f9097c425adde3c7154c962173a" kindref="member">DeleteTask</ref><sp/>(uint8_t<sp/>j)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[j].<ref refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" kindref="member">pfunc</ref><sp/>=<sp/>0x0000;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[j].<ref refid="structtask_1ac587accd9b614b8337dad2636e84488c" kindref="member">countdown</ref>=0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[j].delay<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>TaskArray[j].period<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[j].run<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[j].nextfunc<sp/>=<sp/>0x0000;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[j].numRun<sp/>=0;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><ref refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" kindref="member" tooltip="Массив задач ///////////.">TaskArray</ref>[j].nextdelay=0;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dispatch_8h_1a2242f9428023ff0aacadb5fa210a6686" kindref="member">Idle</ref>(){</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="138"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="dispatch_8c_1a7cfcbe42bd266750aeb6e5d71e5ea479" refkind="member"><highlight class="normal"><ref refid="adc_8c_1a05c2e5b588ced1cd7312f5b0edc5b295" kindref="member">ISR</ref>(TIMER2_OVF_vect){</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>timer2++;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/>TCNT2<sp/>=<sp/><ref refid="macros_8h_1ad43a21637bce77bed55008276c26d3b9" kindref="member">StartFrom</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1ae5a80210d04730e10c09be516366933e" kindref="member">RunFlag</ref>==0&amp;&amp;<ref refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" kindref="member">delay_time</ref>!=0)<ref refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" kindref="member">delay_time</ref>--;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" kindref="member">delay_time</ref>==0)<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1ae5a80210d04730e10c09be516366933e" kindref="member">RunFlag</ref>=1;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="dispatch_8c_1aeeccb93d922e4fb825916b6ca880ec10" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dispatch_8h_1a8ed2d8ac7de1973e6084fcbbdabe7256" kindref="member">InitScheduler</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>uint8_t<sp/>i;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/>TCCR2<sp/>|=<sp/>(1&lt;&lt;CS02)|(0&lt;&lt;CS01)|(0&lt;&lt;CS00);<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>устанавливаем<sp/>прескалер<sp/>-<sp/>1024(101)<sp/>256(100)<sp/>64(011)<sp/>8(010)<sp/>0(001)<sp/>off(000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/>TIFR<sp/>=<sp/>1&lt;&lt;TOV0;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>очищаем<sp/>флаг<sp/>прерывания<sp/>таймера<sp/>Т0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/>TIMSK<sp/>|=<sp/>1&lt;&lt;TOIE2;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>разрешаем<sp/>прерывание<sp/>по<sp/>переполнению</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/>TCNT2<sp/>=<sp/><ref refid="macros_8h_1ad43a21637bce77bed55008276c26d3b9" kindref="member">StartFrom</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>загружаем<sp/>начальное<sp/>зн.<sp/>в<sp/>счетный<sp/>регистр</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>for<sp/>(i=0;<sp/>i&lt;MAXnTASKS;<sp/>i++)<sp/>DeleteTask(i);<sp/><sp/><sp/>//<sp/>очищаем<sp/>массив<sp/>задач</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/geraki/mcu_dev/at8_ct/sheduler/dispatch.c"/>
+  </compounddef>
+</doxygen>

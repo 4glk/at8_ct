@@ -1,0 +1,435 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.1.2">
+  <compounddef id="automate_8h" kind="file">
+    <compoundname>automate.h</compoundname>
+    <includes local="no">avr/io.h</includes>
+    <includes local="no">avr/interrupt.h</includes>
+    <includes refid="kbd_8h" local="yes">kbd.h</includes>
+    <includes refid="indicator_8h" local="yes">indicator.h</includes>
+    <includes refid="macros_8h" local="yes">macros.h</includes>
+    <includedby refid="automate_8c" local="yes">automate.c</includedby>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <incdepgraph>
+      <node id="188">
+        <label>macros.h</label>
+        <link refid="macros_8h"/>
+        <childnode refid="189" relation="include">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>stdbool.h</label>
+      </node>
+      <node id="193">
+        <label>stdint.h</label>
+      </node>
+      <node id="186">
+        <label>avr/interrupt.h</label>
+      </node>
+      <node id="194">
+        <label>spi.h</label>
+        <link refid="spi_8h"/>
+        <childnode refid="192" relation="include">
+        </childnode>
+      </node>
+      <node id="187">
+        <label>kbd.h</label>
+        <link refid="kbd_8h"/>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+      </node>
+      <node id="192">
+        <label>compilers.h</label>
+        <link refid="compilers_8h"/>
+        <childnode refid="193" relation="include">
+        </childnode>
+      </node>
+      <node id="185">
+        <label>avr/io.h</label>
+      </node>
+      <node id="190">
+        <label>indicator.h</label>
+        <link refid="indicator_8h"/>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+      </node>
+      <node id="191">
+        <label>string.h</label>
+      </node>
+      <node id="184">
+        <label>automate.h</label>
+        <link refid="automate.h"/>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="197">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="196">
+        <label>automate.c</label>
+        <link refid="automate_8c"/>
+      </node>
+      <node id="195">
+        <label>automate.h</label>
+        <link refid="automate.h"/>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="automate_8h_1a3769a4fac1f7c715cfca0a9bc66ffc09" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t CurrentTime</definition>
+        <argsstring></argsstring>
+        <name>CurrentTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="9" bodyfile="/home/geraki/mcu_dev/at8_ct/main.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="automate_8h_1a9a8b473f4792f12def2005a5b684ab95" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t TimeStop</definition>
+        <argsstring></argsstring>
+        <name>TimeStop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="10" bodyfile="/home/geraki/mcu_dev/at8_ct/main.c" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="automate_8h_1a8a814c99e1d31da49061dfede837f376" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t TimeSupply</definition>
+        <argsstring></argsstring>
+        <name>TimeSupply</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="11" bodyfile="/home/geraki/mcu_dev/at8_ct/main.c" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="automate_8h_1a0df84c03ae5df9794b9d972fb8069ab7" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t adc6</definition>
+        <argsstring></argsstring>
+        <name>adc6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="12" bodyfile="/home/geraki/mcu_dev/at8_ct/adc.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="automate_8h_1afb794755ffada22ce04e46c51616e5dc" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t adc7</definition>
+        <argsstring></argsstring>
+        <name>adc7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="13" bodyfile="/home/geraki/mcu_dev/at8_ct/adc.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="automate_8h_1a648a2fa2697c358cefdbc198c77b0206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StateAutomate</definition>
+        <argsstring>()</argsstring>
+        <name>StateAutomate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="14" bodyfile="/home/geraki/mcu_dev/at8_ct/automate.c" bodystart="4" bodyend="36"/>
+        <references refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" compoundref="macros_8h" startline="111">flags</references>
+        <references refid="struct_packed_bool_1afc83916c55a3756dd50bb0a558a6ed5f" compoundref="macros_8h" startline="96">PackedBool::State_Automate</references>
+        <references refid="kbd_8h_1a11099369cfb983a02f78ffdee298e974" compoundref="main_8c" startline="26">KeyCurrentCode</references>
+        <references refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" compoundref="dispatch_8c" startline="4" endline="34">AddTask</references>
+        <references refid="automate_8c_1ac41ed6f23d52707933276309ca058269" compoundref="automate_8c" startline="60" endline="76">Supply_sw</references>
+        <references refid="automate_8c_1a7a84985ae54f57552f93b35a907b0542" compoundref="automate_8c" startline="99" endline="110">Fire_sw</references>
+        <references refid="automate_8c_1a4cc8fd1ed483012c97d1a9e9ebf8e93d" compoundref="automate_8c" startline="38" endline="58">Timer_sw</references>
+        <references refid="automate_8c_1adab77d4a76e9465ecbd2eaa9cacf8b61" compoundref="automate_8c" startline="85" endline="97">Furnance_sw</references>
+        <references refid="indicator_8c_1a28fc0d56da8c2d1fbd529d12003278e2" compoundref="indicator_8c" startline="106" endline="126">IND_OutputFormatChar</references>
+        <references refid="automate_8c_1a648a2fa2697c358cefdbc198c77b0206" compoundref="automate_8c" startline="4" endline="36">StateAutomate</references>
+        <referencedby refid="automate_8h_1a648a2fa2697c358cefdbc198c77b0206" compoundref="automate_8c" startline="4" endline="36">StateAutomate</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="automate_8h_1ab82d42f4ec48e743663fb90c550e4fa5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShowAdc6</definition>
+        <argsstring>()</argsstring>
+        <name>ShowAdc6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="15" bodyfile="/home/geraki/mcu_dev/at8_ct/automate.c" bodystart="112" bodyend="115"/>
+        <references refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" compoundref="dispatch_8c" startline="4" endline="34">AddTask</references>
+        <references refid="automate_8c_1aec96046bbb47e80657e6439eda9dc665" compoundref="automate_8c" startline="79" endline="83">FuncINDTime</references>
+        <references refid="indicator_8c_1a6ef4c7141a57a829f312df655f43b94e" compoundref="indicator_8c" startline="128" endline="136">IND_Time</references>
+        <references refid="timer_8h_1a0df84c03ae5df9794b9d972fb8069ab7" compoundref="adc_8h" startline="4">adc6</references>
+        <referencedby refid="adc_8h_1aebdad809d69c09c4dd29da66ebcdac6a" compoundref="adc_8c" startline="8" endline="33">AdcMean</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="automate_8h_1a29ef358bb3f19d4b696b300c61bc0da1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShowAdc7</definition>
+        <argsstring>()</argsstring>
+        <name>ShowAdc7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="16" bodyfile="/home/geraki/mcu_dev/at8_ct/automate.c" bodystart="117" bodyend="121"/>
+        <references refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" compoundref="dispatch_8c" startline="4" endline="34">AddTask</references>
+        <references refid="automate_8c_1aec96046bbb47e80657e6439eda9dc665" compoundref="automate_8c" startline="79" endline="83">FuncINDTime</references>
+        <references refid="indicator_8c_1a6ef4c7141a57a829f312df655f43b94e" compoundref="indicator_8c" startline="128" endline="136">IND_Time</references>
+        <references refid="timer_8h_1afb794755ffada22ce04e46c51616e5dc" compoundref="adc_8h" startline="4">adc7</references>
+        <referencedby refid="adc_8h_1aebdad809d69c09c4dd29da66ebcdac6a" compoundref="adc_8c" startline="8" endline="33">AdcMean</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="automate_8h_1a20948c9b12c543546cdca3c5419d14b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddTask</definition>
+        <argsstring>(void(*taskfunc)(void), uint16_t taskdelay)</argsstring>
+        <name>AddTask</name>
+        <param>
+          <type>void(*)(void)</type>
+          <declname>taskfunc</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>taskdelay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="17" bodyfile="/home/geraki/mcu_dev/at8_ct/sheduler/dispatch.c" bodystart="4" bodyend="34"/>
+        <references refid="dispatch_8h_1a101bcdad0194b88df29ad041cf69136a" compoundref="dispatch_8h" startline="36">TaskArray</references>
+        <references refid="dispatch_8h_1af6b099574c54d63872fc626dcdeef94a" compoundref="dispatch_8h" startline="29">MAXnTASKS</references>
+        <references refid="structtask_1ac587accd9b614b8337dad2636e84488c" compoundref="dispatch_8h" startline="15">task::countdown</references>
+        <references refid="structtask_1a7dbbdee9e0abbc02eb4525f2c789c2e5" compoundref="dispatch_8h" startline="13">task::pfunc</references>
+        <references refid="dispatch_8h_1a3ca83343e7d0b2a5c87e67e7a37d1580" compoundref="dispatch_8h" startline="25">delay_time</references>
+        <references refid="dispatch_8h_1a7f5f503663caaac1aba5da597ea15416" compoundref="dispatch_8h" startline="26">dt</references>
+      </memberdef>
+      <memberdef kind="function" id="automate_8h_1aec96046bbb47e80657e6439eda9dc665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FuncINDTime</definition>
+        <argsstring>()</argsstring>
+        <name>FuncINDTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="18" bodyfile="/home/geraki/mcu_dev/at8_ct/automate.c" bodystart="79" bodyend="83"/>
+        <references refid="indicator_8c_1a6ef4c7141a57a829f312df655f43b94e" compoundref="indicator_8c" startline="128" endline="136">IND_Time</references>
+        <references refid="timer_8h_1a8a814c99e1d31da49061dfede837f376" compoundref="main_8c" startline="24">TimeSupply</references>
+        <references refid="timer_8h_1a9a8b473f4792f12def2005a5b684ab95" compoundref="main_8c" startline="23">TimeStop</references>
+        <references refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" compoundref="dispatch_8c" startline="4" endline="34">AddTask</references>
+        <references refid="automate_8c_1aec96046bbb47e80657e6439eda9dc665" compoundref="automate_8c" startline="79" endline="83">FuncINDTime</references>
+        <referencedby refid="automate_8h_1a4cc8fd1ed483012c97d1a9e9ebf8e93d" compoundref="automate_8c" startline="38" endline="58">Timer_sw</referencedby>
+        <referencedby refid="automate_8h_1ac41ed6f23d52707933276309ca058269" compoundref="automate_8c" startline="60" endline="76">Supply_sw</referencedby>
+        <referencedby refid="automate_8h_1aec96046bbb47e80657e6439eda9dc665" compoundref="automate_8c" startline="79" endline="83">FuncINDTime</referencedby>
+        <referencedby refid="automate_8h_1adab77d4a76e9465ecbd2eaa9cacf8b61" compoundref="automate_8c" startline="85" endline="97">Furnance_sw</referencedby>
+        <referencedby refid="automate_8h_1a7a84985ae54f57552f93b35a907b0542" compoundref="automate_8c" startline="99" endline="110">Fire_sw</referencedby>
+        <referencedby refid="automate_8h_1ab82d42f4ec48e743663fb90c550e4fa5" compoundref="automate_8c" startline="112" endline="115">ShowAdc6</referencedby>
+        <referencedby refid="automate_8h_1a29ef358bb3f19d4b696b300c61bc0da1" compoundref="automate_8c" startline="117" endline="121">ShowAdc7</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="automate_8h_1a9e70b311c509b7833a2ef09de237f531" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FuncINDOutput</definition>
+        <argsstring>()</argsstring>
+        <name>FuncINDOutput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="19"/>
+      </memberdef>
+      <memberdef kind="function" id="automate_8h_1adab77d4a76e9465ecbd2eaa9cacf8b61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Furnance_sw</definition>
+        <argsstring>()</argsstring>
+        <name>Furnance_sw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="20" bodyfile="/home/geraki/mcu_dev/at8_ct/automate.c" bodystart="85" bodyend="97"/>
+        <references refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" compoundref="dispatch_8c" startline="4" endline="34">AddTask</references>
+        <references refid="automate_8c_1aec96046bbb47e80657e6439eda9dc665" compoundref="automate_8c" startline="79" endline="83">FuncINDTime</references>
+        <references refid="indicator_8c_1a28fc0d56da8c2d1fbd529d12003278e2" compoundref="indicator_8c" startline="106" endline="126">IND_OutputFormatChar</references>
+        <references refid="macros_8h_1ace84be4af1bb5665e29cda4eb627c734" compoundref="macros_8h" startline="17">CH</references>
+        <references refid="macros_8h_1ab1a1ccd5c9761ad05f89bbfb57567d08" compoundref="macros_8h" startline="15">CB</references>
+        <references refid="macros_8h_1a9bc7923b991fe9b157404a27cd495285" compoundref="macros_8h" startline="14">SB</references>
+        <references refid="kbd_8h_1a11099369cfb983a02f78ffdee298e974" compoundref="main_8c" startline="26">KeyCurrentCode</references>
+        <referencedby refid="automate_8h_1a648a2fa2697c358cefdbc198c77b0206" compoundref="automate_8c" startline="4" endline="36">StateAutomate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="automate_8h_1a7a84985ae54f57552f93b35a907b0542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Fire_sw</definition>
+        <argsstring>()</argsstring>
+        <name>Fire_sw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="21" bodyfile="/home/geraki/mcu_dev/at8_ct/automate.c" bodystart="99" bodyend="110"/>
+        <references refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" compoundref="dispatch_8c" startline="4" endline="34">AddTask</references>
+        <references refid="automate_8c_1aec96046bbb47e80657e6439eda9dc665" compoundref="automate_8c" startline="79" endline="83">FuncINDTime</references>
+        <references refid="indicator_8c_1a28fc0d56da8c2d1fbd529d12003278e2" compoundref="indicator_8c" startline="106" endline="126">IND_OutputFormatChar</references>
+        <references refid="macros_8h_1ace84be4af1bb5665e29cda4eb627c734" compoundref="macros_8h" startline="17">CH</references>
+        <references refid="macros_8h_1ab1a1ccd5c9761ad05f89bbfb57567d08" compoundref="macros_8h" startline="15">CB</references>
+        <references refid="macros_8h_1a9bc7923b991fe9b157404a27cd495285" compoundref="macros_8h" startline="14">SB</references>
+        <references refid="kbd_8h_1a11099369cfb983a02f78ffdee298e974" compoundref="main_8c" startline="26">KeyCurrentCode</references>
+        <referencedby refid="automate_8h_1a648a2fa2697c358cefdbc198c77b0206" compoundref="automate_8c" startline="4" endline="36">StateAutomate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="automate_8h_1ac41ed6f23d52707933276309ca058269" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Supply_sw</definition>
+        <argsstring>()</argsstring>
+        <name>Supply_sw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="22" bodyfile="/home/geraki/mcu_dev/at8_ct/automate.c" bodystart="60" bodyend="76"/>
+        <references refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" compoundref="dispatch_8c" startline="4" endline="34">AddTask</references>
+        <references refid="automate_8c_1aec96046bbb47e80657e6439eda9dc665" compoundref="automate_8c" startline="79" endline="83">FuncINDTime</references>
+        <references refid="indicator_8c_1a28fc0d56da8c2d1fbd529d12003278e2" compoundref="indicator_8c" startline="106" endline="126">IND_OutputFormatChar</references>
+        <references refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" compoundref="macros_8h" startline="111">flags</references>
+        <references refid="struct_packed_bool_1a900b3c3b6751d7bb6c26874d16b8bd39" compoundref="macros_8h" startline="105">PackedBool::SupplyAuto</references>
+        <references refid="timer_8h_1a8a814c99e1d31da49061dfede837f376" compoundref="main_8c" startline="24">TimeSupply</references>
+        <references refid="timer_8h_1afb794755ffada22ce04e46c51616e5dc" compoundref="adc_8h" startline="4">adc7</references>
+        <references refid="timer_8h_1a9a8b473f4792f12def2005a5b684ab95" compoundref="main_8c" startline="23">TimeStop</references>
+        <references refid="timer_8h_1a0df84c03ae5df9794b9d972fb8069ab7" compoundref="adc_8h" startline="4">adc6</references>
+        <references refid="timer_8h_1a3769a4fac1f7c715cfca0a9bc66ffc09" compoundref="main_8c" startline="25">CurrentTime</references>
+        <references refid="macros_8h_1ace84be4af1bb5665e29cda4eb627c734" compoundref="macros_8h" startline="17">CH</references>
+        <references refid="macros_8h_1ab1a1ccd5c9761ad05f89bbfb57567d08" compoundref="macros_8h" startline="15">CB</references>
+        <references refid="macros_8h_1a9bc7923b991fe9b157404a27cd495285" compoundref="macros_8h" startline="14">SB</references>
+        <referencedby refid="automate_8h_1a648a2fa2697c358cefdbc198c77b0206" compoundref="automate_8c" startline="4" endline="36">StateAutomate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="automate_8h_1a4cc8fd1ed483012c97d1a9e9ebf8e93d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Timer_sw</definition>
+        <argsstring>()</argsstring>
+        <name>Timer_sw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/automate.h" line="23" bodyfile="/home/geraki/mcu_dev/at8_ct/automate.c" bodystart="38" bodyend="58"/>
+        <references refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" compoundref="dispatch_8c" startline="4" endline="34">AddTask</references>
+        <references refid="automate_8c_1aec96046bbb47e80657e6439eda9dc665" compoundref="automate_8c" startline="79" endline="83">FuncINDTime</references>
+        <references refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" compoundref="macros_8h" startline="111">flags</references>
+        <references refid="struct_packed_bool_1a900b3c3b6751d7bb6c26874d16b8bd39" compoundref="macros_8h" startline="105">PackedBool::SupplyAuto</references>
+        <references refid="indicator_8c_1a28fc0d56da8c2d1fbd529d12003278e2" compoundref="indicator_8c" startline="106" endline="126">IND_OutputFormatChar</references>
+        <references refid="struct_packed_bool_1a47103f23257ec2b3dc97f4de4b5963d6" compoundref="macros_8h" startline="107">PackedBool::ADC_Channel</references>
+        <references refid="timer_8h_1a3769a4fac1f7c715cfca0a9bc66ffc09" compoundref="main_8c" startline="25">CurrentTime</references>
+        <references refid="timer_8h_1afb794755ffada22ce04e46c51616e5dc" compoundref="adc_8h" startline="4">adc7</references>
+        <references refid="timer_8h_1a9a8b473f4792f12def2005a5b684ab95" compoundref="main_8c" startline="23">TimeStop</references>
+        <references refid="timer_8h_1a0df84c03ae5df9794b9d972fb8069ab7" compoundref="adc_8h" startline="4">adc6</references>
+        <references refid="timer_8h_1a8a814c99e1d31da49061dfede837f376" compoundref="main_8c" startline="24">TimeSupply</references>
+        <references refid="macros_8h_1a9bc7923b991fe9b157404a27cd495285" compoundref="macros_8h" startline="14">SB</references>
+        <references refid="macros_8h_1ab1a1ccd5c9761ad05f89bbfb57567d08" compoundref="macros_8h" startline="15">CB</references>
+        <references refid="kbd_8h_1a11099369cfb983a02f78ffdee298e974" compoundref="main_8c" startline="26">KeyCurrentCode</references>
+        <referencedby refid="automate_8h_1a648a2fa2697c358cefdbc198c77b0206" compoundref="automate_8c" startline="4" endline="36">StateAutomate</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;avr/io.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/interrupt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="kbd_8h" kindref="compound">kbd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="indicator_8h" kindref="compound">indicator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="macros_8h" kindref="compound">macros.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="timer_8h_1a3769a4fac1f7c715cfca0a9bc66ffc09" kindref="member">CurrentTime</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="timer_8h_1a9a8b473f4792f12def2005a5b684ab95" kindref="member">TimeStop</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="timer_8h_1a8a814c99e1d31da49061dfede837f376" kindref="member">TimeSupply</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="timer_8h_1a0df84c03ae5df9794b9d972fb8069ab7" kindref="member">adc6</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="timer_8h_1afb794755ffada22ce04e46c51616e5dc" kindref="member">adc7</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="automate_8c_1a648a2fa2697c358cefdbc198c77b0206" kindref="member">StateAutomate</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="automate_8c_1ab82d42f4ec48e743663fb90c550e4fa5" kindref="member">ShowAdc6</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="automate_8c_1a29ef358bb3f19d4b696b300c61bc0da1" kindref="member">ShowAdc7</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" kindref="member">AddTask</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*taskfunc)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">),<sp/>uint16_t<sp/>taskdelay);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="automate_8c_1aec96046bbb47e80657e6439eda9dc665" kindref="member">FuncINDTime</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="automate_8h_1a9e70b311c509b7833a2ef09de237f531" kindref="member">FuncINDOutput</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="automate_8c_1adab77d4a76e9465ecbd2eaa9cacf8b61" kindref="member">Furnance_sw</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="automate_8c_1a7a84985ae54f57552f93b35a907b0542" kindref="member">Fire_sw</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="automate_8c_1ac41ed6f23d52707933276309ca058269" kindref="member">Supply_sw</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="automate_8c_1a4cc8fd1ed483012c97d1a9e9ebf8e93d" kindref="member">Timer_sw</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//extern<sp/>void<sp/>AddTask<sp/>(void<sp/>(*taskfunc)(void),void<sp/>(*nextfunc)(void),<sp/>u16<sp/>taskdelay,<sp/>u16<sp/>taskperiod,u16<sp/>taskruns);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//ругаетс€<sp/>на<sp/>точто<sp/>объ€вил<sp/>как<sp/>функции<sp/>в<sp/>структуре<sp/>,<sp/>ладно<sp/><sp/>така€<sp/>организаци€<sp/>будет<sp/>когда<sp/>перейду<sp/>на<sp/>плюсы</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">typedef<sp/>struct<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/>uint16_t<sp/>tralala;</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>Furnance(void);</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>Supply();</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>Fire();</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>Timer();</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">}sw;</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">//*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/geraki/mcu_dev/at8_ct/automate.h"/>
+  </compounddef>
+</doxygen>

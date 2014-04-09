@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.1.2">
+  <compounddef id="timer_8c" kind="file">
+    <compoundname>timer.c</compoundname>
+    <includes refid="timer_8h" local="yes">timer.h</includes>
+    <incdepgraph>
+      <node id="309">
+        <label>macros.h</label>
+        <link refid="macros_8h"/>
+        <childnode refid="310" relation="include">
+        </childnode>
+      </node>
+      <node id="310">
+        <label>stdbool.h</label>
+      </node>
+      <node id="308">
+        <label>avr/interrupt.h</label>
+      </node>
+      <node id="307">
+        <label>avr/io.h</label>
+      </node>
+      <node id="305">
+        <label>timer.c</label>
+        <link refid="timer.c"/>
+        <childnode refid="306" relation="include">
+        </childnode>
+      </node>
+      <node id="306">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="307" relation="include">
+        </childnode>
+        <childnode refid="308" relation="include">
+        </childnode>
+        <childnode refid="309" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="timer_8c_1ab16889ae984b9b798989a0d239283cac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TIMER1_OVF_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TIMER1_OVF_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/timer.c" line="8" bodyfile="/home/geraki/mcu_dev/at8_ct/timer.c" bodystart="7" bodyend="11"/>
+        <references refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" compoundref="macros_8h" startline="111">flags</references>
+        <references refid="struct_packed_bool_1a900b3c3b6751d7bb6c26874d16b8bd39" compoundref="macros_8h" startline="105">PackedBool::SupplyAuto</references>
+        <references refid="struct_packed_bool_1ac831227791a890cdf2e89f68724800d5" compoundref="macros_8h" startline="106">PackedBool::TimerFlag</references>
+      </memberdef>
+      <memberdef kind="function" id="timer_8c_1a9a336e2a30206a895d000a9d07775b4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void doubleCountdown</definition>
+        <argsstring>()</argsstring>
+        <name>doubleCountdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/timer.c" line="13" bodyfile="/home/geraki/mcu_dev/at8_ct/timer.c" bodystart="13" bodyend="43"/>
+        <references refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" compoundref="macros_8h" startline="111">flags</references>
+        <references refid="struct_packed_bool_1ac831227791a890cdf2e89f68724800d5" compoundref="macros_8h" startline="106">PackedBool::TimerFlag</references>
+        <references refid="struct_packed_bool_1a900b3c3b6751d7bb6c26874d16b8bd39" compoundref="macros_8h" startline="105">PackedBool::SupplyAuto</references>
+        <references refid="timer_8h_1a3769a4fac1f7c715cfca0a9bc66ffc09" compoundref="main_8c" startline="25">CurrentTime</references>
+        <references refid="struct_packed_bool_1a47103f23257ec2b3dc97f4de4b5963d6" compoundref="macros_8h" startline="107">PackedBool::ADC_Channel</references>
+        <references refid="timer_8h_1a0df84c03ae5df9794b9d972fb8069ab7" compoundref="adc_8h" startline="4">adc6</references>
+        <references refid="timer_8h_1a8a814c99e1d31da49061dfede837f376" compoundref="main_8c" startline="24">TimeSupply</references>
+        <references refid="macros_8h_1a9bc7923b991fe9b157404a27cd495285" compoundref="macros_8h" startline="14">SB</references>
+        <references refid="timer_8h_1afb794755ffada22ce04e46c51616e5dc" compoundref="adc_8h" startline="4">adc7</references>
+        <references refid="timer_8h_1a9a8b473f4792f12def2005a5b684ab95" compoundref="main_8c" startline="23">TimeStop</references>
+        <references refid="macros_8h_1ab1a1ccd5c9761ad05f89bbfb57567d08" compoundref="macros_8h" startline="15">CB</references>
+        <references refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" compoundref="dispatch_8c" startline="4" endline="34">AddTask</references>
+        <references refid="timer_8h_1a9a336e2a30206a895d000a9d07775b4b" compoundref="timer_8c" startline="13" endline="43">doubleCountdown</references>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+        <referencedby refid="main_8c_1a9a336e2a30206a895d000a9d07775b4b" compoundref="timer_8c" startline="13" endline="43">doubleCountdown</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="timer_8c_1aded9b0ef5cb7a143d739c80442978a1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitTimer</definition>
+        <argsstring>()</argsstring>
+        <name>InitTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/timer.c" line="44" bodyfile="/home/geraki/mcu_dev/at8_ct/timer.c" bodystart="44" bodyend="54"/>
+        <references refid="macros_8h_1a040e861e04489b8a064ec977900d61df" compoundref="macros_8h" startline="11">TCNT0_const</references>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="timer_8c_1add2d7cdddfb682dcc0391e60cf42c7d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(TIMER0_OVF_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>TIMER0_OVF_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/timer.c" line="57" bodyfile="/home/geraki/mcu_dev/at8_ct/timer.c" bodystart="56" bodyend="60"/>
+        <references refid="macros_8h_1a040e861e04489b8a064ec977900d61df" compoundref="macros_8h" startline="11">TCNT0_const</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>—четчик<sp/>времени<sp/>,<sp/>минуты<sp/>и<sp/>секунды</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="timer_8c_1ab16889ae984b9b798989a0d239283cac" refkind="member"><highlight class="normal"><ref refid="adc_8c_1a05c2e5b588ced1cd7312f5b0edc5b295" kindref="member">ISR</ref>(<sp/>TIMER1_OVF_vect<sp/>)<sp/><sp/></highlight><highlight class="comment">//на<sp/>осциллограффе<sp/>в<sp/>протеусе<sp/>ровно<sp/>1<sp/>сек<sp/>^^</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TCNT1=57724;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a900b3c3b6751d7bb6c26874d16b8bd39" kindref="member">SupplyAuto</ref>==1)<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1ac831227791a890cdf2e89f68724800d5" kindref="member">TimerFlag</ref>=1;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="main_8c_1a9a336e2a30206a895d000a9d07775b4b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="timer_8h_1a9a336e2a30206a895d000a9d07775b4b" kindref="member">doubleCountdown</ref>(){</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1ac831227791a890cdf2e89f68724800d5" kindref="member">TimerFlag</ref>==1){</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a900b3c3b6751d7bb6c26874d16b8bd39" kindref="member">SupplyAuto</ref>==1){<sp/><sp/><sp/></highlight><highlight class="comment">//отправить<sp/>в<sp/>диспетчер<sp/>наверное<sp/>...<sp/>можно<sp/>даже<sp/>при<sp/>хорошей<sp/>настройке<sp/>диспетчера</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="timer_8h_1a3769a4fac1f7c715cfca0a9bc66ffc09" kindref="member">CurrentTime</ref>!=0){<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//отключить<sp/>этот<sp/>таймер</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a3769a4fac1f7c715cfca0a9bc66ffc09" kindref="member">CurrentTime</ref>--;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a47103f23257ec2b3dc97f4de4b5963d6" kindref="member">ADC_Channel</ref>==0){</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a3769a4fac1f7c715cfca0a9bc66ffc09" kindref="member">CurrentTime</ref>=<ref refid="timer_8h_1a0df84c03ae5df9794b9d972fb8069ab7" kindref="member">adc6</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a8a814c99e1d31da49061dfede837f376" kindref="member">TimeSupply</ref>=<ref refid="timer_8h_1a3769a4fac1f7c715cfca0a9bc66ffc09" kindref="member">CurrentTime</ref>+1;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a47103f23257ec2b3dc97f4de4b5963d6" kindref="member">ADC_Channel</ref>=1;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a9bc7923b991fe9b157404a27cd495285" kindref="member">SB</ref>(C,3);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a3769a4fac1f7c715cfca0a9bc66ffc09" kindref="member">CurrentTime</ref>=<ref refid="timer_8h_1afb794755ffada22ce04e46c51616e5dc" kindref="member">adc7</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a9a8b473f4792f12def2005a5b684ab95" kindref="member">TimeStop</ref>=<ref refid="timer_8h_1a3769a4fac1f7c715cfca0a9bc66ffc09" kindref="member">CurrentTime</ref>+1;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a47103f23257ec2b3dc97f4de4b5963d6" kindref="member">ADC_Channel</ref>=0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="macros_8h_1ab1a1ccd5c9761ad05f89bbfb57567d08" kindref="member">CB</ref>(C,3);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1ac831227791a890cdf2e89f68724800d5" kindref="member">TimerFlag</ref>=0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>.<ref refid="struct_packed_bool_1a47103f23257ec2b3dc97f4de4b5963d6" kindref="member">ADC_Channel</ref>==0)<sp/>{<ref refid="timer_8h_1a9a8b473f4792f12def2005a5b684ab95" kindref="member">TimeStop</ref>--;}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<ref refid="timer_8h_1a8a814c99e1d31da49061dfede837f376" kindref="member">TimeSupply</ref>--;}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" kindref="member">AddTask</ref>(<ref refid="timer_8h_1a9a336e2a30206a895d000a9d07775b4b" kindref="member">doubleCountdown</ref>,100);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44" refid="timer_8c_1aded9b0ef5cb7a143d739c80442978a1d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="timer_8h_1aded9b0ef5cb7a143d739c80442978a1d" kindref="member">InitTimer</ref>(){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>TIMSK<sp/>=<sp/>(1&lt;&lt;TOIE0)|(1&lt;&lt;TOIE1)|(1&lt;&lt;TOIE2);<sp/></highlight><highlight class="comment">//<sp/>переполнение</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>TCCR0<sp/>=<sp/>(1&lt;&lt;CS02)|(0&lt;&lt;CS01)|(1&lt;&lt;CS00);<sp/></highlight><highlight class="comment">//<sp/>предделитель<sp/>1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>TCNT0<sp/>=<sp/><ref refid="macros_8h_1a040e861e04489b8a064ec977900d61df" kindref="member">TCNT0_const</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>TCCR2<sp/>=<sp/>(1&lt;&lt;CS02)|(0&lt;&lt;CS01)|(1&lt;&lt;CS00);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TCCR1B<sp/>=<sp/>(1&lt;&lt;CS12)|(0&lt;&lt;CS11)|(1&lt;&lt;CS10);<sp/></highlight><highlight class="comment">//<sp/>настраиваем<sp/>делитель<sp/>100=256<sp/>101=1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>TIMSK<sp/>=<sp/>(1&lt;&lt;TOIE1);<sp/>//<sp/>разрешаем<sp/>прерывание<sp/>по<sp/>переполнению<sp/>таймера<sp/>1<sp/>//<sp/>перенесено<sp/>в<sp/>главный<sp/>файл</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TCNT1<sp/>=<sp/>57724;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>выставл€ем<sp/>начальное<sp/>значение<sp/>TCNT1<sp/>64456<sp/>57724</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TIFR<sp/>=<sp/>1&lt;&lt;TOV1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="timer_8c_1add2d7cdddfb682dcc0391e60cf42c7d6" refkind="member"><highlight class="normal"><ref refid="adc_8c_1a05c2e5b588ced1cd7312f5b0edc5b295" kindref="member">ISR</ref>(TIMER0_OVF_vect)<sp/></highlight><highlight class="comment">//<sp/>на<sp/>осциллографе<sp/>в<sp/>протеусе<sp/>10мс<sp/>(10kHz)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>TCNT0<sp/>=<sp/><ref refid="macros_8h_1a040e861e04489b8a064ec977900d61df" kindref="member">TCNT0_const</ref>;<sp/><sp/></highlight><highlight class="comment">//7812<sp/><sp/><sp/>217<sp/><sp/>//8000000/1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(CH(C,4))?CB(C,4):SB(C,4);//<sp/>на<sp/>осциллографе<sp/>в<sp/>протеусе<sp/>10мс(100гц),теперь<sp/>восемь<sp/>оќ</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/geraki/mcu_dev/at8_ct/timer.c"/>
+  </compounddef>
+</doxygen>

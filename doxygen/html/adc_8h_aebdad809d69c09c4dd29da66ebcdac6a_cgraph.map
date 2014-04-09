@@ -1,0 +1,7 @@
+<map id="AdcMean" name="AdcMean">
+<area shape="rect" id="node3" href="$timer_8h.html#a20948c9b12c543546cdca3c5419d14b2" title="AddTask" alt="" coords="420,41,495,70"/>
+<area shape="rect" id="node5" href="$automate_8c.html#ab82d42f4ec48e743663fb90c550e4fa5" title="ShowAdc6" alt="" coords="131,41,216,70"/>
+<area shape="rect" id="node15" href="$automate_8c.html#a29ef358bb3f19d4b696b300c61bc0da1" title="ShowAdc7" alt="" coords="131,130,216,159"/>
+<area shape="rect" id="node8" href="$automate_8c.html#aec96046bbb47e80657e6439eda9dc665" title="FuncINDTime" alt="" coords="264,167,368,197"/>
+<area shape="rect" id="node10" href="$indicator_8c.html#a6ef4c7141a57a829f312df655f43b94e" title="IND_Time" alt="" coords="416,167,499,197"/>
+</map>

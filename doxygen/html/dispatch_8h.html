@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>at8_ct: Файл dispatch.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">at8_ct
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('dispatch_8h.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл dispatch.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br/>
+<code>#include &lt;avr/interrupt.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="macros_8h_source.html">../macros.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для dispatch.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="dispatch_8h__incl.png" border="0" usemap="#dispatch_8h" alt=""/></div>
+<map name="dispatch_8h" id="dispatch_8h">
+<area shape="rect" id="node7" href="macros_8h.html" title="../macros.h" alt="" coords="219,83,307,112"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="dispatch_8h__dep__incl.png" border="0" usemap="#dispatch_8hdep" alt=""/></div>
+<map name="dispatch_8hdep" id="dispatch_8hdep">
+<area shape="rect" id="node3" href="main_8c.html" title="main.c" alt="" coords="5,83,67,112"/><area shape="rect" id="node5" href="dispatch_8c.html" title="dispatch.c" alt="" coords="91,83,173,112"/></map>
+</div>
+</div>
+<p><a href="dispatch_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtask.html">task</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ab672aa997e23009f0bf01f237aac15ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dispatch_8h.html#ab672aa997e23009f0bf01f237aac15ed">LSHED</a></td></tr>
+<tr class="memitem:af6b099574c54d63872fc626dcdeef94a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dispatch_8h.html#af6b099574c54d63872fc626dcdeef94a">MAXnTASKS</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memitem:a91bb4c23e04ae594c94c4b4b9fd9fffc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dispatch_8h.html#a91bb4c23e04ae594c94c4b4b9fd9fffc">UBRRvalue</a>&#160;&#160;&#160;0x0033</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:ae088ef945347f6bd3af65b806a0c3acf"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structtask.html">task</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dispatch_8h.html#ae088ef945347f6bd3af65b806a0c3acf">task</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:aa46f19a6d870d46a2749a8c623a7ef68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dispatch_8h.html#aa46f19a6d870d46a2749a8c623a7ef68">DispatchTask</a> (void)</td></tr>
+<tr class="memdesc:aa46f19a6d870d46a2749a8c623a7ef68"><td class="mdescLeft">&#160;</td><td class="mdescRight">��������� ������� ////////.  <a href="#aa46f19a6d870d46a2749a8c623a7ef68"></a><br/></td></tr>
+<tr class="memitem:a2242f9428023ff0aacadb5fa210a6686"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dispatch_8h.html#a2242f9428023ff0aacadb5fa210a6686">Idle</a> ()</td></tr>
+<tr class="memitem:af9614f9097c425adde3c7154c962173a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dispatch_8h.html#af9614f9097c425adde3c7154c962173a">DeleteTask</a> (uint8_t index)</td></tr>
+<tr class="memitem:a20948c9b12c543546cdca3c5419d14b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dispatch_8h.html#a20948c9b12c543546cdca3c5419d14b2">AddTask</a> (void(*taskfunc)(void), uint16_t taskdelay)</td></tr>
+<tr class="memitem:a8ed2d8ac7de1973e6084fcbbdabe7256"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dispatch_8h.html#a8ed2d8ac7de1973e6084fcbbdabe7256">InitScheduler</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a3ca83343e7d0b2a5c87e67e7a37d1580"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dispatch_8h.html#a3ca83343e7d0b2a5c87e67e7a37d1580">delay_time</a></td></tr>
+<tr class="memitem:a7f5f503663caaac1aba5da597ea15416"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dispatch_8h.html#a7f5f503663caaac1aba5da597ea15416">dt</a></td></tr>
+<tr class="memitem:a101bcdad0194b88df29ad041cf69136a"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="structtask.html">task</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dispatch_8h.html#a101bcdad0194b88df29ad041cf69136a">TaskArray</a> [<a class="el" href="dispatch_8h.html#af6b099574c54d63872fc626dcdeef94a">MAXnTASKS</a>]</td></tr>
+<tr class="memdesc:a101bcdad0194b88df29ad041cf69136a"><td class="mdescLeft">&#160;</td><td class="mdescRight">������ ����� ///////////.  <a href="#a101bcdad0194b88df29ad041cf69136a"></a><br/></td></tr>
+</table>
+<h2>Макросы</h2>
+<a class="anchor" id="ab672aa997e23009f0bf01f237aac15ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LSHED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="dispatch_8h_source.html">dispatch.h</a> строка <a class="el" href="dispatch_8h_source.html#l00008">8</a></p>
+
+</div>
+</div>
+<a class="anchor" id="af6b099574c54d63872fc626dcdeef94a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAXnTASKS&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="dispatch_8h_source.html">dispatch.h</a> строка <a class="el" href="dispatch_8h_source.html#l00029">29</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a91bb4c23e04ae594c94c4b4b9fd9fffc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UBRRvalue&#160;&#160;&#160;0x0033</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="dispatch_8h_source.html">dispatch.h</a> строка <a class="el" href="dispatch_8h_source.html#l00032">32</a></p>
+
+</div>
+</div>
+<h2>Типы</h2>
+<a class="anchor" id="ae088ef945347f6bd3af65b806a0c3acf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structtask.html">task</a> <a class="el" href="structtask.html">task</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2>Функции</h2>
+<a class="anchor" id="a20948c9b12c543546cdca3c5419d14b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddTask </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>taskfunc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>taskdelay</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="dispatch_8c_source.html">dispatch.c</a> строка <a class="el" href="dispatch_8c_source.html#l00004">4</a></p>
+
+</div>
+</div>
+<a class="anchor" id="af9614f9097c425adde3c7154c962173a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeleteTask </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="dispatch_8c_source.html">dispatch.c</a> строка <a class="el" href="dispatch_8c_source.html#l00057">57</a></p>
+
+</div>
+</div>
+<a class="anchor" id="aa46f19a6d870d46a2749a8c623a7ef68"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DispatchTask </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>��������� ������� ////////. </p>
+
+<p>См. определение в файле <a class="el" href="dispatch_8c_source.html">dispatch.c</a> строка <a class="el" href="dispatch_8c_source.html#l00036">36</a></p>
+
+<p><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dispatch_8h_aa46f19a6d870d46a2749a8c623a7ef68_icgraph.png" border="0" usemap="#dispatch_8h_aa46f19a6d870d46a2749a8c623a7ef68_icgraph" alt=""/></div>
+<map name="dispatch_8h_aa46f19a6d870d46a2749a8c623a7ef68_icgraph" id="dispatch_8h_aa46f19a6d870d46a2749a8c623a7ef68_icgraph">
+<area shape="rect" id="node3" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="157,5,208,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2242f9428023ff0aacadb5fa210a6686"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Idle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8ed2d8ac7de1973e6084fcbbdabe7256"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitScheduler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="dispatch_8c_source.html">dispatch.c</a> строка <a class="el" href="dispatch_8c_source.html#l00146">146</a></p>
+
+<p><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="dispatch_8h_a8ed2d8ac7de1973e6084fcbbdabe7256_icgraph.png" border="0" usemap="#dispatch_8h_a8ed2d8ac7de1973e6084fcbbdabe7256_icgraph" alt=""/></div>
+<map name="dispatch_8h_a8ed2d8ac7de1973e6084fcbbdabe7256_icgraph" id="dispatch_8h_a8ed2d8ac7de1973e6084fcbbdabe7256_icgraph">
+<area shape="rect" id="node3" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="152,5,203,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2>Переменные</h2>
+<a class="anchor" id="a3ca83343e7d0b2a5c87e67e7a37d1580"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t delay_time</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="dispatch_8h_source.html">dispatch.h</a> строка <a class="el" href="dispatch_8h_source.html#l00025">25</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a7f5f503663caaac1aba5da597ea15416"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t dt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="dispatch_8h_source.html">dispatch.h</a> строка <a class="el" href="dispatch_8h_source.html#l00026">26</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a101bcdad0194b88df29ad041cf69136a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile <a class="el" href="structtask.html">task</a> TaskArray[<a class="el" href="dispatch_8h.html#af6b099574c54d63872fc626dcdeef94a">MAXnTASKS</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>������ ����� ///////////. </p>
+
+<p>См. определение в файле <a class="el" href="dispatch_8h_source.html">dispatch.h</a> строка <a class="el" href="dispatch_8h_source.html#l00036">36</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_3aa2ea5e909cf0c1cb669e7d9f335c01.html">sheduler</a></li><li class="navelem"><a class="el" href="dispatch_8h.html">dispatch.h</a></li>
+    <li class="footer">Документация по at8_ct. Последние изменения: Вс 8 Дек 2013 07:51:07. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
+  </ul>
+</div>
+</body>
+</html>

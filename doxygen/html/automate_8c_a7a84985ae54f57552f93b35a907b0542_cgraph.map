@@ -1,0 +1,6 @@
+<map id="Fire_sw" name="Fire_sw">
+<area shape="rect" id="node3" href="$timer_8h.html#a20948c9b12c543546cdca3c5419d14b2" title="AddTask" alt="" coords="337,5,412,35"/>
+<area shape="rect" id="node5" href="$automate_8c.html#aec96046bbb47e80657e6439eda9dc665" title="FuncINDTime" alt="" coords="152,69,256,99"/>
+<area shape="rect" id="node11" href="$indicator_8c.html#a28fc0d56da8c2d1fbd529d12003278e2" title="IND_OutputFormatChar" alt="" coords="124,123,284,152"/>
+<area shape="rect" id="node7" href="$indicator_8c.html#a6ef4c7141a57a829f312df655f43b94e" title="IND_Time" alt="" coords="333,69,416,99"/>
+</map>

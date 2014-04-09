@@ -55,7 +55,8 @@ int main (void)
     flags.NextState=0;
     flags.RunFlag=1;
     flags.TimerFlag=0;
-    AddTask(IND_Update,1);
+    // задачи диспетчера
+    AddTask(IND_Update,1); // тут допилить , увеличить частоту таймера диспетчера , чтобы цифры не дрожали
     AddTask(KeyScan,25);
     AddTask(FuncINDTime,250);
     AddTask(StateAutomate,50);

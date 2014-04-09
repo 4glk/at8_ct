@@ -1,0 +1,636 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>at8_ct: Файл indicator.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">at8_ct
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('indicator_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл indicator.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="indicator_8h_source.html">indicator.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для indicator.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="indicator_8c__incl.png" border="0" usemap="#indicator_8c" alt=""/></div>
+<map name="indicator_8c" id="indicator_8c">
+<area shape="rect" id="node3" href="indicator_8h.html" title="indicator.h" alt="" coords="65,83,148,112"/><area shape="rect" id="node7" href="compilers_8h.html" title="compilers.h" alt="" coords="93,237,181,267"/><area shape="rect" id="node11" href="spi_8h.html" title="spi.h" alt="" coords="144,160,195,189"/></map>
+</div>
+</div>
+<p><a href="indicator_8c_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a6166ed9b9a4e515ae50f929618be91c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#a6166ed9b9a4e515ae50f929618be91c5">IND_LIGHT_OUT</a>&#160;&#160;&#160;0xff</td></tr>
+<tr class="memitem:a2a9784a47b8732dd3eb8b70a2c432cca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#a2a9784a47b8732dd3eb8b70a2c432cca">IND_OutSeg</a>(port, value)&#160;&#160;&#160;port &amp;= ~(value)</td></tr>
+<tr class="memitem:a6b63bd129652e6f0a4843e94a105b181"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#a6b63bd129652e6f0a4843e94a105b181">IND_LightOutSeg</a>(port, value)&#160;&#160;&#160;port |= (value)</td></tr>
+<tr class="memitem:a04c1d8ce416ff96afb45c7ecfcf52443"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#a04c1d8ce416ff96afb45c7ecfcf52443">IND_OutDig</a>(port, value)&#160;&#160;&#160;port |= (value)</td></tr>
+<tr class="memitem:aa3a9220f814b0c64e6fabc1d5f9e5e89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#aa3a9220f814b0c64e6fabc1d5f9e5e89">IND_LightOutDig</a>(port, value)&#160;&#160;&#160;port &amp;= ~(value)</td></tr>
+<tr class="memitem:a60fb8869c909002a3ebfbe0c9ee9f291"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#a60fb8869c909002a3ebfbe0c9ee9f291">IND_EMPTY_NUM</a>&#160;&#160;&#160;10</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a05bfab9e55bca0851a0b367438439ec4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#a05bfab9e55bca0851a0b367438439ec4">ascii2int</a> (uint8_t symbol)</td></tr>
+<tr class="memitem:a28fc0d56da8c2d1fbd529d12003278e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#a28fc0d56da8c2d1fbd529d12003278e2">IND_OutputFormatChar</a> (char char_string[], uint8_t comma, uint8_t position)</td></tr>
+<tr class="memitem:a6ef4c7141a57a829f312df655f43b94e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#a6ef4c7141a57a829f312df655f43b94e">IND_Time</a> (uint16_t <a class="el" href="main_8c.html#a3769a4fac1f7c715cfca0a9bc66ffc09">CurrentTime</a>, uint8_t position)</td></tr>
+<tr class="memitem:a380138acbd9424c5d40301e35549ba9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#a380138acbd9424c5d40301e35549ba9a">IND_Init</a> (void)</td></tr>
+<tr class="memitem:ae86de0baebd2e17c0af1ec95e37e0c34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#ae86de0baebd2e17c0af1ec95e37e0c34">IND_Output</a> (uint16_t value, uint8_t comma)</td></tr>
+<tr class="memitem:acd4dbbc0afe32337d15902ae36c23118"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#acd4dbbc0afe32337d15902ae36c23118">IND_OutputFormat</a> (uint16_t value, uint8_t comma, uint8_t position, uint8_t amount)</td></tr>
+<tr class="memitem:a3de511c73fd66b0009b6a1e743bcab30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#a3de511c73fd66b0009b6a1e743bcab30">IND_Update</a> (void)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:af356ae7fec89523ff0f79860057833f9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#af356ae7fec89523ff0f79860057833f9">ind_buf</a> [<a class="el" href="indicator_8h.html#af843ec88ec15b5a7b5f8d8c9065e4fdf">IND_AMOUNT_NUM</a>]</td></tr>
+<tr class="memitem:a50ec565d51ec46918926166c052e99b9"><td class="memItemLeft" align="right" valign="top">__flash uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#a50ec565d51ec46918926166c052e99b9">number</a> [][2]</td></tr>
+<tr class="memitem:a0555fd5164ca009c356fc654f58dd6a6"><td class="memItemLeft" align="right" valign="top">__flash uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#a0555fd5164ca009c356fc654f58dd6a6">digit</a> []</td></tr>
+<tr class="memitem:a6b9742eca1cad646a779b9be7ba21e2d"><td class="memItemLeft" align="right" valign="top">__flash uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="indicator_8c.html#a6b9742eca1cad646a779b9be7ba21e2d">mask</a> []</td></tr>
+</table>
+<h2>Макросы</h2>
+<a class="anchor" id="a60fb8869c909002a3ebfbe0c9ee9f291"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IND_EMPTY_NUM&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00060">60</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a6166ed9b9a4e515ae50f929618be91c5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IND_LIGHT_OUT&#160;&#160;&#160;0xff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00042">42</a></p>
+
+</div>
+</div>
+<a class="anchor" id="aa3a9220f814b0c64e6fabc1d5f9e5e89"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IND_LightOutDig</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;port &amp;= ~(value)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00057">57</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a6b63bd129652e6f0a4843e94a105b181"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IND_LightOutSeg</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;port |= (value)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00046">46</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a04c1d8ce416ff96afb45c7ecfcf52443"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IND_OutDig</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;port |= (value)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00056">56</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a2a9784a47b8732dd3eb8b70a2c432cca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IND_OutSeg</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;port &amp;= ~(value)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00045">45</a></p>
+
+</div>
+</div>
+<h2>Функции</h2>
+<a class="anchor" id="a05bfab9e55bca0851a0b367438439ec4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ascii2int </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>symbol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00101">101</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a380138acbd9424c5d40301e35549ba9a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IND_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00178">178</a></p>
+
+<p><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="indicator_8c_a380138acbd9424c5d40301e35549ba9a_cgraph.png" border="0" usemap="#indicator_8c_a380138acbd9424c5d40301e35549ba9a_cgraph" alt=""/></div>
+<map name="indicator_8c_a380138acbd9424c5d40301e35549ba9a_cgraph" id="indicator_8c_a380138acbd9424c5d40301e35549ba9a_cgraph">
+<area shape="rect" id="node3" href="spi_8c.html#a292196e767158c66f03cbcc244fc802b" title="SPI_Init" alt="" coords="125,5,195,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="indicator_8c_a380138acbd9424c5d40301e35549ba9a_icgraph.png" border="0" usemap="#indicator_8c_a380138acbd9424c5d40301e35549ba9a_icgraph" alt=""/></div>
+<map name="indicator_8c_a380138acbd9424c5d40301e35549ba9a_icgraph" id="indicator_8c_a380138acbd9424c5d40301e35549ba9a_icgraph">
+<area shape="rect" id="node3" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="125,5,176,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae86de0baebd2e17c0af1ec95e37e0c34"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IND_Output </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>comma</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00199">199</a></p>
+
+</div>
+</div>
+<a class="anchor" id="acd4dbbc0afe32337d15902ae36c23118"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IND_OutputFormat </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>comma</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00222">222</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a28fc0d56da8c2d1fbd529d12003278e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IND_OutputFormatChar </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>char_string</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>comma</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00106">106</a></p>
+
+<p><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="indicator_8c_a28fc0d56da8c2d1fbd529d12003278e2_icgraph.png" border="0" usemap="#indicator_8c_a28fc0d56da8c2d1fbd529d12003278e2_icgraph" alt=""/></div>
+<map name="indicator_8c_a28fc0d56da8c2d1fbd529d12003278e2_icgraph" id="indicator_8c_a28fc0d56da8c2d1fbd529d12003278e2_icgraph">
+<area shape="rect" id="node3" href="automate_8h.html#a648a2fa2697c358cefdbc198c77b0206" title="StateAutomate" alt="" coords="365,81,475,110"/><area shape="rect" id="node8" href="automate_8h.html#a4cc8fd1ed483012c97d1a9e9ebf8e93d" title="Timer_sw" alt="" coords="228,28,305,57"/><area shape="rect" id="node11" href="automate_8h.html#ac41ed6f23d52707933276309ca058269" title="Supply_sw" alt="" coords="224,81,309,110"/><area shape="rect" id="node14" href="automate_8h.html#adab77d4a76e9465ecbd2eaa9cacf8b61" title="Furnance_sw" alt="" coords="217,134,316,164"/><area shape="rect" id="node17" href="automate_8h.html#a7a84985ae54f57552f93b35a907b0542" title="Fire_sw" alt="" coords="233,188,300,217"/><area shape="rect" id="node6" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="523,81,573,110"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6ef4c7141a57a829f312df655f43b94e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IND_Time </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>CurrentTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>����� �� ��������� ����� � ������. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">����</td><td>���-�� ������ � ��� </td></tr>
+    <tr><td class="paramname">argument2</td><td>explanation . . . </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>���������� ������� ���������� </dd></dl>
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00128">128</a></p>
+
+<p><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="indicator_8c_a6ef4c7141a57a829f312df655f43b94e_icgraph.png" border="0" usemap="#indicator_8c_a6ef4c7141a57a829f312df655f43b94e_icgraph" alt=""/></div>
+<map name="indicator_8c_a6ef4c7141a57a829f312df655f43b94e_icgraph" id="indicator_8c_a6ef4c7141a57a829f312df655f43b94e_icgraph">
+<area shape="rect" id="node3" href="automate_8h.html#aec96046bbb47e80657e6439eda9dc665" title="FuncINDTime" alt="" coords="136,177,240,206"/><area shape="rect" id="node22" href="automate_8h.html#ab82d42f4ec48e743663fb90c550e4fa5" title="ShowAdc6" alt="" coords="296,310,381,340"/><area shape="rect" id="node28" href="automate_8h.html#a29ef358bb3f19d4b696b300c61bc0da1" title="ShowAdc7" alt="" coords="296,257,381,286"/><area shape="rect" id="node5" href="automate_8h.html#a4cc8fd1ed483012c97d1a9e9ebf8e93d" title="Timer_sw" alt="" coords="300,44,377,73"/><area shape="rect" id="node10" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="595,45,645,74"/><area shape="rect" id="node12" href="automate_8h.html#ac41ed6f23d52707933276309ca058269" title="Supply_sw" alt="" coords="296,97,381,126"/><area shape="rect" id="node16" href="automate_8h.html#adab77d4a76e9465ecbd2eaa9cacf8b61" title="Furnance_sw" alt="" coords="289,150,388,180"/><area shape="rect" id="node19" href="automate_8h.html#a7a84985ae54f57552f93b35a907b0542" title="Fire_sw" alt="" coords="305,204,372,233"/><area shape="rect" id="node7" href="automate_8h.html#a648a2fa2697c358cefdbc198c77b0206" title="StateAutomate" alt="" coords="437,97,547,126"/><area shape="rect" id="node24" href="adc_8h.html#aebdad809d69c09c4dd29da66ebcdac6a" title="AdcMean" alt="" coords="453,284,531,313"/><area shape="rect" id="node26" href="adc_8c.html#a05c2e5b588ced1cd7312f5b0edc5b295" title="ISR" alt="" coords="597,284,643,313"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3de511c73fd66b0009b6a1e743bcab30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IND_Update </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00250">250</a></p>
+
+<p><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="indicator_8c_a3de511c73fd66b0009b6a1e743bcab30_cgraph.png" border="0" usemap="#indicator_8c_a3de511c73fd66b0009b6a1e743bcab30_cgraph" alt=""/></div>
+<map name="indicator_8c_a3de511c73fd66b0009b6a1e743bcab30_cgraph" id="indicator_8c_a3de511c73fd66b0009b6a1e743bcab30_cgraph">
+<area shape="rect" id="node3" href="spi_8c.html#a47b45aed3d09db2fcd47a4ead3a029f6" title="SPI_WriteArray" alt="" coords="151,5,263,35"/><area shape="rect" id="node5" href="timer_8h.html#a20948c9b12c543546cdca3c5419d14b2" title="AddTask" alt="" coords="169,59,244,88"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="indicator_8c_a3de511c73fd66b0009b6a1e743bcab30_icgraph.png" border="0" usemap="#indicator_8c_a3de511c73fd66b0009b6a1e743bcab30_icgraph" alt=""/></div>
+<map name="indicator_8c_a3de511c73fd66b0009b6a1e743bcab30_icgraph" id="indicator_8c_a3de511c73fd66b0009b6a1e743bcab30_icgraph">
+<area shape="rect" id="node3" href="indicator_8h.html#a3de511c73fd66b0009b6a1e743bcab30" title="IND_Update" alt="" coords="151,29,244,59"/><area shape="rect" id="node6" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="293,56,344,85"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2>Переменные</h2>
+<a class="anchor" id="a0555fd5164ca009c356fc654f58dd6a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__flash uint8_t digit[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line"></div>
+<div class="line">{</div>
+<div class="line">   <a class="code" href="indicator_8h.html#a9c941317544dd73ee8e8ce90120b1c90">IND_NUM1</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#a7e8f2eef8b648065bbd877eb2b9a07bf">IND_NUM2</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#a5a99ddf4c9145fb6b1af6e5a2de39e78">IND_NUM3</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#aa2a194f6386d91054d85fa3a86413594">IND_NUM4</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#a20d61d8c22d5313fead758d2dadc0461">IND_NUM5</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#aa1c6289b5f9e70091eec000183d9b565">IND_NUM6</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#a9bd321775ab25e439f13b7c642204629">IND_NUM7</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#ac6624f40f1ab08d095370c7a8686d864">IND_NUM8</a></div>
+<div class="line"></div>
+<div class="line">   ,<a class="code" href="indicator_8h.html#acc8643291a1d2e12b95685e092f69f94">IND_NUM9</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#acee1b59cff6144b8e28f1343c28f3b47">IND_NUM10</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#a5fd61779608fa55d2349bdfbdc01c8bd">IND_NUM11</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#a22c22bae525b3e1873d8c3889ef0b777">IND_NUM12</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#a04540808f3ce42949ffc9034407eb4c3">IND_NUM13</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#abc358861441e9f220f4b6a02b606aecb">IND_NUM14</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#a0b7e1bc60f57784452d1531f208fad86">IND_NUM15</a>,</div>
+<div class="line">   <a class="code" href="indicator_8h.html#a10f63ff9ce685bab16872793a0427088">IND_NUM16</a></div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00140">140</a></p>
+
+</div>
+</div>
+<a class="anchor" id="af356ae7fec89523ff0f79860057833f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ind_buf[<a class="el" href="indicator_8h.html#af843ec88ec15b5a7b5f8d8c9065e4fdf">IND_AMOUNT_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00063">63</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a6b9742eca1cad646a779b9be7ba21e2d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__flash uint8_t mask[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line"></div>
+<div class="line">{</div>
+<div class="line">   (1&lt;&lt;<a class="code" href="indicator_8h.html#a062c61a509dd7a54b5e7bf3a931193d5">IND_A</a>),</div>
+<div class="line">   (1&lt;&lt;<a class="code" href="indicator_8h.html#aeeea41ed366ddc725b29487aa0701448">IND_B</a>),</div>
+<div class="line">   (1&lt;&lt;<a class="code" href="indicator_8h.html#a92811401ba22001d488f1cad2e6ea3da">IND_C</a>),</div>
+<div class="line">   (1&lt;&lt;<a class="code" href="indicator_8h.html#a88e8654262f24c4ae04f35869e442616">IND_D</a>),</div>
+<div class="line">   (1&lt;&lt;<a class="code" href="indicator_8h.html#a76b34390bc53f2b4b9969ec33b65a78c">IND_E</a>),</div>
+<div class="line">   (1&lt;&lt;<a class="code" href="indicator_8h.html#a55680b2305fa93c9ca1244496dc46b36">IND_F</a>),</div>
+<div class="line">   (1&lt;&lt;<a class="code" href="indicator_8h.html#aaf16f6ed10762438498a20428ca1f2eb">IND_G</a>),</div>
+<div class="line">   (1&lt;&lt;<a class="code" href="indicator_8h.html#a671b5c8e2f65387cb904972744706555">IND_COM</a>)</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00164">164</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a50ec565d51ec46918926166c052e99b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__flash uint8_t number[][2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="indicator_8c_source.html">indicator.c</a> строка <a class="el" href="indicator_8c_source.html#l00068">68</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="indicator_8c.html">indicator.c</a></li>
+    <li class="footer">Документация по at8_ct. Последние изменения: Вс 8 Дек 2013 07:51:07. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
+  </ul>
+</div>
+</body>
+</html>

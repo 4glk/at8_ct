@@ -1,0 +1,11 @@
+<map id="main.c" name="main.c">
+<area shape="rect" id="node7" href="$macros_8h.html" title="macros.h" alt="" coords="435,237,509,267"/>
+<area shape="rect" id="node11" href="$kbd_8h.html" title="kbd.h" alt="" coords="445,160,499,189"/>
+<area shape="rect" id="node16" href="$adc_8h.html" title="adc.h" alt="" coords="24,160,77,189"/>
+<area shape="rect" id="node20" href="$indicator_8h.html" title="indicator.h" alt="" coords="675,160,757,189"/>
+<area shape="rect" id="node24" href="$compilers_8h.html" title="compilers.h" alt="" coords="739,315,827,344"/>
+<area shape="rect" id="node28" href="$spi_8h.html" title="spi.h" alt="" coords="757,237,808,267"/>
+<area shape="rect" id="node32" href="$automate_8h.html" title="automate.h" alt="" coords="493,83,579,112"/>
+<area shape="rect" id="node39" href="$timer_8h.html" title="timer.h" alt="" coords="360,160,421,189"/>
+<area shape="rect" id="node45" href="$dispatch_8h.html" title="sheduler/dispatch.h" alt="" coords="152,160,285,189"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Furnance_sw" name="Furnance_sw">
+<area shape="rect" id="node3" href="$timer_8h.html#a20948c9b12c543546cdca3c5419d14b2" title="AddTask" alt="" coords="369,5,444,35"/>
+<area shape="rect" id="node5" href="$automate_8c.html#aec96046bbb47e80657e6439eda9dc665" title="FuncINDTime" alt="" coords="184,69,288,99"/>
+<area shape="rect" id="node11" href="$indicator_8c.html#a28fc0d56da8c2d1fbd529d12003278e2" title="IND_OutputFormatChar" alt="" coords="156,123,316,152"/>
+<area shape="rect" id="node7" href="$indicator_8c.html#a6ef4c7141a57a829f312df655f43b94e" title="IND_Time" alt="" coords="365,69,448,99"/>
+</map>

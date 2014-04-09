@@ -1,0 +1,8 @@
+<map id="IND_OutputFormatChar" name="IND_OutputFormatChar">
+<area shape="rect" id="node3" href="$automate_8h.html#a648a2fa2697c358cefdbc198c77b0206" title="StateAutomate" alt="" coords="365,81,475,110"/>
+<area shape="rect" id="node8" href="$automate_8h.html#a4cc8fd1ed483012c97d1a9e9ebf8e93d" title="Timer_sw" alt="" coords="228,28,305,57"/>
+<area shape="rect" id="node11" href="$automate_8h.html#ac41ed6f23d52707933276309ca058269" title="Supply_sw" alt="" coords="224,81,309,110"/>
+<area shape="rect" id="node14" href="$automate_8h.html#adab77d4a76e9465ecbd2eaa9cacf8b61" title="Furnance_sw" alt="" coords="217,134,316,164"/>
+<area shape="rect" id="node17" href="$automate_8h.html#a7a84985ae54f57552f93b35a907b0542" title="Fire_sw" alt="" coords="233,188,300,217"/>
+<area shape="rect" id="node6" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="523,81,573,110"/>
+</map>

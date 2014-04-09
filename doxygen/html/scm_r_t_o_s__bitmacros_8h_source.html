@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>at8_ct: Исходный файл scmRTOS_bitmacros.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">at8_ct
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('scm_r_t_o_s__bitmacros_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">scmRTOS_bitmacros.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="scm_r_t_o_s__bitmacros_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *    pin_macros.h  (AVR/avr-gcc)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *----------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Author:  Oleksandr Redchuk aka ReAl (real@real.kiev.ua)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Description: port bits access macros for AVR uC family (avr-gcc compiler)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Based on macros by Ascold Volkov, Andy Mozzevilov, Aleksey Musin</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *----------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">examples</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">#define Pin1 A,2,H</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">#define Pin2 B,3,L</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">             ^ ^ ^</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">          port | |</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">             bit \active level</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">void main(void)</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    DRIVER(Pin1,OUT);    //as output</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    DRIVER(Pin2,IN);        //as input</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    DRIVER(Pin2,PULLUP);    // with pullup</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    ON(Pin1);</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    if (ACTIVE(Pin2)) OFF(Pin1);</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    if (LATCH(Pin1)) { //if active level presents on Pin1 for drive something</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">        //do something</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifndef PIN_MACROS_H</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PIN_MACROS_H</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// assume chip has PORT_TOGGLE_BY_PIN_WRITE feature by default (all new AVR chips)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// check only old-style chips</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#if    defined(__AVR_AT94K__) \</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">    || defined(__AVR_AT43USB320__) || defined(__AVR_AT43USB355__) \</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">    || defined(__AVR_AT76C711__) || defined(__AVR_AT86RF401__) \</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">    || defined(__AVR_AT90C8534__) || defined(__AVR_AT90S4434__) \</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">    || defined(__AVR_AT90S1200__) || defined(__AVR_AT90S2343__) \</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">    || defined(__AVR_AT90S2333__) || defined(__AVR_AT90S2323__) \</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">    || defined(__AVR_AT90S2313__) || defined(__AVR_AT90S4433__) \</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">    || defined(__AVR_AT90S4414__) \</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">    || defined(__AVR_AT90S8515__) || defined(__AVR_AT90S8535__) \</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">    || defined(__AVR_ATmega8515__) || defined(__AVR_ATmega8535__) \</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">    || defined(__AVR_ATmega103__) \</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">    || defined(__AVR_ATmega64__) || defined(__AVR_ATmega128__) \</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">    || defined(__AVR_ATmega8__) || defined(__AVR_ATmega16__) \</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">    || defined(__AVR_ATmega32__) \</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">    || defined(__AVR_ATtiny11__) || defined(__AVR_ATtiny12__) \</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">    || defined(__AVR_ATtiny15__) || defined(__AVR_ATtiny28__) \</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">    || defined(__AVR_ATtiny22__) || defined(__AVR_ATtiny26__) \</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">    || defined(__AVR_ATmega161__) || defined(__AVR_ATmega162__) \</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">    || defined(__AVR_ATmega163__) || defined(__AVR_ATmega323__) \</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">    || defined(__AVR_ATmega8HVA__) || defined(__AVR_ATmega16HVA__)</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#  define PORT_TOGGLE_BY_PIN_WRITE 0</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#aef8856aff35621cceff35a36a1ab253a">   63</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#  define PORT_TOGGLE_BY_PIN_WRITE 1</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#acd51628efae6f5e555e7ac2faaa54bca">   66</a></span>&#160;<span class="preprocessor">#define PM_BITNUM(port,bit,val) (bit)</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a8a63eee53f365aad7e436b4070c1ec09">   67</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define BITNUM(x) PM_BITNUM(x)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#aa611d8f7e5aa7a82486ee4fb0c64bc05">   68</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define BITMASK(x) (1&lt;&lt;PM_BITNUM(x))</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a14ff7494a8e6bae2607c362bd26c0af4">   70</a></span>&#160;<span class="preprocessor">#define PM_SETOUT(port,bit) (DDR##port |= (1&lt;&lt;(bit)))</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a66a8b68e0cc7454849a82898ed3a289f">   71</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PM_SETIN(port,bit) (DDR##port &amp;= ~(1&lt;&lt;(bit)))</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a5f7da1bcc002a8fbe1c282044a9e6ab5">   72</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PM_SETPULLUP(port,bit) (PORT##port |= (1&lt;&lt;(bit)))</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a426651a7ec58867202e3caf871828e40">   73</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PM_SETHIZ(port,bit) (PORT##port &amp;= ~(1&lt;&lt;(bit)))</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#aa8381942a507cf9fd98558ecd9d9d71d">   74</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PM_DRIVER(port,bit,val,mode) PM_SET##mode(port,bit)</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor"></span><span class="comment">/* dmode = OUT or IN, PULLUP or HIZ */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a3b1acb21fc3bb55932d3fc842548a661">   76</a></span>&#160;<span class="preprocessor">#define DRIVER(x,mode) PM_DRIVER(x,mode)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a91f6cdc8d0c86dc91159b52fde7e0c3d">   78</a></span>&#160;<span class="preprocessor">#define PM_SETL(port,bit,dummy) (PORT##port &amp;= ~(1&lt;&lt;(bit)))</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#ac92a9b2d3c33385eaf49cedf41aa3ab5">   79</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PM_SETH(port,bit,dummy) (PORT##port |= (1&lt;&lt;(bit)))</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#ab7b2e24a60f38d510ab22f4717d44846">   80</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PM_SET(port,bit,val) PM_SET##val(port,bit,dummy)</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a327590f376df057caf1541ffc3deb31f">   81</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ON(x) PM_SET(x)</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a1e573d4c5b004a71c86c15800b65708f">   82</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SET(x) PM_SETH(x)</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a74bc9444cf3ef3289a07cea717e16764">   83</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CLR(x) PM_SETL(x)</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#acdffa2129a3a337633cf6463ad5d7d2a">   85</a></span>&#160;<span class="preprocessor">#define PM_CLRL(port,bit,dummy) PM_SETH(port,bit,dummy)</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#abd688b96cf4944e53a301aa3bd667bd5">   86</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PM_CLRH(port,bit,dummy) PM_SETL(port,bit,dummy)</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a564aa36998e5d04f6d4492d34655caf0">   87</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PM_CLR(port,bit,val) PM_CLR##val(port,bit,dummy)</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a4521467edec9387fad3ae8761f0f4b1d">   88</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define OFF(x) PM_CLR(x)</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a87da8eb6d4b4d14bcfbdf1ca2cd33b64">   90</a></span>&#160;<span class="preprocessor">#define PM_PINH(port,bit,dummy) (PIN##port &amp; (1&lt;&lt;(bit)))</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#ac15c7bbd87b514f08c6123aea4911a61">   91</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PM_PINL(port,bit,dummy) !PM_PINH(port,bit,dummy)</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a0d71c442d435f90fa64e4f27947ee4f7">   92</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PM_PIN(port,bit,val) PM_PIN##val(port,bit,dummy)</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a74e496c928b7a7b86ad52253f5995363">   93</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ACTIVE(x) PM_PIN(x)</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a7bacdbbf412a44abfcffa6665b755dd4">   94</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PIN_H(x) PM_PINH(x)</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#ad1b410659583ad9e9efc65c221998a53">   95</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PIN_L(x) PM_PINL(x)</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a82edfe7e7e0887fd40b0e7dcac951827">   97</a></span>&#160;<span class="preprocessor">#define PM_LATCHH(port,bit,dummy) (PORT##port &amp; (1&lt;&lt;(bit)))</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#ac59d84ebf2efe432b70768fce970df31">   98</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PM_LATCHL(port,bit,dummy) !PM_LATCHH(port,bit,dummy)</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#aada44cd8de5a239e23d85248b530b1e0">   99</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PM_LATCH(port,bit,val) PM_LATCH##val(port,bit,dummy)</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#ac29b270d21fb82df16e5a6fdcf860ab1">  100</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define LATCH(x) PM_LATCH(x)</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a62362198d3afe359ed12662804b15f05">  101</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define LATCH_H(x) PM_LATCHH(x)</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a35d4c98ec05f1c4f144104c8ebb4aeeb">  102</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define LATCH_L(x) PM_LATCHL(x)</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#if PORT_TOGGLE_BY_PIN_WRITE</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a05fbbabea3c99c1abd266ad97a75a357">  106</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#  define PM_CPL(port,bit,val)      (PIN##port |= (1 &lt;&lt; (bit)))</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#  define PM_CPL(port,bit,val)      (PORT##port ^= (1 &lt;&lt; (bit)))</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a5f0f4210b8e3cd585410657a64dc9c9c">  111</a></span>&#160;<span class="preprocessor">#define CPL(x) PM_CPL(x)</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="scm_r_t_o_s__bitmacros_8h.html#a10801dd855e20334cd83cace96616de6">  112</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TOGGLE(x) PM_CPL(x)</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif    // PIN_MACROS_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="scm_r_t_o_s__bitmacros_8h.html">scmRTOS_bitmacros.h</a></li>
+    <li class="footer">Документация по at8_ct. Последние изменения: Вс 8 Дек 2013 07:51:06. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
+  </ul>
+</div>
+</body>
+</html>

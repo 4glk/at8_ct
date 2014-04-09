@@ -1,0 +1,221 @@
+# depslib dependency file v1.0
+1385842312 source:/home/geraki/mcu_dev/at8_ct/adc.c
+	"adc.h"
+
+1385842312 /home/geraki/mcu_dev/at8_ct/adc.h
+	<avr/io.h>
+	<avr/interrupt.h>
+
+1385842312 source:/home/geraki/mcu_dev/at8_ct/automate.c
+	"automate.h"
+
+1385842312 /home/geraki/mcu_dev/at8_ct/automate.h
+	<avr/io.h>
+	<avr/interrupt.h>
+	"kbd.h"
+	"indicator.h"
+	"macros.h"
+
+1385842312 /home/geraki/mcu_dev/at8_ct/kbd.h
+	<avr/interrupt.h>
+	<avr/io.h>
+	<avr/interrupt.h>
+	"macros.h"
+
+1386520477 /home/geraki/mcu_dev/at8_ct/macros.h
+	<stdbool.h>
+
+1387868506 /home/geraki/mcu_dev/at8_ct/indicator.h
+	<string.h>
+	"compilers.h"
+	"spi.h"
+
+1385842312 /home/geraki/mcu_dev/at8_ct/compilers.h
+	<ioavr.h>
+	<inavr.h>
+	<intrinsics.h>
+	<avr/io.h>
+	<util/delay.h>
+	<avr/interrupt.h>
+	<avr/pgmspace.h>
+	<io.h>
+	<delay.h>
+	<stdint.h>
+
+1385842312 /home/geraki/mcu_dev/at8_ct/spi.h
+	"compilers.h"
+
+1385842312 source:/home/geraki/mcu_dev/at8_ct/fuse.c
+	<avr/io.h>
+
+1385842312 source:/home/geraki/mcu_dev/at8_ct/indicator.c
+	"indicator.h"
+
+1386211181 source:/home/geraki/mcu_dev/at8_ct/kbd.c
+	"kbd.h"
+
+1388891727 source:/home/geraki/mcu_dev/at8_ct/main.c
+	<avr/io.h>
+	<avr/interrupt.h>
+	"macros.h"
+	"kbd.h"
+	"adc.h"
+	"indicator.h"
+	"spi.h"
+	"automate.h"
+	"timer.h"
+	"compilers.h"
+	"sheduler/dispatch.h"
+
+1385842312 /home/geraki/mcu_dev/at8_ct/timer.h
+	<avr/io.h>
+	<avr/interrupt.h>
+	"macros.h"
+
+1385842312 /home/geraki/mcu_dev/at8_ct/sheduler/dispatch.h
+	<avr/io.h>
+	<avr/interrupt.h>
+	"../macros.h"
+
+1385842312 source:/home/geraki/mcu_dev/at8_ct/sheduler/dispatch.c
+	"dispatch.h"
+
+1385842312 source:/home/geraki/mcu_dev/at8_ct/spi.c
+	"spi.h"
+
+1387868456 source:/home/geraki/mcu_dev/at8_ct/timer.c
+	"timer.h"
+
+1356881654 /usr/include/string.h
+	<features.h>
+	<stddef.h>
+	<xlocale.h>
+	<bits/string.h>
+	<bits/string2.h>
+	<bits/string3.h>
+
+1356881635 /usr/include/features.h
+	<bits/predefs.h>
+	<sys/cdefs.h>
+	<gnu/stubs.h>
+
+1356881636 /usr/include/bits/predefs.h
+
+1356881658 /usr/include/sys/cdefs.h
+	<features.h>
+	<bits/wordsize.h>
+
+1356881652 /usr/include/bits/wordsize.h
+
+1356881636 /usr/include/gnu/stubs.h
+	<bits/wordsize.h>
+	<gnu/stubs-32.h>
+	<gnu/stubs-64.h>
+
+1356881753 /usr/include/gnu/stubs-32.h
+
+1356881675 /usr/include/gnu/stubs-64.h
+
+1356881636 /usr/include/xlocale.h
+
+1356881654 /usr/include/bits/string.h
+
+1356881654 /usr/include/bits/string2.h
+	<endian.h>
+	<bits/types.h>
+	<stdlib.h>
+
+1356881654 /usr/include/endian.h
+	<features.h>
+	<bits/endian.h>
+	<bits/byteswap.h>
+
+1356881654 /usr/include/bits/endian.h
+
+1356881654 /usr/include/bits/byteswap.h
+	<bits/wordsize.h>
+
+1356881657 /usr/include/bits/types.h
+	<features.h>
+	<bits/wordsize.h>
+	<bits/typesizes.h>
+
+1356881657 /usr/include/bits/typesizes.h
+
+1356881652 /usr/include/stdlib.h
+	<features.h>
+	<stddef.h>
+	<bits/waitflags.h>
+	<bits/waitstatus.h>
+	<xlocale.h>
+	<sys/types.h>
+	<alloca.h>
+	<bits/stdlib.h>
+	<bits/stdlib-ldbl.h>
+
+1356881657 /usr/include/bits/waitflags.h
+
+1356881657 /usr/include/bits/waitstatus.h
+	<endian.h>
+
+1356881657 /usr/include/sys/types.h
+	<features.h>
+	<bits/types.h>
+	<time.h>
+	<stddef.h>
+	<endian.h>
+	<sys/select.h>
+	<sys/sysmacros.h>
+	<bits/pthreadtypes.h>
+
+1356881656 /usr/include/time.h
+	<features.h>
+	<stddef.h>
+	<bits/time.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<xlocale.h>
+
+1356881656 /usr/include/bits/time.h
+	<bits/types.h>
+	<bits/types.h>
+
+1356881659 /usr/include/sys/select.h
+	<features.h>
+	<bits/types.h>
+	<bits/select.h>
+	<bits/sigset.h>
+	<time.h>
+	<bits/time.h>
+
+1356881659 /usr/include/bits/select.h
+	<bits/wordsize.h>
+
+1356881651 /usr/include/bits/sigset.h
+
+1356881657 /usr/include/sys/sysmacros.h
+	<features.h>
+
+1356881657 /usr/include/bits/pthreadtypes.h
+	<bits/wordsize.h>
+
+1356881652 /usr/include/alloca.h
+	<features.h>
+	<stddef.h>
+
+1356881652 /usr/include/bits/stdlib.h
+
+1356881652 /usr/include/bits/stdlib-ldbl.h
+
+1356881654 /usr/include/bits/string3.h
+
+1356881652 /usr/include/stdint.h
+	<features.h>
+	<bits/wchar.h>
+	<bits/wordsize.h>
+
+1356881654 /usr/include/bits/wchar.h
+

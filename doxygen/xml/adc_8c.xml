@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.1.2">
+  <compounddef id="adc_8c" kind="file">
+    <compoundname>adc.c</compoundname>
+    <includes refid="adc_8h" local="yes">adc.h</includes>
+    <incdepgraph>
+      <node id="160">
+        <label>adc.c</label>
+        <link refid="adc.c"/>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="163">
+        <label>avr/interrupt.h</label>
+      </node>
+      <node id="161">
+        <label>adc.h</label>
+        <link refid="adc_8h"/>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+      </node>
+      <node id="162">
+        <label>avr/io.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="adc_8c_1a05c2e5b588ced1cd7312f5b0edc5b295" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(ADC_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>ADC_vect</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/adc.c" line="3" bodyfile="/home/geraki/mcu_dev/at8_ct/adc.c" bodystart="3" bodyend="6"/>
+        <references refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" compoundref="dispatch_8c" startline="4" endline="34">AddTask</references>
+        <references refid="adc_8c_1aebdad809d69c09c4dd29da66ebcdac6a" compoundref="adc_8c" startline="8" endline="33">AdcMean</references>
+      </memberdef>
+      <memberdef kind="function" id="adc_8c_1aebdad809d69c09c4dd29da66ebcdac6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdcMean</definition>
+        <argsstring>()</argsstring>
+        <name>AdcMean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/adc.c" line="8" bodyfile="/home/geraki/mcu_dev/at8_ct/adc.c" bodystart="8" bodyend="33"/>
+        <references refid="adc_8h_1af446519fc41f4f1585255781b381fc77" compoundref="adc_8h" startline="9">adc_buf</references>
+        <references refid="adc_8h_1a010ebd8befbc747b05c533a9bebb4e19" compoundref="adc_8h" startline="10">adc_result</references>
+        <references refid="timer_8h_1a0df84c03ae5df9794b9d972fb8069ab7" compoundref="adc_8h" startline="4">adc6</references>
+        <references refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" compoundref="dispatch_8c" startline="4" endline="34">AddTask</references>
+        <references refid="automate_8c_1ab82d42f4ec48e743663fb90c550e4fa5" compoundref="automate_8c" startline="112" endline="115">ShowAdc6</references>
+        <references refid="timer_8h_1afb794755ffada22ce04e46c51616e5dc" compoundref="adc_8h" startline="4">adc7</references>
+        <references refid="automate_8c_1a29ef358bb3f19d4b696b300c61bc0da1" compoundref="automate_8c" startline="117" endline="121">ShowAdc7</references>
+        <referencedby refid="adc_8c_1a05c2e5b588ced1cd7312f5b0edc5b295" compoundref="adc_8c" startline="3" endline="6">ISR</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="adc_8c_1aebf00c4b26377bca91c8702ced5e7927" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitADC</definition>
+        <argsstring>()</argsstring>
+        <name>InitADC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/adc.c" line="37" bodyfile="/home/geraki/mcu_dev/at8_ct/adc.c" bodystart="37" bodyend="47"/>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="adc_8h" kindref="compound">adc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="adc_8c_1a05c2e5b588ced1cd7312f5b0edc5b295" refkind="member"><highlight class="normal"><ref refid="adc_8c_1a05c2e5b588ced1cd7312f5b0edc5b295" kindref="member">ISR</ref><sp/>(ADC_vect){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" kindref="member">AddTask</ref>(<ref refid="adc_8c_1aebdad809d69c09c4dd29da66ebcdac6a" kindref="member">AdcMean</ref>,100);<sp/><sp/><sp/></highlight><highlight class="comment">//отошлю<sp/>в<sp/>диспетчер<sp/>гы<sp/>гы<sp/>,<sp/>главное<sp/>чтоб<sp/>он<sp/>успевал<sp/>отработать<sp/>,<sp/>до<sp/>того<sp/>как<sp/>новое<sp/>придет</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>AdcMean();<sp/><sp/>//медленный<sp/>диспетчер<sp/>может<sp/>засратьс€<sp/>(</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="adc_8h_1aebdad809d69c09c4dd29da66ebcdac6a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adc_8c_1aebdad809d69c09c4dd29da66ebcdac6a" kindref="member">AdcMean</ref>(){</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>counti<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADCSRA|=(1&lt;&lt;ADSC);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counti!=0)<sp/><ref refid="adc_8h_1af446519fc41f4f1585255781b381fc77" kindref="member">adc_buf</ref>+=ADCW;<sp/></highlight><highlight class="comment">//оп€ть<sp/>костыли<sp/>(((</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>counti++;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counti<sp/>==<sp/>9){</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="adc_8h_1a010ebd8befbc747b05c533a9bebb4e19" kindref="member">adc_result</ref><sp/>=<sp/>(<ref refid="adc_8h_1af446519fc41f4f1585255781b381fc77" kindref="member">adc_buf</ref>&gt;&gt;3);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="adc_8h_1af446519fc41f4f1585255781b381fc77" kindref="member">adc_buf</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>counti<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ADMUX==6){</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="timer_8h_1a0df84c03ae5df9794b9d972fb8069ab7" kindref="member">adc6</ref>!=<ref refid="adc_8h_1a010ebd8befbc747b05c533a9bebb4e19" kindref="member">adc_result</ref>){</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a0df84c03ae5df9794b9d972fb8069ab7" kindref="member">adc6</ref>=<ref refid="adc_8h_1a010ebd8befbc747b05c533a9bebb4e19" kindref="member">adc_result</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>TimeStop=adc6;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" kindref="member">AddTask</ref>(<ref refid="automate_8c_1ab82d42f4ec48e743663fb90c550e4fa5" kindref="member">ShowAdc6</ref>,50);}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADMUX=7;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>adc7=adc_result*10;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="timer_8h_1afb794755ffada22ce04e46c51616e5dc" kindref="member">adc7</ref>!=<ref refid="adc_8h_1a010ebd8befbc747b05c533a9bebb4e19" kindref="member">adc_result</ref>){</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timer_8h_1afb794755ffada22ce04e46c51616e5dc" kindref="member">adc7</ref>=<ref refid="adc_8h_1a010ebd8befbc747b05c533a9bebb4e19" kindref="member">adc_result</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>TimeSupply=adc7;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timer_8h_1a20948c9b12c543546cdca3c5419d14b2" kindref="member">AddTask</ref>(<ref refid="automate_8c_1a29ef358bb3f19d4b696b300c61bc0da1" kindref="member">ShowAdc7</ref>,50);}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADMUX=6;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>AddTask(AdcMean,100);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="adc_8h_1aebf00c4b26377bca91c8702ced5e7927" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adc_8c_1aebf00c4b26377bca91c8702ced5e7927" kindref="member">InitADC</ref>(){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>cli();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADCSRA<sp/>|=<sp/><sp/>(1<sp/>&lt;&lt;<sp/>ADPS2)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>ADPS1)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>ADPS0);<sp/></highlight><highlight class="comment">//<sp/>Set<sp/>ADC<sp/>prescalar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADMUX<sp/><sp/>|=<sp/>(0<sp/>&lt;&lt;<sp/>MUX3)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>MUX2)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>MUX1)<sp/>|<sp/>(0<sp/>&lt;&lt;<sp/>MUX0);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>adc6=ADCW;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADMUX<sp/>|=<sp/>(1&lt;&lt;ADLAR)|(1<sp/>&lt;&lt;<sp/>REFS0)|(0&lt;&lt;REFS1);<sp/></highlight><highlight class="comment">//<sp/>Set<sp/>ADC<sp/>reference<sp/>to<sp/>AVCC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>ADCSRA<sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/>ADFR);<sp/><sp/>//<sp/>Set<sp/>ADC<sp/>to<sp/>Free-Running<sp/>Mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADCSRA<sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/>ADEN);<sp/><sp/></highlight><highlight class="comment">//<sp/>Enable<sp/>ADC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADCSRA<sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/>ADSC);</highlight><highlight class="comment">//<sp/>Start<sp/>A2D<sp/>Conversions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADCSRA<sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/>ADIE);</highlight><highlight class="comment">//Ѕит<sp/>3<sp/>Ц<sp/>ADIE<sp/>(ADC<sp/>Interrupt<sp/>Enable)<sp/>Ц<sp/>бит<sp/>разрешени€<sp/>прерывани€<sp/>аналогоЦцифрового<sp/>преобразовател€<sp/>:<sp/>1<sp/>Ц<sp/>разрешено,<sp/>0<sp/>Ц<sp/>запрещено.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>sei();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/>ADMUX<sp/>|=<sp/>(1&lt;&lt;REFS0)|(1&lt;&lt;ADLAR)|(0&lt;&lt;MUX1)|(1&lt;&lt;MUX0);<sp/>//ADCH,adsc</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/>ADCSRA<sp/>|=<sp/>(1&lt;&lt;ADEN)|(1&lt;&lt;ADSC)|(0&lt;&lt;ADATE)|(1&lt;&lt;ADIF)|(1&lt;&lt;ADIE)|(1&lt;&lt;ADPS2)|(1&lt;&lt;ADPS1)|(1&lt;&lt;ADPS0);</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">//<sp/><sp/><sp/><sp/>ADCSRB<sp/>|=<sp/>(0&lt;&lt;ACME)|(0&lt;&lt;ADTS2)|(0&lt;&lt;ADTS1)|(0&lt;&lt;ADTS0);</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">//<sp/><sp/><sp/><sp/>DIDR0<sp/>|=<sp/>(0&lt;&lt;ADC0D)|(0&lt;&lt;ADC2D)|(0&lt;&lt;ADC3D)|(0&lt;&lt;ADC1D)|(0&lt;&lt;AIN1D)|(0&lt;&lt;AIN0D);</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/>int<sp/>state=0;</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/>for(;;){</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/>st=PINB<sp/>&amp;<sp/>0b001000;</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(!st){</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(state==0)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*timer_ptra=adc_result;</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state=1;</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(state==1){</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*timer_ptrb=adc_result;</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state=0;</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"></highlight></codeline>
+<codeline lineno="71"><highlight class="comment">ISR(ADC_vect){</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/>ADCSRA|=(1&lt;&lt;ADSC);</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/>static<sp/>uint8_t<sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/>//считываем<sp/>результат<sp/>преобразовани€<sp/>ј÷ѕ</highlight></codeline>
+<codeline lineno="75"><highlight class="comment">//<sp/><sp/>adcTemp<sp/>=<sp/>ADCL;</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/>//<sp/>adcTemp<sp/>|=(ADCH&lt;&lt;8);</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/>adc_buf+=ADCH;</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/>//adcValue<sp/><sp/>+=<sp/>adcTemp;</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/>//если<sp/>накопили<sp/>сумму<sp/>8-ми<sp/>значений<sp/>-<sp/>делим<sp/>на<sp/>8</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/><sp/>//сохран€ем<sp/>в<sp/>буфере,<sp/>обнул€ем<sp/>счетчик<sp/>и<sp/>аккумул€тор</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/><sp/><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/>if<sp/>(count<sp/>==<sp/>8){</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/>adc_result<sp/>=<sp/>(adc_buf&gt;&gt;3);</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/>adc_buf<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/>ADCSRA<sp/>|=<sp/>(1&lt;&lt;ADSC);</highlight></codeline>
+<codeline lineno="88"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="89"><highlight class="comment">//*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/geraki/mcu_dev/at8_ct/adc.c"/>
+  </compounddef>
+</doxygen>

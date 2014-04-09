@@ -1,0 +1,11 @@
+<map id="macros.h" name="macros.h">
+<area shape="rect" id="node3" href="$kbd_8h.html" title="kbd.h" alt="" coords="145,83,199,112"/>
+<area shape="rect" id="node5" href="$automate_8h.html" title="automate.h" alt="" coords="5,160,91,189"/>
+<area shape="rect" id="node9" href="$main_8c.html" title="main.c" alt="" coords="225,237,287,267"/>
+<area shape="rect" id="node15" href="$timer_8h.html" title="timer.h" alt="" coords="293,83,355,112"/>
+<area shape="rect" id="node20" href="$dispatch_8h.html" title="dispatch.h" alt="" coords="401,83,484,112"/>
+<area shape="rect" id="node12" href="$kbd_8c.html" title="kbd.c" alt="" coords="165,160,219,189"/>
+<area shape="rect" id="node7" href="$automate_8c.html" title="automate.c" alt="" coords="5,237,91,267"/>
+<area shape="rect" id="node17" href="$timer_8c.html" title="timer.c" alt="" coords="344,160,405,189"/>
+<area shape="rect" id="node23" href="$dispatch_8c.html" title="dispatch.c" alt="" coords="480,160,563,189"/>
+</map>

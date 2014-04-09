@@ -1,0 +1,19 @@
+Warning: The selected output language "russian" has not been updated
+since release 1.7.5.  As a result some sentences may appear in English.
+
+/home/geraki/mcu_dev/at8_ct/indicator.h:157: warning: argument 'argument2' of command @param is not found in the argument list of IND_Time(uint16_t CurrentTime, uint8_t position)
+/home/geraki/mcu_dev/at8_ct/indicator.h:157: warning: The following parameters of IND_Time(uint16_t CurrentTime, uint8_t position) are not documented:
+  parameter 'CurrentTime'
+  parameter 'position'
+/home/geraki/mcu_dev/at8_ct/indicator.h:157: warning: argument 'argument2' of command @param is not found in the argument list of IND_Time(uint16_t CurrentTime, uint8_t position)
+/home/geraki/mcu_dev/at8_ct/indicator.h:157: warning: The following parameters of IND_Time(uint16_t CurrentTime, uint8_t position) are not documented:
+  parameter 'CurrentTime'
+  parameter 'position'
+/home/geraki/mcu_dev/at8_ct/indicator.h:157: warning: argument 'argument2' of command @param is not found in the argument list of IND_Time(uint16_t CurrentTime, uint8_t position)
+/home/geraki/mcu_dev/at8_ct/indicator.h:157: warning: The following parameters of IND_Time(uint16_t CurrentTime, uint8_t position) are not documented:
+  parameter 'CurrentTime'
+  parameter 'position'
+/home/geraki/mcu_dev/at8_ct/indicator.h:157: warning: argument 'argument2' of command @param is not found in the argument list of IND_Time(uint16_t CurrentTime, uint8_t position)
+/home/geraki/mcu_dev/at8_ct/indicator.h:157: warning: The following parameters of IND_Time(uint16_t CurrentTime, uint8_t position) are not documented:
+  parameter 'CurrentTime'
+  parameter 'position'

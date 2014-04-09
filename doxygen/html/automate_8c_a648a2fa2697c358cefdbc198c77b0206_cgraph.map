@@ -1,0 +1,10 @@
+<map id="StateAutomate" name="StateAutomate">
+<area shape="rect" id="node3" href="$timer_8h.html#a20948c9b12c543546cdca3c5419d14b2" title="AddTask" alt="" coords="527,138,601,167"/>
+<area shape="rect" id="node5" href="$automate_8c.html#ac41ed6f23d52707933276309ca058269" title="Supply_sw" alt="" coords="171,160,256,190"/>
+<area shape="rect" id="node14" href="$indicator_8c.html#a28fc0d56da8c2d1fbd529d12003278e2" title="IND_OutputFormatChar" alt="" coords="313,214,473,243"/>
+<area shape="rect" id="node16" href="$automate_8c.html#a7a84985ae54f57552f93b35a907b0542" title="Fire_sw" alt="" coords="180,214,247,243"/>
+<area shape="rect" id="node21" href="$automate_8c.html#a4cc8fd1ed483012c97d1a9e9ebf8e93d" title="Timer_sw" alt="" coords="175,107,252,136"/>
+<area shape="rect" id="node26" href="$automate_8c.html#adab77d4a76e9465ecbd2eaa9cacf8b61" title="Furnance_sw" alt="" coords="164,54,263,83"/>
+<area shape="rect" id="node8" href="$automate_8c.html#aec96046bbb47e80657e6439eda9dc665" title="FuncINDTime" alt="" coords="341,59,445,88"/>
+<area shape="rect" id="node10" href="$indicator_8c.html#a6ef4c7141a57a829f312df655f43b94e" title="IND_Time" alt="" coords="523,59,605,88"/>
+</map>

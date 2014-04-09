@@ -99,7 +99,7 @@
 			<envvars />
 			<debugger>
 				<remote_debugging target="Debug">
-					<options conn_type="0" serial_baud="115200" ip_address="localhost" ip_port="4242" additional_cmds="load&#x0A;break main" skip_ld_path="1" />
+					<options conn_type="0" serial_baud="115200" ip_address="127.0.0.1" ip_port="4242" additional_cmds="break main" />
 				</remote_debugging>
 			</debugger>
 			<lib_finder disable_auto="1" />

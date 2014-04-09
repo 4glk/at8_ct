@@ -1,0 +1,13 @@
+<map id="IND_Time" name="IND_Time">
+<area shape="rect" id="node3" href="$automate_8h.html#aec96046bbb47e80657e6439eda9dc665" title="FuncINDTime" alt="" coords="136,177,240,206"/>
+<area shape="rect" id="node22" href="$automate_8h.html#ab82d42f4ec48e743663fb90c550e4fa5" title="ShowAdc6" alt="" coords="296,310,381,340"/>
+<area shape="rect" id="node28" href="$automate_8h.html#a29ef358bb3f19d4b696b300c61bc0da1" title="ShowAdc7" alt="" coords="296,257,381,286"/>
+<area shape="rect" id="node5" href="$automate_8h.html#a4cc8fd1ed483012c97d1a9e9ebf8e93d" title="Timer_sw" alt="" coords="300,44,377,73"/>
+<area shape="rect" id="node10" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="595,45,645,74"/>
+<area shape="rect" id="node12" href="$automate_8h.html#ac41ed6f23d52707933276309ca058269" title="Supply_sw" alt="" coords="296,97,381,126"/>
+<area shape="rect" id="node16" href="$automate_8h.html#adab77d4a76e9465ecbd2eaa9cacf8b61" title="Furnance_sw" alt="" coords="289,150,388,180"/>
+<area shape="rect" id="node19" href="$automate_8h.html#a7a84985ae54f57552f93b35a907b0542" title="Fire_sw" alt="" coords="305,204,372,233"/>
+<area shape="rect" id="node7" href="$automate_8h.html#a648a2fa2697c358cefdbc198c77b0206" title="StateAutomate" alt="" coords="437,97,547,126"/>
+<area shape="rect" id="node24" href="$adc_8h.html#aebdad809d69c09c4dd29da66ebcdac6a" title="AdcMean" alt="" coords="453,284,531,313"/>
+<area shape="rect" id="node26" href="$adc_8c.html#a05c2e5b588ced1cd7312f5b0edc5b295" title="ISR" alt="" coords="597,284,643,313"/>
+</map>

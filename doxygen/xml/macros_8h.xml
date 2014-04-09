@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.1.2">
+  <compounddef id="macros_8h" kind="file">
+    <compoundname>macros.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includedby refid="kbd_8h" local="yes">kbd.h</includedby>
+    <includedby refid="automate_8h" local="yes">automate.h</includedby>
+    <includedby refid="timer_8h" local="yes">timer.h</includedby>
+    <includedby refid="dispatch_8h" local="yes">dispatch.h</includedby>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <incdepgraph>
+      <node id="260">
+        <label>macros.h</label>
+        <link refid="macros.h"/>
+        <childnode refid="261" relation="include">
+        </childnode>
+      </node>
+      <node id="261">
+        <label>stdbool.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="262">
+        <label>macros.h</label>
+        <link refid="macros.h"/>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="268" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+      </node>
+      <node id="271">
+        <label>dispatch.c</label>
+        <link refid="dispatch_8c"/>
+      </node>
+      <node id="270">
+        <label>dispatch.h</label>
+        <link refid="dispatch_8h"/>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="271" relation="include">
+        </childnode>
+      </node>
+      <node id="267">
+        <label>kbd.c</label>
+        <link refid="kbd_8c"/>
+      </node>
+      <node id="263">
+        <label>kbd.h</label>
+        <link refid="kbd_8h"/>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="267" relation="include">
+        </childnode>
+      </node>
+      <node id="266">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="269">
+        <label>timer.c</label>
+        <link refid="timer_8c"/>
+      </node>
+      <node id="268">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+      </node>
+      <node id="265">
+        <label>automate.c</label>
+        <link refid="automate_8c"/>
+      </node>
+      <node id="264">
+        <label>automate.h</label>
+        <link refid="automate_8h"/>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_packed_bool" prot="public">PackedBool</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="macros_8h_1ad43a21637bce77bed55008276c26d3b9" prot="public" static="no">
+        <name>StartFrom</name>
+        <initializer>0xD3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="3" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="3" bodyend="-1"/>
+        <referencedby refid="dispatch_8c_1a7cfcbe42bd266750aeb6e5d71e5ea479" compoundref="dispatch_8c" startline="139" endline="144">ISR</referencedby>
+        <referencedby refid="dispatch_8c_1aeeccb93d922e4fb825916b6ca880ec10" compoundref="dispatch_8c" startline="146" endline="153">InitScheduler</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1a040e861e04489b8a064ec977900d61df" prot="public" static="no">
+        <name>TCNT0_const</name>
+        <initializer>0xd9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="11" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="timer_8c_1aded9b0ef5cb7a143d739c80442978a1d" compoundref="timer_8c" startline="44" endline="54">InitTimer</referencedby>
+        <referencedby refid="timer_8c_1add2d7cdddfb682dcc0391e60cf42c7d6" compoundref="timer_8c" startline="56" endline="60">ISR</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1acd5f3a5277c5bb1eca2d0c8133e121ea" prot="public" static="no">
+        <name>TCNTCC</name>
+        <initializer>57724</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="12" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1a9bc7923b991fe9b157404a27cd495285" prot="public" static="no">
+        <name>SB</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <initializer>(PORT##port|=(1&lt;&lt;bit))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="14" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="automate_8h_1a4cc8fd1ed483012c97d1a9e9ebf8e93d" compoundref="automate_8c" startline="38" endline="58">Timer_sw</referencedby>
+        <referencedby refid="automate_8h_1ac41ed6f23d52707933276309ca058269" compoundref="automate_8c" startline="60" endline="76">Supply_sw</referencedby>
+        <referencedby refid="automate_8h_1adab77d4a76e9465ecbd2eaa9cacf8b61" compoundref="automate_8c" startline="85" endline="97">Furnance_sw</referencedby>
+        <referencedby refid="automate_8h_1a7a84985ae54f57552f93b35a907b0542" compoundref="automate_8c" startline="99" endline="110">Fire_sw</referencedby>
+        <referencedby refid="main_8c_1a9a336e2a30206a895d000a9d07775b4b" compoundref="timer_8c" startline="13" endline="43">doubleCountdown</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1ab1a1ccd5c9761ad05f89bbfb57567d08" prot="public" static="no">
+        <name>CB</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <initializer>(PORT##port&amp;= ~(1&lt;&lt;bit))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="15" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="automate_8h_1a4cc8fd1ed483012c97d1a9e9ebf8e93d" compoundref="automate_8c" startline="38" endline="58">Timer_sw</referencedby>
+        <referencedby refid="automate_8h_1ac41ed6f23d52707933276309ca058269" compoundref="automate_8c" startline="60" endline="76">Supply_sw</referencedby>
+        <referencedby refid="automate_8h_1adab77d4a76e9465ecbd2eaa9cacf8b61" compoundref="automate_8c" startline="85" endline="97">Furnance_sw</referencedby>
+        <referencedby refid="automate_8h_1a7a84985ae54f57552f93b35a907b0542" compoundref="automate_8c" startline="99" endline="110">Fire_sw</referencedby>
+        <referencedby refid="main_8c_1a9a336e2a30206a895d000a9d07775b4b" compoundref="timer_8c" startline="13" endline="43">doubleCountdown</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1a135fd395b99f85241ce9b02bc678ace3" prot="public" static="no">
+        <name>TB</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <initializer>(PORT##port^=(1&lt;&lt;bit))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="16" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1ace84be4af1bb5665e29cda4eb627c734" prot="public" static="no">
+        <name>CH</name>
+        <param><defname>port</defname></param>
+        <param><defname>bit</defname></param>
+        <initializer>(PIN##port&amp;(1&lt;&lt;bit))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="17" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="automate_8h_1ac41ed6f23d52707933276309ca058269" compoundref="automate_8c" startline="60" endline="76">Supply_sw</referencedby>
+        <referencedby refid="automate_8h_1adab77d4a76e9465ecbd2eaa9cacf8b61" compoundref="automate_8c" startline="85" endline="97">Furnance_sw</referencedby>
+        <referencedby refid="automate_8h_1a7a84985ae54f57552f93b35a907b0542" compoundref="automate_8c" startline="99" endline="110">Fire_sw</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1ad17919b36244bc669e66efede1a2d86c" prot="public" static="no">
+        <name>SBC</name>
+        <param><defname>x</defname></param>
+        <initializer>(PORTC|=(1&lt;&lt;x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="28" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1ab6c15007f78397ed8ce86d7ed264bbbd" prot="public" static="no">
+        <name>CBC</name>
+        <param><defname>x</defname></param>
+        <initializer>(PORTC&amp;= ~(1&lt;&lt;x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="29" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1a3d00a7a3babb97fea3570ed9ee01ae8f" prot="public" static="no">
+        <name>TBC</name>
+        <param><defname>x</defname></param>
+        <initializer>(PORTC^=(1&lt;&lt;x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="30" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1afbb2d369e8b8bf636a07a2821ed59fe6" prot="public" static="no">
+        <name>CHC</name>
+        <param><defname>x</defname></param>
+        <initializer>(PINC&amp;(1&lt;&lt;x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="31" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_packed_bool" kindref="compound">PackedBool</ref></type>
+        <definition>PackedBool flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="111" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="111" bodyend="-1"/>
+        <referencedby refid="automate_8h_1a648a2fa2697c358cefdbc198c77b0206" compoundref="automate_8c" startline="4" endline="36">StateAutomate</referencedby>
+        <referencedby refid="automate_8h_1a4cc8fd1ed483012c97d1a9e9ebf8e93d" compoundref="automate_8c" startline="38" endline="58">Timer_sw</referencedby>
+        <referencedby refid="automate_8h_1ac41ed6f23d52707933276309ca058269" compoundref="automate_8c" startline="60" endline="76">Supply_sw</referencedby>
+        <referencedby refid="dispatch_8c_1aa46f19a6d870d46a2749a8c623a7ef68" compoundref="dispatch_8c" startline="36" endline="55">DispatchTask</referencedby>
+        <referencedby refid="dispatch_8c_1a7cfcbe42bd266750aeb6e5d71e5ea479" compoundref="dispatch_8c" startline="139" endline="144">ISR</referencedby>
+        <referencedby refid="kbd_8c_1ac24268e43ab02c713950ac04cd01bf4c" compoundref="kbd_8c" startline="37" endline="40">KeyCode</referencedby>
+        <referencedby refid="kbd_8c_1a8602ac7725d183564812f39737d61f3b" compoundref="kbd_8c" startline="42" endline="58">KeyState</referencedby>
+        <referencedby refid="kbd_8c_1a119554f5f29d82aa2bd6259ee28ab2f9" compoundref="kbd_8c" startline="60" endline="80">KeyScan</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+        <referencedby refid="main_8c_1a9a336e2a30206a895d000a9d07775b4b" compoundref="timer_8c" startline="13" endline="43">doubleCountdown</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MACROS_</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MACROS_</highlight></codeline>
+<codeline lineno="3" refid="macros_8h_1ad43a21637bce77bed55008276c26d3b9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>StartFrom<sp/><sp/>0xD3</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="comment">/*************управление<sp/>портами</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">//стара€<sp/>верси€</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">#define<sp/>SB(x,y)<sp/>(x|=(1&lt;&lt;y))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//setbit<sp/>(PORTx,y)</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">#define<sp/>CB(x,y)<sp/>(x&amp;=<sp/>~(1&lt;&lt;y))<sp/><sp/><sp/>//clearbit</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">#define<sp/>TB(x,y)<sp/>(x^=(1&lt;&lt;y))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//togglebit</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">#define<sp/>CH(x,y)<sp/>(x&amp;(1&lt;&lt;y))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//checkbit</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">//*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="macros_8h_1a040e861e04489b8a064ec977900d61df" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TCNT0_const<sp/>0xd9<sp/>//217(0xEC,236<sp/>дл€<sp/>400√ц)<sp/>//5<sp/>мс<sp/>дл€<sp/>8<sp/>бит<sp/>таймера<sp/>на<sp/>8ћгц<sp/>200<sp/>√ц,<sp/>2,5мс<sp/>на<sp/>16ћгц<sp/>400√ц</highlight></codeline>
+<codeline lineno="12" refid="macros_8h_1acd5f3a5277c5bb1eca2d0c8133e121ea" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TCNTCC<sp/>57724<sp/>//0xe17c<sp/>1√ц<sp/>1<sp/>сек<sp/>на<sp/>16<sp/>бит<sp/>таймер<sp/>на<sp/>8<sp/>ћгц</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="comment">//*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="macros_8h_1a9bc7923b991fe9b157404a27cd495285" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SB(port,bit)<sp/>(PORT##port|=(1&lt;&lt;bit))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//setbit<sp/>(port,bit)<sp/>приклеим<sp/>это<sp/>слово<sp/>порт<sp/>куда<sp/>надо<sp/>и<sp/>будет<sp/>проще</highlight></codeline>
+<codeline lineno="15" refid="macros_8h_1ab1a1ccd5c9761ad05f89bbfb57567d08" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CB(port,bit)<sp/>(PORT##port&amp;=<sp/>~(1&lt;&lt;bit))<sp/><sp/><sp/>//clearbit<sp/>а<sp/>лучше<sp/>конечно<sp/>написать<sp/>порт<sp/>и<sp/>бит<sp/>шоб<sp/>пон€тнее<sp/>было</highlight></codeline>
+<codeline lineno="16" refid="macros_8h_1a135fd395b99f85241ce9b02bc678ace3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TB(port,bit)<sp/>(PORT##port^=(1&lt;&lt;bit))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//togglebit<sp/>и<sp/>это<sp/>,<sp/>терь<sp/>не<sp/>надо<sp/>писать<sp/>PORTC<sp/><sp/>терь<sp/>только<sp/>C<sp/>и<sp/>все</highlight></codeline>
+<codeline lineno="17" refid="macros_8h_1ace84be4af1bb5665e29cda4eb627c734" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CH(port,bit)<sp/>(PIN##port&amp;(1&lt;&lt;bit))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//checkbit<sp/>CH(B,3)<sp/>так<sp/>терь<sp/>оно<sp/>будет<sp/>гл€детьс€</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="comment">//*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>это<sp/>все<sp/>прекрасно<sp/>,<sp/>но<sp/>как<sp/>пощупать<sp/>бит<sp/>порта<sp/>командочкой<sp/>PIN<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>а<sp/>то<sp/>циклитс€<sp/>родима€<sp/>в<sp/>теле<sp/>переключател€<sp/>на<sp/>антидребезге</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>тоже<sp/>самое<sp/>дл€<sp/>порта<sp/>C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>FURNANCE_PIN(port,bit)<sp/>(C,5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>FIRE_PIN(port,bit)<sp/>(C,4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>SUPPLY<sp/>C,<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>TIMER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="macros_8h_1ad17919b36244bc669e66efede1a2d86c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBC(x)<sp/>(PORTC|=(1&lt;&lt;x))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//setbit</highlight></codeline>
+<codeline lineno="29" refid="macros_8h_1ab6c15007f78397ed8ce86d7ed264bbbd" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CBC(x)<sp/><sp/>(PORTC&amp;=<sp/>~(1&lt;&lt;x))<sp/><sp/><sp/><sp/><sp/><sp/><sp/>//clearbit</highlight></codeline>
+<codeline lineno="30" refid="macros_8h_1a3d00a7a3babb97fea3570ed9ee01ae8f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TBC(x)<sp/>(PORTC^=(1&lt;&lt;x))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//togglebit</highlight></codeline>
+<codeline lineno="31" refid="macros_8h_1afbb2d369e8b8bf636a07a2821ed59fe6" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CHC(x)<sp/>(PINC&amp;(1&lt;&lt;x))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//checkbit<sp/>PIN<sp/><sp/>на<sp/>чеке<sp/>,<sp/>а<sp/>не<sp/>PORT</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*/<sp/>немного<sp/>красотищи<sp/>из<sp/>scmRTOS<sp/>pin_macros.h<sp/><sp/>(AVR/avr-gcc)</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">#define<sp/>PM_SETL(port,bit,dummy)<sp/>(PORT##port<sp/>&amp;=<sp/>~(1&lt;&lt;(bit)))<sp/>//<sp/>так<sp/>вот<sp/>в<sp/>дефайнах<sp/>строка<sp/>склеиваетс€</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">#define<sp/>PM_SETH(port,bit,dummy)<sp/>(PORT##port<sp/>|=<sp/>(1&lt;&lt;(bit)))<sp/><sp/>//<sp/>##</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">#define<sp/>PM_SET(port,bit,val)<sp/>PM_SET##val(port,bit,dummy)</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">#define<sp/>ON(x)<sp/>PM_SET(x)</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">#define<sp/>SET(x)<sp/>PM_SETH(x)</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">#define<sp/>CLR(x)<sp/>PM_SETL(x)</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">//*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>значение<sp/>калибровки<sp/>таймера<sp/>,<sp/>секунда<sp/>тики</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/******************кнопки********************----//это<sp/>все<sp/>тоже<sp/>устарело<sp/>,<sp/>код<sp/>клавиши<sp/>теперь<sp/>хранитс€<sp/>в<sp/>flags.KeyPin</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">#define<sp/>KP1<sp/>(PINC&amp;(1&lt;&lt;PC0))<sp/><sp/><sp/>//KP<sp/>=<sp/>Key<sp/>Port<sp/>а<sp/>чо<sp/>бы<sp/>так<sp/>не<sp/>сделать<sp/>что<sp/>бы<sp/>меньше<sp/>в<sp/>глазах<sp/>р€било<sp/>?</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">#define<sp/>KP2<sp/>(PINC&amp;(1&lt;&lt;PC1))<sp/><sp/><sp/>//CHC(1)</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">#define<sp/>KP3<sp/>(PINC&amp;(1&lt;&lt;PC2))<sp/><sp/><sp/>//CHC(2)</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">#define<sp/>truba_btn<sp/>(!KP3&amp;&amp;KP2&amp;&amp;KP1)<sp/><sp/><sp/><sp/>//100</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">#define<sp/>fire_btn<sp/>(KP3&amp;&amp;!KP2&amp;&amp;KP1)<sp/><sp/><sp/><sp/><sp/>//010</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">#define<sp/>podacha_btn<sp/>(KP3&amp;&amp;KP2&amp;&amp;!KP1)<sp/><sp/>//001</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">#define<sp/>avtomat_btn<sp/>(!KP3&amp;&amp;KP2&amp;&amp;!KP1)<sp/>//101</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">#define<sp/>count_btn<sp/>(KP3&amp;&amp;!KP2&amp;&amp;!KP1)<sp/><sp/><sp/>//011</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">#define<sp/>plus1_btn<sp/>(!KP3&amp;&amp;!KP2&amp;&amp;KP1)<sp/><sp/><sp/>//110</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">#define<sp/>plus2_btn<sp/>(!KP3&amp;&amp;!KP2&amp;&amp;!KP1)<sp/><sp/>//111</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"></highlight></codeline>
+<codeline lineno="56"><highlight class="comment"></highlight></codeline>
+<codeline lineno="57"><highlight class="comment">//enum<sp/>boolean<sp/>{<sp/>L<sp/>=<sp/>0,<sp/>H<sp/>};</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">//<sp/><sp/><sp/><sp/>******************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>и<sp/>енумом<sp/>коды<sp/>клавиш<sp/>сразу<sp/>приписать</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="61"><highlight class="comment">typedef<sp/>enum<sp/>f<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>потом<sp/>объ€вить<sp/>типа<sp/>Btn<sp/>KeyCode<sp/>и<sp/>переключать<sp/>последнюю<sp/>как<sp/>int</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/>truba_btn=4,<sp/><sp/><sp/><sp/><sp/><sp/>//0<sp/>или<sp/>можно<sp/>+1<sp/>шоб<sp/>с<sp/>нулем<sp/>не<sp/>путатьс€</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/>fire_btn=2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>//1<sp/>или<sp/>вообще<sp/>каждому<sp/>свой<sp/>присвоить</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/>podacha_btn=1,<sp/><sp/><sp/><sp/>//2<sp/>или<sp/>в<sp/>обычных<sp/>скобках<sp/>хз</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/>avtomat_btn=5,<sp/><sp/><sp/><sp/>//3<sp/>тупо<sp/>из<sp/>бин<sp/>кодов<sp/>номер<sp/>клавиши<sp/>получаетс€</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/>count_btn=3;<sp/><sp/><sp/><sp/><sp/><sp/>//4</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/>//plus1_btn=6,<sp/><sp/><sp/><sp/><sp/><sp/>//5</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/>//plus2_btn=7<sp/><sp/><sp/><sp/><sp/><sp/><sp/>//6</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">};</highlight></codeline>
+<codeline lineno="70"><highlight class="comment">//*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">/***********стара€<sp/>сишна€<sp/>верси€*****************************************************</highlight></codeline>
+<codeline lineno="73"><highlight class="comment">#define<sp/>truba_btn<sp/>(!(PINC&amp;(1&lt;&lt;PC2)))&amp;&amp;(PINC&amp;(1&lt;&lt;PC1))&amp;&amp;(PINC&amp;(1&lt;&lt;PC0))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//100</highlight></codeline>
+<codeline lineno="74"><highlight class="comment">#define<sp/>fire_btn<sp/>((PINC&amp;(1&lt;&lt;PC2)))&amp;&amp;(!(PINC&amp;(1&lt;&lt;PC1)))&amp;&amp;(PINC&amp;(1&lt;&lt;PC0))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//010</highlight></codeline>
+<codeline lineno="75"><highlight class="comment">#define<sp/>podacha_btn<sp/>((PINC&amp;(1&lt;&lt;PC2)))&amp;&amp;((PINC&amp;(1&lt;&lt;PC1)))&amp;&amp;(!(PINC&amp;(1&lt;&lt;PC0)))<sp/><sp/><sp/><sp/>//001</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">#define<sp/>avtomat_btn<sp/>(!(PINC&amp;(1&lt;&lt;PC2)))&amp;&amp;((PINC&amp;(1&lt;&lt;PC1)))&amp;&amp;(!(PINC&amp;(1&lt;&lt;PC0)))<sp/><sp/><sp/>//101</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">#define<sp/>count_btn<sp/>((PINC&amp;(1&lt;&lt;PC2)))&amp;&amp;(!(PINC&amp;(1&lt;&lt;PC1)))&amp;&amp;(!(PINC&amp;(1&lt;&lt;PC0)))<sp/><sp/><sp/><sp/><sp/>//011</highlight></codeline>
+<codeline lineno="79"><highlight class="comment">//#define<sp/>truba_off<sp/>CBC(5)//(PORTC&amp;=<sp/>~(1&lt;&lt;PC5))<sp/>парочка<sp/>типа<sp/>булеана</highlight></codeline>
+<codeline lineno="80"><highlight class="comment">//#define<sp/>truba_on<sp/>SBC(5)//(PORTC|=(1&lt;&lt;PC5))</highlight></codeline>
+<codeline lineno="81"><highlight class="comment">#endif<sp/>//<sp/>MACROS_</highlight></codeline>
+<codeline lineno="85"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="86"><highlight class="comment">#define<sp/>SB(port,bit)<sp/>(PORT##port|=(1&lt;&lt;bit))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//setbit<sp/>(port,bit)</highlight></codeline>
+<codeline lineno="87"><highlight class="comment">#define<sp/>CB(port,bit)<sp/>(PORT##port&amp;=<sp/>~(1&lt;&lt;bit))<sp/><sp/><sp/>//clearbit<sp/>CH(B,3)<sp/>так<sp/>терь<sp/>оно<sp/>будет<sp/>гл€детьс€</highlight></codeline>
+<codeline lineno="88"><highlight class="comment">#define<sp/>TB(port,bit)<sp/>(PORT##port^=(1&lt;&lt;bit))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//togglebit</highlight></codeline>
+<codeline lineno="89"><highlight class="comment">#define<sp/>CH(port,bit)<sp/>(PIN##port&amp;(1&lt;&lt;bit))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//checkbit</highlight></codeline>
+<codeline lineno="90"><highlight class="comment">//*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"></highlight><highlight class="comment">//*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="struct_packed_bool" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="comment">//булеановы<sp/>переменные<sp/>,<sp/>зачем<sp/>тратить<sp/>на<sp/>каждый<sp/>флаг<sp/>по<sp/>байту<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="struct_packed_bool_1afc83916c55a3756dd50bb0a558a6ed5f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>State_Automate:1;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//обработчик</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="struct_packed_bool_1a4632f42a77835db7258b0b8ad0dee075" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>KeyPressed:1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//флаг<sp/>нажати€<sp/>клавиши</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="struct_packed_bool_1a746c49c375112b4b43a2ae974bed69d3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>KeyReleased:1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//флаг<sp/>отпускани€<sp/>клавиши</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="struct_packed_bool_1a1dc85c6cfe92c1b73cbdd6f1eae7efb5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>KeyPushLong:1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//флаг<sp/>долгово<sp/>нажати€<sp/>клавиши</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="struct_packed_bool_1a24cbf01f9701f18e9be7f7320570685f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="timer_8h_1a8602ac7725d183564812f39737d61f3b" kindref="member">KeyState</ref>:1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//флаг<sp/>состо€ни€<sp/>клавиши</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="struct_packed_bool_1abaad87249bbff85ac78c58eb36cd16c5" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/>KeyPin:4;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//здесь<sp/>код<sp/>клавиши</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="struct_packed_bool_1a175cfc8edf0bf47952768325d7b0c361" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Fire:1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//флаг<sp/>горелки</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="struct_packed_bool_1a3a27b1e2173aec15a755a7d4def475f2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Furnace:1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//флаг<sp/>циркул€рной<sp/>печи</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="struct_packed_bool_1a0901709a69f005c976f96271b39ab886" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>SupplyManual:1;</highlight></codeline>
+<codeline lineno="105" refid="struct_packed_bool_1a900b3c3b6751d7bb6c26874d16b8bd39" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>SupplyAuto:1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//флаг<sp/>подачи</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="struct_packed_bool_1ac831227791a890cdf2e89f68724800d5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>TimerFlag:1;</highlight></codeline>
+<codeline lineno="107" refid="struct_packed_bool_1a47103f23257ec2b3dc97f4de4b5963d6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ADC_Channel:1;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>канал<sp/>ацп</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="struct_packed_bool_1a9ea4a6ddf9cc388137b9b7c20f58c206" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>NextState:1;</highlight></codeline>
+<codeline lineno="109" refid="struct_packed_bool_1ae5a80210d04730e10c09be516366933e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>RunFlag:1;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/>}<sp/><ref refid="struct_packed_bool" kindref="compound">PackedBool</ref>;</highlight></codeline>
+<codeline lineno="111" refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" refkind="member"><highlight class="normal"><ref refid="struct_packed_bool" kindref="compound">PackedBool</ref><sp/><ref refid="macros_8h_1a336eb7a105c8ad5b3a7f7bb022016491" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//int<sp/>*KeyCodePointer;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">//*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/geraki/mcu_dev/at8_ct/macros.h"/>
+  </compounddef>
+</doxygen>

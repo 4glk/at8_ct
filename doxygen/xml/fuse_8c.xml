@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.1.2">
+  <compounddef id="fuse_8c" kind="file">
+    <compoundname>fuse.c</compoundname>
+    <includes local="no">avr/io.h</includes>
+    <incdepgraph>
+      <node id="224">
+        <label>avr/io.h</label>
+      </node>
+      <node id="223">
+        <label>fuse.c</label>
+        <link refid="fuse.c"/>
+        <childnode refid="224" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="fuse_8c_1a9eca7681a8cf33b72c057cbd699dc9e6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>FUSES</definition>
+        <argsstring></argsstring>
+        <name>FUSES</name>
+        <initializer> {
+    .low = LFUSE_DEFAULT,
+    .high = HFUSE_DEFAULT
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/fuse.c" line="6" bodyfile="/home/geraki/mcu_dev/at8_ct/fuse.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;avr/io.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="fuse_8c_1a9eca7681a8cf33b72c057cbd699dc9e6" refkind="member"><highlight class="normal"><ref refid="fuse_8c_1a9eca7681a8cf33b72c057cbd699dc9e6" kindref="member">FUSES</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>.low<sp/>=<sp/>LFUSE_DEFAULT,</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>.high<sp/>=<sp/>HFUSE_DEFAULT</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/geraki/mcu_dev/at8_ct/fuse.c"/>
+  </compounddef>
+</doxygen>

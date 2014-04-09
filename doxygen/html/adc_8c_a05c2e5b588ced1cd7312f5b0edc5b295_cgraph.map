@@ -1,0 +1,8 @@
+<map id="ISR" name="ISR">
+<area shape="rect" id="node3" href="$timer_8h.html#a20948c9b12c543546cdca3c5419d14b2" title="AddTask" alt="" coords="513,75,588,104"/>
+<area shape="rect" id="node5" href="$adc_8c.html#aebdad809d69c09c4dd29da66ebcdac6a" title="AdcMean" alt="" coords="99,68,176,97"/>
+<area shape="rect" id="node8" href="$automate_8c.html#ab82d42f4ec48e743663fb90c550e4fa5" title="ShowAdc6" alt="" coords="224,213,309,243"/>
+<area shape="rect" id="node18" href="$automate_8c.html#a29ef358bb3f19d4b696b300c61bc0da1" title="ShowAdc7" alt="" coords="224,99,309,128"/>
+<area shape="rect" id="node11" href="$automate_8c.html#aec96046bbb47e80657e6439eda9dc665" title="FuncINDTime" alt="" coords="357,252,461,281"/>
+<area shape="rect" id="node13" href="$indicator_8c.html#a6ef4c7141a57a829f312df655f43b94e" title="IND_Time" alt="" coords="509,252,592,281"/>
+</map>

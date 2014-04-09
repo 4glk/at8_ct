@@ -1,0 +1,709 @@
+Archive member included because of file (symbol)
+
+/usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_umulhisi3.o)
+                              obj/Debug/indicator.o (__umulhisi3)
+/usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_udivmodhi4.o)
+                              obj/Debug/indicator.o (__udivmodhi4)
+/usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o (exit)
+/usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+                              obj/Debug/automate.o (__do_copy_data)
+/usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+                              obj/Debug/adc.o (__do_clear_bss)
+/usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/libc.a(strlen.o)
+                              obj/Debug/indicator.o (strlen)
+
+Allocating common symbols
+Common symbol       size              file
+
+adc_result          0x2               obj/Debug/adc.o
+adc6                0x2               obj/Debug/adc.o
+i                   0x2               obj/Debug/automate.o
+ind_buf             0x8               obj/Debug/indicator.o
+delay_time          0x2               obj/Debug/main.o
+TaskArray           0x20              obj/Debug/main.o
+adc7                0x2               obj/Debug/adc.o
+adc_buf             0x2               obj/Debug/adc.o
+dt                  0x2               obj/Debug/main.o
+flags               0x3               obj/Debug/automate.o
+KeyCurrentCode      0x2               obj/Debug/main.o
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+ .data          0x0000000000000000        0x0 obj/Debug/adc.o
+ .data          0x0000000000000000        0x0 obj/Debug/automate.o
+ .bss           0x0000000000000000        0x0 obj/Debug/automate.o
+ .text          0x0000000000000000        0x0 obj/Debug/fuse.o
+ .data          0x0000000000000000        0x0 obj/Debug/fuse.o
+ .bss           0x0000000000000000        0x0 obj/Debug/fuse.o
+ .data          0x0000000000000000        0x0 obj/Debug/indicator.o
+ .data          0x0000000000000000        0x0 obj/Debug/kbd.o
+ .bss           0x0000000000000000        0x0 obj/Debug/kbd.o
+ .data          0x0000000000000000        0x0 obj/Debug/main.o
+ .data          0x0000000000000000        0x0 obj/Debug/sheduler/dispatch.o
+ .bss           0x0000000000000000        0x0 obj/Debug/sheduler/dispatch.o
+ .text          0x0000000000000000      0x1f2 obj/Debug/spi.o
+ .data          0x0000000000000000        0x0 obj/Debug/spi.o
+ .bss           0x0000000000000000        0x0 obj/Debug/spi.o
+ .data          0x0000000000000000        0x0 obj/Debug/timer.o
+ .bss           0x0000000000000000        0x0 obj/Debug/timer.o
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_umulhisi3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_umulhisi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_umulhisi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_udivmodhi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/libc.a(strlen.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/libc.a(strlen.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/libc.a(strlen.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000002000 xr
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000400 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+LOAD obj/Debug/adc.o
+LOAD obj/Debug/automate.o
+LOAD obj/Debug/fuse.o
+LOAD obj/Debug/indicator.o
+LOAD obj/Debug/kbd.o
+LOAD obj/Debug/main.o
+LOAD obj/Debug/sheduler/dispatch.o
+LOAD obj/Debug/spi.o
+LOAD obj/Debug/timer.o
+LOAD /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a
+LOAD /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/libm.a
+LOAD /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a
+LOAD /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/libc.a
+LOAD /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x1a18
+ *(.vectors)
+ .vectors       0x0000000000000000       0x26 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_sw_table
+                0x0000000000000026       0x1c obj/Debug/automate.o
+ *(.progmem*)
+ .progmem.data  0x0000000000000042       0x50 obj/Debug/indicator.o
+                0x0000000000000042                number
+                0x000000000000007a                digit
+                0x000000000000008a                mask
+                0x0000000000000092                . = ALIGN (0x2)
+                0x0000000000000092                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000000092        0x0 linker stubs
+ *(.trampolines*)
+                0x0000000000000092                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000000000000092                __ctors_start = .
+ *(.ctors)
+                0x0000000000000092                __ctors_end = .
+                0x0000000000000092                __dtors_start = .
+ *(.dtors)
+                0x0000000000000092                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000000000000092        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+                0x0000000000000092                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000000000000092        0xc /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000000000000009e       0x16 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+                0x000000000000009e                __do_copy_data
+ .init4         0x00000000000000b4       0x10 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+                0x00000000000000b4                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000000000000c4        0x4 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+ *(.init9)
+ *(.text)
+ .text          0x00000000000000c8        0x2 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+                0x00000000000000c8                __vector_1
+                0x00000000000000c8                __vector_12
+                0x00000000000000c8                __bad_interrupt
+                0x00000000000000c8                __vector_6
+                0x00000000000000c8                __vector_3
+                0x00000000000000c8                __vector_11
+                0x00000000000000c8                __vector_13
+                0x00000000000000c8                __vector_17
+                0x00000000000000c8                __vector_7
+                0x00000000000000c8                __vector_5
+                0x00000000000000c8                __vector_2
+                0x00000000000000c8                __vector_15
+                0x00000000000000c8                __vector_10
+                0x00000000000000c8                __vector_16
+                0x00000000000000c8                __vector_18
+ .text          0x00000000000000ca      0x1dc obj/Debug/adc.o
+                0x00000000000000ca                __vector_14
+                0x0000000000000128                AdcMean
+                0x000000000000022c                InitADC
+ .text          0x00000000000002a6      0x370 obj/Debug/automate.o
+                0x00000000000002a6                StateAutomate
+                0x000000000000034a                Timer_sw
+                0x0000000000000434                Supply_sw
+                0x00000000000004d6                FuncINDTime
+                0x0000000000000506                Furnance_sw
+                0x000000000000056a                Fire_sw
+                0x00000000000005ce                ShowAdc6
+                0x00000000000005f2                ShowAdc7
+ .text          0x0000000000000616      0x8ec obj/Debug/indicator.o
+                0x0000000000000616                ascii2int
+                0x000000000000063c                IND_OutputFormatChar
+                0x0000000000000816                IND_Time
+                0x0000000000000a20                IND_Init
+                0x0000000000000b10                IND_Output
+                0x0000000000000c38                IND_OutputFormat
+                0x0000000000000d8a                IND_Update
+ .text          0x0000000000000f02      0x236 obj/Debug/kbd.o
+                0x0000000000000f02                InitControl
+                0x0000000000000f24                KeyCode
+                0x0000000000000f4a                KeyState
+                0x0000000000001030                KeyScan
+ .text          0x0000000000001138       0xcc obj/Debug/main.o
+                0x0000000000001138                main
+ .text          0x0000000000001204      0x5a6 obj/Debug/sheduler/dispatch.o
+                0x0000000000001204                AddTask
+                0x0000000000001518                DispatchTask
+                0x000000000000169a                DeleteTask
+                0x00000000000016de                __vector_4
+                0x0000000000001764                InitScheduler
+ .text          0x00000000000017aa      0x218 obj/Debug/timer.o
+                0x00000000000017aa                __vector_8
+                0x000000000000180a                doubleCountdown
+                0x0000000000001932                InitTimer
+                0x0000000000001980                __vector_9
+                0x00000000000019c2                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc.mul
+                0x00000000000019c2       0x18 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_umulhisi3.o)
+                0x00000000000019c2                __umulhisi3
+ .text.libgcc.div
+                0x00000000000019da       0x28 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_udivmodhi4.o)
+                0x00000000000019da                __udivmodhi4
+ .text.avr-libc
+                0x0000000000001a02       0x12 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/libc.a(strlen.o)
+                0x0000000000001a02                strlen
+                0x0000000000001a14                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000000000001a14        0x0 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+                0x0000000000001a14                exit
+                0x0000000000001a14                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000000000001a14        0x4 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000000000001a18                _etext = .
+
+.data           0x0000000000800060       0x1e load address 0x0000000000001a18
+                0x0000000000800060                PROVIDE (__data_start, .)
+ *(.data)
+ *(.data*)
+ *(.rodata)
+ .rodata        0x0000000000800060       0x1e obj/Debug/automate.o
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x000000000080007e                . = ALIGN (0x2)
+                0x000000000080007e                _edata = .
+                0x000000000080007e                PROVIDE (__data_end, .)
+
+.bss            0x000000000080007e       0x43
+                0x000000000080007e                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x000000000080007e        0x1 obj/Debug/adc.o
+ .bss           0x000000000080007f        0x1 obj/Debug/indicator.o
+ .bss           0x0000000000800080        0x6 obj/Debug/main.o
+                0x0000000000800080                TimeStop
+                0x0000000000800082                TimeSupply
+                0x0000000000800084                CurrentTime
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0000000000800086        0x8 obj/Debug/adc.o
+                0x0000000000800086                adc_result
+                0x0000000000800088                adc6
+                0x000000000080008a                adc7
+                0x000000000080008c                adc_buf
+ COMMON         0x000000000080008e        0x5 obj/Debug/automate.o
+                0x000000000080008e                i
+                0x0000000000800090                flags
+ COMMON         0x0000000000800093        0x8 obj/Debug/indicator.o
+                0x0000000000800093                ind_buf
+ COMMON         0x000000000080009b       0x26 obj/Debug/main.o
+                0x000000000080009b                delay_time
+                0x000000000080009d                TaskArray
+                0x00000000008000bd                dt
+                0x00000000008000bf                KeyCurrentCode
+                0x00000000008000c1                PROVIDE (__bss_end, .)
+                0x0000000000001a18                __data_load_start = LOADADDR (.data)
+                0x0000000000001a36                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00000000008000c1        0x0
+                0x00000000008000c1                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00000000008000c1                PROVIDE (__noinit_end, .)
+                0x00000000008000c1                _end = .
+                0x00000000008000c1                PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse           0x0000000000820000        0x2
+ *(.fuse)
+ .fuse          0x0000000000820000        0x2 obj/Debug/fuse.o
+                0x0000000000820000                __fuse
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x0000000000000000     0x3618
+ *(.stab)
+ .stab          0x0000000000000000      0x6cc /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+ .stab          0x00000000000006cc      0x534 obj/Debug/adc.o
+                                        0x540 (size before relaxing)
+ .stab          0x0000000000000c00      0x87c obj/Debug/automate.o
+                                        0x8b8 (size before relaxing)
+ .stab          0x000000000000147c      0x138 obj/Debug/fuse.o
+                                        0x300 (size before relaxing)
+ .stab          0x00000000000015b4      0xc6c obj/Debug/indicator.o
+                                        0xe64 (size before relaxing)
+ .stab          0x0000000000002220      0x3e4 obj/Debug/kbd.o
+                                        0x5d0 (size before relaxing)
+ .stab          0x0000000000002604      0x390 obj/Debug/main.o
+                                        0x5a0 (size before relaxing)
+ .stab          0x0000000000002994      0x684 obj/Debug/sheduler/dispatch.o
+                                        0x870 (size before relaxing)
+ .stab          0x0000000000003018      0x1b0 obj/Debug/spi.o
+                                        0x6a8 (size before relaxing)
+ .stab          0x00000000000031c8      0x3cc obj/Debug/timer.o
+                                        0x5ac (size before relaxing)
+ .stab          0x0000000000003594       0x84 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/libc.a(strlen.o)
+                                         0x90 (size before relaxing)
+
+.stabstr        0x0000000000000000     0x1632
+ *(.stabstr)
+ .stabstr       0x0000000000000000     0x1632 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 obj/Debug/adc.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000000       0x12 obj/Debug/automate.o
+ .comment       0x0000000000000000       0x12 obj/Debug/fuse.o
+ .comment       0x0000000000000000       0x12 obj/Debug/indicator.o
+ .comment       0x0000000000000000       0x12 obj/Debug/kbd.o
+ .comment       0x0000000000000000       0x12 obj/Debug/main.o
+ .comment       0x0000000000000000       0x12 obj/Debug/sheduler/dispatch.o
+ .comment       0x0000000000000000       0x12 obj/Debug/spi.o
+ .comment       0x0000000000000000       0x12 obj/Debug/timer.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(bin/Debug/mrg_at8ct.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+AdcMean                                           obj/Debug/adc.o
+AddTask                                           obj/Debug/sheduler/dispatch.o
+                                                  obj/Debug/timer.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/kbd.o
+                                                  obj/Debug/indicator.o
+                                                  obj/Debug/automate.o
+                                                  obj/Debug/adc.o
+CurrentTime                                       obj/Debug/main.o
+                                                  obj/Debug/timer.o
+                                                  obj/Debug/automate.o
+DeleteTask                                        obj/Debug/sheduler/dispatch.o
+DispatchTask                                      obj/Debug/sheduler/dispatch.o
+                                                  obj/Debug/main.o
+Fire_sw                                           obj/Debug/automate.o
+FuncINDTime                                       obj/Debug/automate.o
+                                                  obj/Debug/main.o
+Furnance_sw                                       obj/Debug/automate.o
+IND_Init                                          obj/Debug/indicator.o
+                                                  obj/Debug/main.o
+IND_Output                                        obj/Debug/indicator.o
+IND_OutputFormat                                  obj/Debug/indicator.o
+IND_OutputFormatChar                              obj/Debug/indicator.o
+                                                  obj/Debug/automate.o
+IND_Time                                          obj/Debug/indicator.o
+                                                  obj/Debug/automate.o
+IND_Update                                        obj/Debug/indicator.o
+                                                  obj/Debug/main.o
+InitADC                                           obj/Debug/adc.o
+                                                  obj/Debug/main.o
+InitControl                                       obj/Debug/kbd.o
+                                                  obj/Debug/main.o
+InitScheduler                                     obj/Debug/sheduler/dispatch.o
+                                                  obj/Debug/main.o
+InitTimer                                         obj/Debug/timer.o
+                                                  obj/Debug/main.o
+KeyCode                                           obj/Debug/kbd.o
+KeyCurrentCode                                    obj/Debug/main.o
+                                                  obj/Debug/kbd.o
+                                                  obj/Debug/automate.o
+KeyScan                                           obj/Debug/kbd.o
+                                                  obj/Debug/main.o
+KeyState                                          obj/Debug/kbd.o
+SPI_Init                                          obj/Debug/spi.o
+SPI_ReadArray                                     obj/Debug/spi.o
+SPI_ReadByte                                      obj/Debug/spi.o
+SPI_WriteArray                                    obj/Debug/spi.o
+SPI_WriteByte                                     obj/Debug/spi.o
+ShowAdc6                                          obj/Debug/automate.o
+                                                  obj/Debug/adc.o
+ShowAdc7                                          obj/Debug/automate.o
+                                                  obj/Debug/adc.o
+StateAutomate                                     obj/Debug/automate.o
+                                                  obj/Debug/main.o
+Supply_sw                                         obj/Debug/automate.o
+TaskArray                                         obj/Debug/sheduler/dispatch.o
+                                                  obj/Debug/main.o
+TimeStop                                          obj/Debug/main.o
+                                                  obj/Debug/timer.o
+                                                  obj/Debug/automate.o
+TimeSupply                                        obj/Debug/main.o
+                                                  obj/Debug/timer.o
+                                                  obj/Debug/automate.o
+Timer_sw                                          obj/Debug/automate.o
+__bad_interrupt                                   /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__bss_end                                         /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+__bss_start                                       /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+__data_end                                        /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+__data_load_start                                 /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+__data_start                                      /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+__do_clear_bss                                    /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_clear_bss.o)
+                                                  obj/Debug/timer.o
+                                                  obj/Debug/sheduler/dispatch.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/kbd.o
+                                                  obj/Debug/indicator.o
+                                                  obj/Debug/automate.o
+                                                  obj/Debug/adc.o
+__do_copy_data                                    /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_copy_data.o)
+                                                  obj/Debug/automate.o
+__fuse                                            obj/Debug/fuse.o
+__heap_end                                        /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__init                                            /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__stack                                           /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__udivmodhi4                                      /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_udivmodhi4.o)
+                                                  obj/Debug/indicator.o
+__umulhisi3                                       /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_umulhisi3.o)
+                                                  obj/Debug/indicator.o
+__vector_1                                        /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_10                                       /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_11                                       /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_12                                       /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_13                                       /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_14                                       obj/Debug/adc.o
+                                                  /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_15                                       /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_16                                       /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_17                                       /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_18                                       /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_2                                        /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_3                                        /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_4                                        obj/Debug/sheduler/dispatch.o
+                                                  /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_5                                        /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_6                                        /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_7                                        /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_8                                        obj/Debug/timer.o
+                                                  /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_9                                        obj/Debug/timer.o
+                                                  /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vector_default                                  /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+__vectors                                         /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+_exit                                             /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+adc6                                              obj/Debug/timer.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/automate.o
+                                                  obj/Debug/adc.o
+adc7                                              obj/Debug/timer.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/automate.o
+                                                  obj/Debug/adc.o
+adc_buf                                           obj/Debug/main.o
+                                                  obj/Debug/adc.o
+adc_result                                        obj/Debug/main.o
+                                                  obj/Debug/adc.o
+ascii2int                                         obj/Debug/indicator.o
+delay_time                                        obj/Debug/sheduler/dispatch.o
+                                                  obj/Debug/main.o
+digit                                             obj/Debug/indicator.o
+doubleCountdown                                   obj/Debug/timer.o
+                                                  obj/Debug/main.o
+dt                                                obj/Debug/sheduler/dispatch.o
+                                                  obj/Debug/main.o
+exit                                              /usr/lib/gcc/avr/4.7.2/avr4/libgcc.a(_exit.o)
+                                                  /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+flags                                             obj/Debug/timer.o
+                                                  obj/Debug/sheduler/dispatch.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/kbd.o
+                                                  obj/Debug/automate.o
+i                                                 obj/Debug/main.o
+                                                  obj/Debug/kbd.o
+                                                  obj/Debug/automate.o
+ind_buf                                           obj/Debug/indicator.o
+main                                              obj/Debug/main.o
+                                                  /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/crtm8.o
+mask                                              obj/Debug/indicator.o
+number                                            obj/Debug/indicator.o
+strlen                                            /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr4/libc.a(strlen.o)
+                                                  obj/Debug/indicator.o

@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.1.2">
+  <compounddef id="struct_packed_bool" kind="struct" prot="public">
+    <compoundname>PackedBool</compoundname>
+    <includes refid="macros_8h" local="no">macros.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_packed_bool_1afc83916c55a3756dd50bb0a558a6ed5f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PackedBool::State_Automate</definition>
+        <argsstring></argsstring>
+        <name>State_Automate</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="96" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="automate_8h_1a648a2fa2697c358cefdbc198c77b0206" compoundref="automate_8c" startline="4" endline="36">StateAutomate</referencedby>
+        <referencedby refid="kbd_8c_1a8602ac7725d183564812f39737d61f3b" compoundref="kbd_8c" startline="42" endline="58">KeyState</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_packed_bool_1a4632f42a77835db7258b0b8ad0dee075" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PackedBool::KeyPressed</definition>
+        <argsstring></argsstring>
+        <name>KeyPressed</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="97" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="kbd_8c_1a8602ac7725d183564812f39737d61f3b" compoundref="kbd_8c" startline="42" endline="58">KeyState</referencedby>
+        <referencedby refid="kbd_8c_1a119554f5f29d82aa2bd6259ee28ab2f9" compoundref="kbd_8c" startline="60" endline="80">KeyScan</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_packed_bool_1a746c49c375112b4b43a2ae974bed69d3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PackedBool::KeyReleased</definition>
+        <argsstring></argsstring>
+        <name>KeyReleased</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="98" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="kbd_8c_1a8602ac7725d183564812f39737d61f3b" compoundref="kbd_8c" startline="42" endline="58">KeyState</referencedby>
+        <referencedby refid="kbd_8c_1a119554f5f29d82aa2bd6259ee28ab2f9" compoundref="kbd_8c" startline="60" endline="80">KeyScan</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_packed_bool_1a1dc85c6cfe92c1b73cbdd6f1eae7efb5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PackedBool::KeyPushLong</definition>
+        <argsstring></argsstring>
+        <name>KeyPushLong</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="99" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="kbd_8c_1a8602ac7725d183564812f39737d61f3b" compoundref="kbd_8c" startline="42" endline="58">KeyState</referencedby>
+        <referencedby refid="kbd_8c_1a119554f5f29d82aa2bd6259ee28ab2f9" compoundref="kbd_8c" startline="60" endline="80">KeyScan</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_packed_bool_1a24cbf01f9701f18e9be7f7320570685f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PackedBool::KeyState</definition>
+        <argsstring></argsstring>
+        <name>KeyState</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="100" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_packed_bool_1abaad87249bbff85ac78c58eb36cd16c5" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t PackedBool::KeyPin</definition>
+        <argsstring></argsstring>
+        <name>KeyPin</name>
+        <bitfield>4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="101" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="101" bodyend="-1"/>
+        <referencedby refid="kbd_8c_1ac24268e43ab02c713950ac04cd01bf4c" compoundref="kbd_8c" startline="37" endline="40">KeyCode</referencedby>
+        <referencedby refid="kbd_8c_1a8602ac7725d183564812f39737d61f3b" compoundref="kbd_8c" startline="42" endline="58">KeyState</referencedby>
+        <referencedby refid="kbd_8c_1a119554f5f29d82aa2bd6259ee28ab2f9" compoundref="kbd_8c" startline="60" endline="80">KeyScan</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_packed_bool_1a175cfc8edf0bf47952768325d7b0c361" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PackedBool::Fire</definition>
+        <argsstring></argsstring>
+        <name>Fire</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="102" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_packed_bool_1a3a27b1e2173aec15a755a7d4def475f2" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PackedBool::Furnace</definition>
+        <argsstring></argsstring>
+        <name>Furnace</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="103" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="103" bodyend="-1"/>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_packed_bool_1a0901709a69f005c976f96271b39ab886" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PackedBool::SupplyManual</definition>
+        <argsstring></argsstring>
+        <name>SupplyManual</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="104" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="104" bodyend="-1"/>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_packed_bool_1a900b3c3b6751d7bb6c26874d16b8bd39" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PackedBool::SupplyAuto</definition>
+        <argsstring></argsstring>
+        <name>SupplyAuto</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="105" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="105" bodyend="-1"/>
+        <referencedby refid="automate_8h_1a4cc8fd1ed483012c97d1a9e9ebf8e93d" compoundref="automate_8c" startline="38" endline="58">Timer_sw</referencedby>
+        <referencedby refid="automate_8h_1ac41ed6f23d52707933276309ca058269" compoundref="automate_8c" startline="60" endline="76">Supply_sw</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+        <referencedby refid="timer_8c_1ab16889ae984b9b798989a0d239283cac" compoundref="timer_8c" startline="7" endline="11">ISR</referencedby>
+        <referencedby refid="main_8c_1a9a336e2a30206a895d000a9d07775b4b" compoundref="timer_8c" startline="13" endline="43">doubleCountdown</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_packed_bool_1ac831227791a890cdf2e89f68724800d5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PackedBool::TimerFlag</definition>
+        <argsstring></argsstring>
+        <name>TimerFlag</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="106" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="106" bodyend="-1"/>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+        <referencedby refid="timer_8c_1ab16889ae984b9b798989a0d239283cac" compoundref="timer_8c" startline="7" endline="11">ISR</referencedby>
+        <referencedby refid="main_8c_1a9a336e2a30206a895d000a9d07775b4b" compoundref="timer_8c" startline="13" endline="43">doubleCountdown</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_packed_bool_1a47103f23257ec2b3dc97f4de4b5963d6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PackedBool::ADC_Channel</definition>
+        <argsstring></argsstring>
+        <name>ADC_Channel</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="107" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="automate_8h_1a4cc8fd1ed483012c97d1a9e9ebf8e93d" compoundref="automate_8c" startline="38" endline="58">Timer_sw</referencedby>
+        <referencedby refid="main_8c_1a9a336e2a30206a895d000a9d07775b4b" compoundref="timer_8c" startline="13" endline="43">doubleCountdown</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_packed_bool_1a9ea4a6ddf9cc388137b9b7c20f58c206" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PackedBool::NextState</definition>
+        <argsstring></argsstring>
+        <name>NextState</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="108" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="108" bodyend="-1"/>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_packed_bool_1ae5a80210d04730e10c09be516366933e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PackedBool::RunFlag</definition>
+        <argsstring></argsstring>
+        <name>RunFlag</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="109" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="dispatch_8c_1aa46f19a6d870d46a2749a8c623a7ef68" compoundref="dispatch_8c" startline="36" endline="55">DispatchTask</referencedby>
+        <referencedby refid="dispatch_8c_1a7cfcbe42bd266750aeb6e5d71e5ea479" compoundref="dispatch_8c" startline="139" endline="144">ISR</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="36" endline="72">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+ <heading level="2">--<mdash/>это мой битмакрос</heading>
+</para>    </detaileddescription>
+    <location file="/home/geraki/mcu_dev/at8_ct/macros.h" line="95" bodyfile="/home/geraki/mcu_dev/at8_ct/macros.h" bodystart="95" bodyend="110"/>
+    <listofallmembers>
+      <member refid="struct_packed_bool_1a47103f23257ec2b3dc97f4de4b5963d6" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>ADC_Channel</name></member>
+      <member refid="struct_packed_bool_1a175cfc8edf0bf47952768325d7b0c361" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>Fire</name></member>
+      <member refid="struct_packed_bool_1a3a27b1e2173aec15a755a7d4def475f2" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>Furnace</name></member>
+      <member refid="struct_packed_bool_1abaad87249bbff85ac78c58eb36cd16c5" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>KeyPin</name></member>
+      <member refid="struct_packed_bool_1a4632f42a77835db7258b0b8ad0dee075" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>KeyPressed</name></member>
+      <member refid="struct_packed_bool_1a1dc85c6cfe92c1b73cbdd6f1eae7efb5" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>KeyPushLong</name></member>
+      <member refid="struct_packed_bool_1a746c49c375112b4b43a2ae974bed69d3" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>KeyReleased</name></member>
+      <member refid="struct_packed_bool_1a24cbf01f9701f18e9be7f7320570685f" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>KeyState</name></member>
+      <member refid="struct_packed_bool_1a9ea4a6ddf9cc388137b9b7c20f58c206" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>NextState</name></member>
+      <member refid="struct_packed_bool_1ae5a80210d04730e10c09be516366933e" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>RunFlag</name></member>
+      <member refid="struct_packed_bool_1afc83916c55a3756dd50bb0a558a6ed5f" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>State_Automate</name></member>
+      <member refid="struct_packed_bool_1a900b3c3b6751d7bb6c26874d16b8bd39" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>SupplyAuto</name></member>
+      <member refid="struct_packed_bool_1a0901709a69f005c976f96271b39ab886" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>SupplyManual</name></member>
+      <member refid="struct_packed_bool_1ac831227791a890cdf2e89f68724800d5" prot="public" virt="non-virtual"><scope>PackedBool</scope><name>TimerFlag</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
